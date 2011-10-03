@@ -3,6 +3,7 @@ require 'mysql'
 require 'sequel'
 require 'fileutils'
 require 'yaml'
+require 'iconv'
 
 # NOTE: This converter requires Sequel and the MySQL gems.
 # The MySQL gem can be difficult to install on OS X. Once you have MySQL
@@ -19,15 +20,19 @@ module Jekyll
     # This restriction is made because 'draft' posts are not guaranteed to
     # have valid dates.
     QUERY = "select post_title, post_name, post_date, post_content, post_excerpt, ID, guid from wp_posts where post_status = 'publish' and post_type = 'post'"
-	# Fetch all tags for a given POST ID
-	TAGS_QUERY = "select tm.term_id,tm.name from wp_term_relationships tr 
+	  
+	  # Fetch all tags for a given POST ID
+	  TAGS_QUERY = "select tm.term_id,tm.name from wp_term_relationships tr 
 				  inner join wp_term_taxonomy tt on tr.term_taxonomy_id = tt.term_taxonomy_id 
 				  inner join wp_terms tm on tm.term_id=tt.term_id  
 				  where tr.object_id=%d and tt.taxonomy = 'post_tag'";
+		
+		
 				  
     def self.process()
       gem('mysql')
       puts 'init'
+      ic = Iconv.new('UTF-8//IGNORE', 'UTF-8')
       db = Sequel.connect(:adapter => 'mysql', :user => 'root', :host => 'localhost', :database => 'gpowered',:password=>'root')
       puts 'have db'
       FileUtils.mkdir_p("_posts")
@@ -35,14 +40,14 @@ module Jekyll
       # Reads a MySQL database via Sequel and creates a post file for each
       # post in wp_posts that has post_status = 'publish'. This restriction is
       # made because 'draft' posts are not guaranteed to have valid dates.
-      query = "select post_name, post_title, post_date, post_content, post_excerpt, id, guid from wp_posts where post_status = 'publish' and post_type = 'post' order by id limit 1"
+      #query = "select post_name, post_title, post_date, post_content, post_excerpt, id, guid from wp_posts where post_status = 'publish' and post_type = 'post' order by id limit 1"
 
             db[QUERY].each do |post|
               # Get required fields and construct Jekyll compatible name
               title = post[:post_title]
               slug = post[:post_name]
               date = post[:post_date]
-              content = post[:post_content]
+              content = ic.iconv(post[:post_content] + ' ')[0..-2]
               name = "%02d-%02d-%02d-%s.markdown" % [date.year, date.month, date.day, slug]
 
       		# Get associated taxonomy terms (tags)
@@ -60,11 +65,15 @@ module Jekyll
 
               # Get the relevant fields as a hash, delete empty fields and convert
               # to YAML for the header
+              puts title.to_s
               data = {
-                 'layout' => 'post',
-                 'title' => title.to_s,
-                 'excerpt' => post[:post_excerpt].to_s,
-      		   'tags' => tags
+                'layout' => 'post',
+                'title' => title.to_s,
+                'excerpt' => post[:post_excerpt].to_s,
+                'wordpress_id' => post[:id],
+                'wordpress_url' => post[:guid],
+                'date' => date,
+                'comments' => true
                }.delete_if { |k,v| v.nil? || v == ''}.to_yaml
 
               # Write out the data and content to file
