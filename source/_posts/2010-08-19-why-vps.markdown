@@ -1,0 +1,33 @@
+--- 
+layout: post
+title: Why VPS?
+wordpress_url: http://timbroder.com/?p=596
+date: 2010-08-19 15:16:43 -04:00
+comments: true
+---
+Lately the four main web hosting options are shared, VPS, dedicated, or a cloud based solution. I'll follow up on this article at a later date with my experience with Amazon's cloud solution. We are rolling out a magento install into the cloud in a few weeks and I'll be commenting on how that goes. To start off, what is <a href="http://www.inmotionhosting.com/vps_hosting.html" target="_blank">VPS web hosting</a>?
+
+A Virtual Private Server (VPS) is a hosting environment that combines the benefits of both shared hosting and dedicated hosting. It does this by creating a virtual server that runs inside a hardware server via a specially designed partition. So why would you need one over shared hosting?
+<ul>
+	<li>Speed: Much faster then shared hosting. There are fewer people sharing resources on the server and you have guaranteed resources. If another site is hogging 100% of the cpu on its VPS, this will not effect your sites performance. A VPS can handle might higher traffic loads then shared hosting.</li>
+	<li>Security: Your files are isolated from other VPS instances</li>
+	<li>Full root access to your instance</li>
+	<li>Reboot: Reboot apache or your whole server instance without effecting the other servers</li>
+	<li>Cost: Much cheaper then a dedicated instance with almost the same control/resources</li>
+	<li>More space for files</li>
+	<li>Custom Instances: More control over what you get, and is not dependent on the other instances on the same physical server. With shared hosting the provider usually picks the OS, with VPS there are usually dozens of options.</li>
+	<li>Private email, IP, and domain: Shared hosts will have one email server for all the hosts</li>
+	<li>Custom Security policies: From on server virus scanning to a customizable firewall</li>
+	<li>Reseller: if you have extra resources available you can usually resell these</li>
+</ul>
+The top VPS Hosting providers according to <a href="http://webhostinggeeks.com/vpshosting.html" target="_blank">Web Hosting Geeks</a> are:
+<ul>
+	<li><a href="http://www.inmotionhosting.com/vps_hosting.html" target="_blank">Inmotion</a></li>
+	<li><a href="http://www.ultrahosting.com/" target="_blank">Ultrahosting</a></li>
+	<li><a href="http://www.networksolutions.com/vps/index.jsp" target="_blank">Network Solutions</a></li>
+	<li><a href="http://www.ace-host.net/index.html" target="_blank">Ace Host</a></li>
+	<li><a href="http://www.hostican.com/" target="_blank">HostIcan</a></li>
+	<li><a href="http://www.lpdedicated.com/index.php" target="_blank">Lunar Pages</a></li>
+	<li><a href="http://order.1and1.com/xml/order/VirtualServer" target="_blank">1&amp;1</a></li>
+	<li><a href="http://www.xlhost.com/" target="_blank">xlhost</a></li>
+</ul>

@@ -1,0 +1,8 @@
+--- 
+layout: post
+title: domain!
+wordpress_url: http://beta.timbroder.com/2007/07/31/domain/
+date: 2007-07-31 01:31:00 -04:00
+comments: true
+---
+The design and domain have been set up (actually I finished it a week or so ago but work's been keeping me pretty crazy).  All my examples will be implemented on <a href="http://gpowered.net/g/">gPowered.net</a> as well as a copy of theses posts.  Enjoy.

@@ -1,0 +1,8 @@
+--- 
+layout: post
+title: Geek 1.0 vs. Geek 2.0
+wordpress_url: http://beta.timbroder.com/2008/09/12/geek-1-0-vs-geek-2-0/
+date: 2008-09-12 15:26:00 -04:00
+comments: true
+---
+<a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://spotonce.com/story.php?title=Geek_1-0_vs-_Geek_2-0__Pic"><img style="display:block; margin:0px auto 10px; text-align:center;cursor:pointer; cursor:hand;width: 400px;" src="http://farm4.static.flickr.com/3044/2780453718_16d3121d13_o.gif" border="0" alt="" /></a>
