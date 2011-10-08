@@ -1,0 +1,797 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>TimBroder.com</title>
+  <meta name="author" content="Tim Broder">
+
+  
+  <meta name="description" content="Google Buzz quetly came out, adds friendfeed like functionality to gmailFacebook is also launching email, interesting times ahead in the communicat...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://timbroder.com/blog/page/13/index.html">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="TimBroder.com" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">TimBroder.com</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:timbroder.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/02/google-buzz-facebook-email.html">Google Buzz? Facebook Email?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2010-02-10T16:55:00-05:00" pubdate  data-updated="true" >Feb 10<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.google.com/buzz">Google Buzz</a> quetly came out, adds friendfeed like functionality to gmail<br /></p>
+
+<br />
+
+
+<br />
+
+
+<p>Facebook is also <a href="http://gizmodo.com/5465353/facebook-eyes-webmail-with-project-titan">launching email</a>, interesting times ahead in the communication world.<br />
+&nbsp;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/02/django-admin-inline-preview.html">Django Admin Inline Preview</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2010-02-09T19:17:00-05:00" pubdate  data-updated="true" >Feb 9<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>To get inline Admin Previews in the list view<br /></p>
+
+<br />
+
+
+<p>1) Inherit from PreviewAdmin in your ModelAdmin<br />
+2) In your model&#8217;s template directory, create a folder called preview, and create a template for that model&#8217;s preview<br /></p>
+
+<br />
+
+
+<p>Example for model Article<br /></p>
+
+<br />
+
+
+<p>class ArticleAdmin(PreviewAdmin, other admin.ModelAdmin,,,_):<br />
+list_display = (..,.., &#8216;admin_slide_preview&#8217;)<br />
+&#8230;<br />
+&#8230;<br /></p>
+
+<br />
+
+
+<p>then edit<br />
+app_that_has_ArticleModel/templates/preview/article.html<br /></p>
+
+<br />
+
+
+<p>whatever is in article.html will be shown inline<br />
+Access your Article object through  in the template<br /></p>
+
+<br />
+
+
+<p>code updates on <a href="http://github.com/broderboy/django-admin-preview">github</a><br /></p>
+
+<br />
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">class</span> <span class="nc">PreviewAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+</span><span class='line'>    <span class="c">#add to your ModelAdmin</span>
+</span><span class='line'>    <span class="c">#list_display = (&#39;headline&#39;,&#39;created_date&#39;, &#39;state&#39;, &#39;admin_slide_preview&#39;)</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">admin_slide_preview</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
+</span><span class='line'>        <span class="k">return</span> <span class="s">&quot;&lt;div class=</span><span class="se">\&quot;</span><span class="s">previewslide</span><span class="se">\&quot;</span><span class="s"> id=</span><span class="se">\&quot;</span><span class="si">%s</span><span class="s">/preview/</span><span class="se">\&quot;</span><span class="s">&gt;+&lt;/div&gt;&quot;</span> <span class="o">%</span> <span class="n">obj</span><span class="o">.</span><span class="n">id</span>
+</span><span class='line'>    <span class="n">admin_slide_preview</span><span class="o">.</span><span class="n">allow_tags</span> <span class="o">=</span> <span class="bp">True</span>
+</span><span class='line'>    <span class="n">admin_slide_preview</span><span class="o">.</span><span class="n">short_description</span> <span class="o">=</span> <span class="s">&#39;Preview&#39;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">get_preview</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">object_id</span><span class="p">):</span>
+</span><span class='line'>        <span class="n">sub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">queryset</span><span class="p">(</span><span class="n">request</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</span><span class='line'>        <span class="n">template</span> <span class="o">=</span> <span class="s">&quot;preview/</span><span class="si">%s</span><span class="s">.html&quot;</span> <span class="o">%</span> <span class="n">sub</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">object_detail</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">queryset</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">queryset</span><span class="p">(</span><span class="n">request</span><span class="p">),</span> <span class="n">object_id</span><span class="o">=</span><span class="n">object_id</span><span class="p">,</span> <span class="n">template_name</span><span class="o">=</span><span class="n">template</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">get_urls</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>        <span class="n">urls</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">PreviewAdmin</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">get_urls</span><span class="p">()</span>
+</span><span class='line'>        <span class="n">my_urls</span> <span class="o">=</span> <span class="n">patterns</span><span class="p">(</span><span class="s">&#39;&#39;</span><span class="p">,</span>
+</span><span class='line'>            <span class="p">(</span><span class="s">r&#39;^(?P&lt;object_id&gt;\d+)/preview/$&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_preview</span><span class="p">),</span>
+</span><span class='line'>        <span class="p">)</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">my_urls</span> <span class="o">+</span> <span class="n">urls</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">class</span> <span class="nc">Media</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">js</span> <span class="o">=</span> <span class="n">js</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;js/jquery.js&#39;</span><span class="p">,</span>
+</span><span class='line'>                   <span class="s">&#39;js/jquery.adminpreview.js&#39;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">object_id</span><span class="o">&gt;</span><span class="sb">``</span><span class="err">`</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">br</span> <span class="o">/&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;code&quot;</span> <span class="n">class</span><span class="o">=</span><span class="s">&quot;javascript&quot;</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">//</span><span class="n">base</span><span class="o">.</span><span class="n">css</span>
+</span><span class='line'><span class="o">.</span><span class="n">previewslide</span> <span class="p">{</span>
+</span><span class='line'><span class="n">cursor</span><span class="p">:</span><span class="n">pointer</span><span class="p">;</span>
+</span><span class='line'><span class="n">cursor</span><span class="p">:</span><span class="n">hand</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<br />
+
+
+<br />
+
+
+<pre name="code" class="javascript">
+//jquery.adminpreview.js
+$(document).ready(function(){
+ $(".previewslide").click(function(){
+  $.ajax({
+   url:$(this).attr('id'),
+   context: $(this).parent().parent(),
+   success:function(data){
+    var $html = $(data);
+    $('.previewed').each(function(){
+     $(this).remove();
+    });
+    
+    if(!$html.hasClass('previewed')){
+     $html.addClass('previewed');
+    }
+    
+    $html.addClass($(this.context).attr('class'));  
+    $(this.context).after($html);
+   }
+  });
+ });
+});
+``` 
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/02/get-admin-url-for-django-model.html">Get the Admin Url for a Django Model</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2010-02-09T18:48:00-05:00" pubdate  data-updated="true" >Feb 9<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Add this to your model to be able to get their admin change link from anywhere<br /></p>
+
+<br />
+
+
+<p>Useful if you want to jump to the admin screen of an object you are looking at on the front end <br /></p>
+
+<br />
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">django.core</span> <span class="kn">import</span> <span class="n">urlresolvers</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">django.contrib.contenttypes.models</span> <span class="kn">import</span> <span class="n">ContentType</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">get_admin_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>    <span class="n">content_type</span> <span class="o">=</span> <span class="n">ContentType</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get_for_model</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">urlresolvers</span><span class="o">.</span><span class="n">reverse</span><span class="p">(</span><span class="s">&quot;admin:</span><span class="si">%s</span><span class="s">_</span><span class="si">%s</span><span class="s">_change&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">content_type</span><span class="o">.</span><span class="n">app_label</span><span class="p">,</span> <span class="n">content_type</span><span class="o">.</span><span class="n">model</span><span class="p">),</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/02/remaining-character-count-in-django.html">Remaining Character Count in Django Admin</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2010-02-01T19:28:00-05:00" pubdate  data-updated="true" >Feb 1<span>st</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Want to display the remaining characters on a text field in admin? (based off of maxlength or an override) <br /></p>
+
+<br />
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+<span class='line-number'>102</span>
+<span class='line-number'>103</span>
+<span class='line-number'>104</span>
+<span class='line-number'>105</span>
+<span class='line-number'>106</span>
+<span class='line-number'>107</span>
+<span class='line-number'>108</span>
+<span class='line-number'>109</span>
+<span class='line-number'>110</span>
+<span class='line-number'>111</span>
+<span class='line-number'>112</span>
+<span class='line-number'>113</span>
+<span class='line-number'>114</span>
+<span class='line-number'>115</span>
+<span class='line-number'>116</span>
+<span class='line-number'>117</span>
+<span class='line-number'>118</span>
+<span class='line-number'>119</span>
+<span class='line-number'>120</span>
+<span class='line-number'>121</span>
+<span class='line-number'>122</span>
+<span class='line-number'>123</span>
+<span class='line-number'>124</span>
+<span class='line-number'>125</span>
+<span class='line-number'>126</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c">#have your ModelAdmin inherit this to use</span>
+</span><span class='line'><span class="k">class</span> <span class="nc">CounterAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+</span><span class='line'>    <span class="n">counted_fields</span> <span class="o">=</span> <span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c">#really for textareas</span>
+</span><span class='line'>    <span class="n">max_lengths</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;abstract&#39;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">class</span> <span class="nc">Media</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">js</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;js/jquery.js&#39;</span><span class="p">,</span>
+</span><span class='line'>              <span class="s">&#39;js/jquery.charCount.js&#39;</span><span class="p">,)</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">formfield_for_dbfield</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">db_field</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span><span class='line'>        <span class="n">field</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">CounterAdmin</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">formfield_for_dbfield</span><span class="p">(</span><span class="n">db_field</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">print</span> <span class="n">db_field</span><span class="o">.</span><span class="n">name</span>
+</span><span class='line'>        <span class="k">print</span> <span class="bp">self</span><span class="o">.</span><span class="n">counted_fields</span>
+</span><span class='line'>        <span class="k">if</span> <span class="n">db_field</span><span class="o">.</span><span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">counted_fields</span><span class="p">:</span>
+</span><span class='line'>            <span class="k">try</span><span class="p">:</span>
+</span><span class='line'>                <span class="nb">len</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_lengths</span><span class="p">[</span><span class="n">db_field</span><span class="o">.</span><span class="n">name</span><span class="p">]</span>
+</span><span class='line'>                <span class="n">field</span><span class="o">.</span><span class="n">widget</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s">&#39;maxlength&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span>
+</span><span class='line'>            <span class="k">except</span><span class="p">:</span> <span class="k">pass</span>
+</span><span class='line'>            <span class="n">field</span><span class="o">.</span><span class="n">widget</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s">&#39;class&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;counted &#39;</span> <span class="o">+</span> <span class="n">field</span><span class="o">.</span><span class="n">widget</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;class&#39;</span><span class="p">,</span><span class="s">&#39;&#39;</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">field</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="sd">&quot;&quot;&quot;</span>
+</span><span class='line'><span class="sd">jquery,charCount.js</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">/*</span>
+</span><span class='line'><span class="sd"> *  Character Count Plugin - jQuery plugin</span>
+</span><span class='line'><span class="sd"> *  Dynamic character count for text areas and input fields</span>
+</span><span class='line'><span class="sd"> * written by Alen Grakalic </span>
+</span><span class='line'><span class="sd"> * http://cssglobe.com/post/7161/jquery-plugin-simplest-twitterlike-dynamic-character-count-for-textareas</span>
+</span><span class='line'><span class="sd"> *</span>
+</span><span class='line'><span class="sd"> * Copyright (c) 2009 Alen Grakalic (http://cssglobe.com)</span>
+</span><span class='line'><span class="sd"> * Dual licensed under the MIT (MIT-LICENSE.txt)</span>
+</span><span class='line'><span class="sd"> * and GPL (GPL-LICENSE.txt) licenses.</span>
+</span><span class='line'><span class="sd"> *</span>
+</span><span class='line'><span class="sd"> * Built for jQuery library</span>
+</span><span class='line'><span class="sd"> * http://jquery.com</span>
+</span><span class='line'><span class="sd"> *</span>
+</span><span class='line'><span class="sd"> */</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">/*</span>
+</span><span class='line'><span class="sd"> * Modified 2010 Tim Broder for django-admin-charcount</span>
+</span><span class='line'><span class="sd"> * http://gpowered.net</span>
+</span><span class='line'><span class="sd"> */</span>
+</span><span class='line'><span class="sd"> </span>
+</span><span class='line'><span class="sd">(function($) {</span>
+</span><span class='line'><span class="sd"> $.fn.charCount = function(options){</span>
+</span><span class='line'><span class="sd">  // default configuration properties</span>
+</span><span class='line'><span class="sd">  var defaults = { </span>
+</span><span class='line'><span class="sd">   allowed: 140,  </span>
+</span><span class='line'><span class="sd">   warning: 20,</span>
+</span><span class='line'><span class="sd">   css: &#39;help&#39;,</span>
+</span><span class='line'><span class="sd">   counterElement: &#39;p&#39;,</span>
+</span><span class='line'><span class="sd">   cssWarning: &#39;warning&#39;,</span>
+</span><span class='line'><span class="sd">   cssExceeded: &#39;exceeded&#39;,</span>
+</span><span class='line'><span class="sd">   counterText: &#39;&#39;</span>
+</span><span class='line'><span class="sd">  }; </span>
+</span><span class='line'><span class="sd">   </span>
+</span><span class='line'><span class="sd">  var options = $.extend(defaults, options); </span>
+</span><span class='line'><span class="sd">  </span>
+</span><span class='line'><span class="sd">  function calculate(obj){</span>
+</span><span class='line'><span class="sd">   var count = $(obj).val().length;</span>
+</span><span class='line'><span class="sd">   var available = options.allowed - count;</span>
+</span><span class='line'><span class="sd">   if(available &lt; = options.warning &amp;&amp; available &gt;= 0){</span>
+</span><span class='line'><span class="sd">    $(obj).next().addClass(options.cssWarning);</span>
+</span><span class='line'><span class="sd">   } else {</span>
+</span><span class='line'><span class="sd">    $(obj).next().removeClass(options.cssWarning);</span>
+</span><span class='line'><span class="sd">   }</span>
+</span><span class='line'><span class="sd">   if(available &lt; 0){</span>
+</span><span class='line'><span class="sd">    $(obj).next().addClass(options.cssExceeded);</span>
+</span><span class='line'><span class="sd">   } else {</span>
+</span><span class='line'><span class="sd">    $(obj).next().removeClass(options.cssExceeded);</span>
+</span><span class='line'><span class="sd">   }</span>
+</span><span class='line'><span class="sd">   $(obj).next().html(options.counterText + available);</span>
+</span><span class='line'><span class="sd">  };</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">  this.each(function() {     </span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">   $(this).after(&#39;&lt;&#39;+ options.counterElement +&#39; class=&quot;&#39; + options.css + &#39;&quot;&gt;&#39;+ options.counterText +&#39;&#39;);</span>
+</span><span class='line'><span class="sd">   calculate(this);</span>
+</span><span class='line'><span class="sd">   $(this).keyup(function(){calculate(this); });</span>
+</span><span class='line'><span class="sd">   $(this).change(function(){calculate(this)});</span>
+</span><span class='line'><span class="sd">  });</span>
+</span><span class='line'><span class="sd">   </span>
+</span><span class='line'><span class="sd"> };</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">})(jQuery);</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">/*function init_counters(selector, len){</span>
+</span><span class='line'><span class="sd"> $(selector).each(function() {</span>
+</span><span class='line'><span class="sd">  //console.log($(this).attr(&#39;maxlength&#39;));</span>
+</span><span class='line'><span class="sd">  if(len==null){</span>
+</span><span class='line'><span class="sd">   len = $(this).attr(&#39;maxlength&#39;);</span>
+</span><span class='line'><span class="sd">  }</span>
+</span><span class='line'><span class="sd">  $(this).charCount({</span>
+</span><span class='line'><span class="sd">   counterText: &#39;Characters Remaining: &#39;,</span>
+</span><span class='line'><span class="sd">   allowed: len,</span>
+</span><span class='line'><span class="sd">  });</span>
+</span><span class='line'><span class="sd"> });</span>
+</span><span class='line'><span class="sd">}*/</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">$(document).ready(function(){</span>
+</span><span class='line'><span class="sd"> $(&quot;.counted&quot;).each(function(){</span>
+</span><span class='line'><span class="sd">  console.log($(this));</span>
+</span><span class='line'><span class="sd">  len = $(this).attr(&#39;maxlength&#39;);</span>
+</span><span class='line'><span class="sd">  $(this).charCount({</span>
+</span><span class='line'><span class="sd">   counterText: &#39;Characters Remaining: &#39;,</span>
+</span><span class='line'><span class="sd">   allowed: len,</span>
+</span><span class='line'><span class="sd">  });</span>
+</span><span class='line'><span class="sd"> });</span>
+</span><span class='line'><span class="sd"> //init_counters(&quot;input[maxlength]&quot;, 80);</span>
+</span><span class='line'><span class="sd"> //init_counters(&quot;textarea[maxlength]&quot;);</span>
+</span><span class='line'><span class="sd"> //init_counters(&quot;#id_abstract&quot;, 400);</span>
+</span><span class='line'><span class="sd">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">/*</span>
+</span><span class='line'><span class="sd"> * &lt;style type=&quot;text/css&quot;&gt;</span>
+</span><span class='line'><span class="sd">form .counter{</span>
+</span><span class='line'><span class="sd"> }</span>
+</span><span class='line'><span class="sd">form .warning{color:#600;} </span>
+</span><span class='line'><span class="sd">form .exceeded{color:#e00;}</span>
+</span><span class='line'><span class="sd">&lt;/style&gt;</span>
+</span><span class='line'><span class="sd">*/</span>
+</span><span class='line'><span class="sd">&quot;&quot;&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/01/override-querysetdelete-one-way-of.html">Override QuerySet.delete() (One Way of Preventing Cascading Deletes)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2010-01-07T17:05:00-05:00" pubdate  data-updated="true" >Jan 7<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>We needed to override the default QuerySet delete function to deal with a client problem that we were facing<br /></p>
+
+<br />
+
+
+<p>Yes This is monkey-patching, and probably bad practice but if anyone needs to conditionally override the cascading delete that django does at the application level from a queryset, this is how to do it<br /></p>
+
+<br />
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">django.db.models.query</span> <span class="kn">import</span> <span class="n">QuerySet</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">#save original delete method</span>
+</span><span class='line'><span class="n">orrigdelete</span> <span class="o">=</span> <span class="n">QuerySet</span><span class="o">.</span><span class="n">delete</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">showdelete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>    <span class="c">#add on to delete method</span>
+</span><span class='line'>    <span class="k">for</span> <span class="n">test</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
+</span><span class='line'>        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="n">YourObject</span><span class="p">):</span>
+</span><span class='line'>            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s">&#39;someone tried to delete your object&#39;</span><span class="p">)</span>
+</span><span class='line'>            <span class="k">return</span>
+</span><span class='line'>        <span class="k">else</span><span class="p">:</span>
+</span><span class='line'>            <span class="k">break</span>
+</span><span class='line'>    <span class="c">#call original delete</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">orrigdelete</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">#set the queryset delete as our new method</span>
+</span><span class='line'><span class="n">QuerySet</span><span class="o">.</span><span class="n">delete</span> <span class="o">=</span> <span class="n">showdelete</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <nav class="pagination">
+    <div>
+      
+        <a class="prev" href="/blog/page/14/">&larr; Older</a>
+      
+      <a href="/blog/archives">Blog Archives</a>
+      
+      <a class="next" href="/blog/page/12/">Newer &rarr;</a>
+      
+    </div>
+  </nav>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2011/04/jira-tabs-open-all-those-jiras-at-once.html">Jira Tabs: Open all those Jira&#8217;s at once! </a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/04/google%25e2%2580%2599s-groupon-competitor-goes-live.html">Googles Groupon Competitor Goes Live</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/04/skynet.html">Skynet Becomes Self Aware Tonight</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/04/extending-a-magento-controller.html">Extending a Magento Controller</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/04/moving-gmail-gadgets-to-the-right-side.html">Moving Gmail Gadgets to the Right Side</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2011 - Tim Broder -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+
+
+</body>
+</html>

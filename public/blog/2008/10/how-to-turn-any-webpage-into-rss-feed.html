@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>How to turn any webpage into an RSS feed - TimBroder.com</title>
+  <meta name="author" content="Tim Broder">
+
+  
+  <meta name="description" content="Using a tool called Dapper and Yahoo Pipes, its fairly easy to turn any webpage into an RSS feed. Dapper is a powerful HTML scrapping system and Pi...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://timbroder.com/blog/2008/10/how-to-turn-any-webpage-into-rss-feed.html">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="TimBroder.com" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">TimBroder.com</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:timbroder.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">How to Turn Any Webpage Into an RSS Feed</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2008-10-06T12:55:00-04:00" pubdate  data-updated="true" >Oct 6<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Using a tool called <a href="http://www.dapper.net/">Dapper</a> and <a href="http://pipes.yahoo.com/pipes/">Yahoo Pipes</a>, its fairly easy to turn any webpage into an RSS feed. Dapper is a powerful HTML scrapping system and Pipes is a handy data remixing tool.&nbsp; Head on over to dapper.net and check to make sure someone hasn&#8217;t already done what you are planning on doing (Do this by using dapper&#8217;s search function.)&nbsp; If you can&#8217;t find any, you are ready to go.<br /></p>
+
+<br />
+
+
+<p>For this example, I&#8217;m going to scrape <a href="http://ifanboy.com/users/broderboy/comics">http://ifanboy.com/users/broderboy/comics</a> which shows the comic books I&#8217;m interested in this week.&nbsp; Click &#8220;create new dapp&#8221; (located under the search bar). Once inside the Dapp Factory, input the url of the page you want to scrape.&nbsp; Then, change the format to RSS Feed.&nbsp; You can leave the format is Dapp XML if you want much more control over the data, as well as more options for output, but its harder to turn this into an RSS feed.&nbsp; I&#8217;ll cover how to do this in a later article.<br /></p>
+
+<br />
+
+
+<div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/_Ng3QbVQfLZ8/SOoNorE0EnI/AAAAAAAATJ0/leCPt6SrNsQ/s1600-h/1.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/_Ng3QbVQfLZ8/SOoNorE0EnI/AAAAAAAATJ0/aXiC3Ywj07I/s320-R/1.jpg" /></a></div>
+
+
+<p>At this point I would recomend watching the Demo that will pop up.&nbsp; After the demo you should see a rendering of the page you were looking at.&nbsp; Click add to basket.&nbsp; Then, try to add more pages that are similar, but might have different data.&nbsp; For my example this would be other people&#8217;s comics.&nbsp; Add these to the basket as well (you should try to have at least 4)<br /></p>
+
+<br />
+
+
+<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/_Ng3QbVQfLZ8/SOoOoUkvuhI/AAAAAAAATJ8/ktxQucSBFxY/s1600-h/2.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/_Ng3QbVQfLZ8/SOoOoUkvuhI/AAAAAAAATJ8/WgfrxcqVv4E/s320-R/2.jpg" /></a>&nbsp;</div>
+
+
+<div class="separator" style="clear: both; text-align: center;"></div>
+
+
+<p>Click next step, and the system will analyze your pages.&nbsp; You can watch another demo at this point.&nbsp; Now you can start selecting page elements.&nbsp; The more example pages you gave dapper, the smarter the element selecting will be.&nbsp; All I&#8217;m interested in is the title of the comic, which I&#8217;m going to use for the title of the RSS article, and the number of pulls it had, which I will use for the body of the article.<br /></p>
+
+<br />
+
+
+<div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/_Ng3QbVQfLZ8/SOoP7VrxYiI/AAAAAAAATKE/cZegoqyOGRg/s1600-h/3.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/_Ng3QbVQfLZ8/SOoP7VrxYiI/AAAAAAAATKE/Sa8E9LiQTBU/s320-R/3.jpg" /></a>&nbsp;</div>
+
+
+<div class="separator" style="clear: both; text-align: center;">&nbsp; </div>
+
+
+<p>After I have these selected, I move on to the next step. Here you can preview or save you dapp.&nbsp; It should have already grouped your 2 items into an RSS group for you.&nbsp; Exit the wizard to get the RSS feed and options.<br /></p>
+
+<br />
+
+
+<div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/_Ng3QbVQfLZ8/SOoRHt1LJRI/AAAAAAAATKM/byTDlv2rlaA/s1600-h/4.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://2.bp.blogspot.com/_Ng3QbVQfLZ8/SOoRHt1LJRI/AAAAAAAATKM/xd4VjsOeDIk/s320-R/4.jpg" /></a></div>
+
+
+<br />
+
+
+<br />
+
+
+<p>At this point, you have the RSS feed and are done with that portion.&nbsp; If you only need the address of the feed for yourself, there is no need to go any furthur.&nbsp; I wanted to make the input very easy for anyone to use the feed for any user on iFanboy.&nbsp; Enter Yahoo Pipes.&nbsp; I used a text input, string builder, and URL builder to create the URL I would need.&nbsp; Then sent this url into the dapp, and pulled back the RSS.&nbsp; The orriginal URL for the dapp was <a href="http://www.dapper.net/transform.php?dappName=iFanboyComicsfortheWeekRSS&amp;transformer=RSS&amp;extraArg_title=comic_title&amp;extraArg_description%5B%5D=pulls&amp;applyToUrl=http%3A%2F%2Fwww.ifanboy.com%2Fusers%2Fbroderboy%2Fcomics">http://www.dapper.net/transform.php?dappName=iFanboyComicsfortheWeekRSS&amp;transformer=RSS&amp;extraArg_title=comic_title&amp;extraArg_description[]=pulls&amp;applyToUrl=http%3A%2F%2Fwww.ifanboy.com%2Fusers%2Fbroderboy%2Fcomics</a>.&nbsp; While the &#8216;broderboy&#8217; could have been replaced directly in this url, it might not have been clear.&nbsp; The new Pipes URL makes it a little easier to see <a href="http://pipes.yahoo.com/pipes/pipe.run?_id=GjdOGm9_3RGeKVooPxJ3AQ&amp;_render=rss&amp;username=broderboy">http://pipes.yahoo.com/pipes/pipe.run?<em>id=GjdOGm9_3RGeKVooPxJ3AQ&amp;</em>render=rss&amp;username=broderboy</a>.<br /></p>
+
+<br />
+
+
+<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/_Ng3QbVQfLZ8/SOoTMSgH6JI/AAAAAAAATKU/fxS2mt00hNc/s1600-h/5.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/_Ng3QbVQfLZ8/SOoTMSgH6JI/AAAAAAAATKU/f6s1x0hbHF4/s320-R/5.jpg" /></a></div>
+
+
+<p>You can also merge multiple RSS feeds in the pipe using the Union node.<br /></p>
+
+<br />
+
+
+<p>Enjoy!</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Tim Broder</span></span>
+
+      
+
+
+
+
+
+  
+
+
+
+<time datetime="2008-10-06T12:55:00-04:00" pubdate  data-updated="true" >Oct 6<span>th</span>, 2008</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://timbroder.com/blog/2008/10/how-to-turn-any-webpage-into-rss-feed.html" data-via="" data-counturl="http://timbroder.com/blog/2008/10/how-to-turn-any-webpage-into-rss-feed.html" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+</div>
+
+    
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2011/04/jira-tabs-open-all-those-jiras-at-once.html">Jira Tabs: Open all those Jira's at once! </a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/04/google%25e2%2580%2599s-groupon-competitor-goes-live.html">Googles Groupon Competitor Goes Live</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/04/skynet.html">Skynet Becomes Self Aware Tonight</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/04/extending-a-magento-controller.html">Extending a Magento Controller</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/04/moving-gmail-gadgets-to-the-right-side.html">Moving Gmail Gadgets to the Right Side</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2011 - Tim Broder -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+
+
+</body>
+</html>
