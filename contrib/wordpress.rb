@@ -11,6 +11,7 @@ require 'iconv'
 # $ sudo gem install sequel
 # $ sudo gem install mysql -- --with-mysql-config=/usr/local/mysql/bin/mysql_config
 
+# ruby1.9 -r './wordpress.rb' -e 'Jekyll::WordPress.process()'
 
 module Jekyll
   module WordPress
@@ -27,9 +28,42 @@ module Jekyll
 				  inner join wp_terms tm on tm.term_id=tt.term_id  
 				  where tr.object_id=%d and tt.taxonomy = 'post_tag'";
 		
-		
+		def self.fix_tim_code(content, title)
+		  langs = ['php', 'python', 'xml', 'css', 'html', 'ruby']
+		  
+		  #fix urls
+		  content = content.gsub("http://timbroder.com/wp-content/", "/images/wp-content/")
+		  content = content.gsub("http://timbroder.com", "http://www.timbroder.com")
+		  
+		  #fix django templaetes so Liquid doesn't freak out
+		  content = content.gsub("{%", "{{ \"{%")
+      content = content.gsub("%}", "\" }}%}")
+      
+      #fix xml
+      content = content.gsub("&lt;", "<")
+      content = content.gsub("&gt;", ">")
+      
+      langs.each do |lang|
+        #search so we try* to not blow out to many </pre>
+        if(content =~ /<pre name="code" class="/) then
+          puts 'found'
+          content = content.gsub('<pre name="code" class="' + lang + '">', "``` " + lang + "\n")
+          #eh... probably going to mess some other things up, we'll see
+          content = content.gsub('</pre>', "``` \n")
+        end
+        
+        content = content.gsub('[' + lang + ']', "``` " + lang + "\n")
+        content = content.gsub('[/' + lang + ']', "```\n")
+      end
+      
+      #fix php
+      content = content.gsub("``` php\n", "``` php\n<?php\n")
+      
+		  return content
+		end
 				  
     def self.process()
+      remove_markdown = true
       gem('mysql')
       puts 'init'
       ic = Iconv.new('UTF-8//IGNORE', 'UTF-8')
@@ -48,6 +82,9 @@ module Jekyll
               slug = post[:post_name]
               date = post[:post_date]
               content = ic.iconv(post[:post_content] + ' ')[0..-2]
+              if remove_markdown
+                content = self.fix_tim_code(content, title.to_s)
+              end
               name = "%02d-%02d-%02d-%s.markdown" % [date.year, date.month, date.day, slug]
 
       		# Get associated taxonomy terms (tags)
@@ -65,7 +102,6 @@ module Jekyll
 
               # Get the relevant fields as a hash, delete empty fields and convert
               # to YAML for the header
-              puts title.to_s
               data = {
                 'layout' => 'post',
                 'title' => title.to_s,
@@ -73,7 +109,8 @@ module Jekyll
                 'wordpress_id' => post[:id],
                 'wordpress_url' => post[:guid],
                 'date' => date,
-                'comments' => true
+                'comments' => true,
+                'tags' => tags
                }.delete_if { |k,v| v.nil? || v == ''}.to_yaml
 
               # Write out the data and content to file
