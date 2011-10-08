@@ -4,6 +4,8 @@ title: A begining
 wordpress_url: http://beta.timbroder.com/2007/07/15/a-begining/
 date: 2007-07-15 18:33:00 -04:00
 comments: true
+tags: 
+- gpowered.net
 ---
 <p>I've been meaning to start this project for a while now so here it goes...<br />
 <br />

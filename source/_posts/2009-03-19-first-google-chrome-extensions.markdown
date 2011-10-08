@@ -4,6 +4,9 @@ title: First Google Chrome Extensions
 wordpress_url: http://beta.timbroder.com/2009/03/19/first-google-chrome-extensions/
 date: 2009-03-19 17:11:00 -04:00
 comments: true
+tags: 
+- chrome
+- greasemonkey
 ---
 Extensions <a href="http://dev.chromium.org/developers/design-documents/extensions/howto">are coming</a> for chrome.&nbsp;<br />
 <br />

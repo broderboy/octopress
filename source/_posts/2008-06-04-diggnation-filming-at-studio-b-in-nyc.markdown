@@ -4,6 +4,8 @@ title: Diggnation filming at Studio B in NYC tonight
 wordpress_url: http://beta.timbroder.com/2008/06/04/diggnation-filming-at-studio-b-in-nyc-tonight/
 date: 2008-06-04 11:36:00 -04:00
 comments: true
+tags: 
+- events
 ---
 Kevin Rose is filming Diggnation in Brooklyn tonight for <a href="http://www.internetweekny.com/">Internet Week</a>.  It starts at 6 I should be able to get out of work in time.  Anyone else going?<br /><br />
 

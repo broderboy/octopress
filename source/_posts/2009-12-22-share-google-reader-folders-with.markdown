@@ -4,6 +4,8 @@ title: Share Google Reader folders with friends
 wordpress_url: http://beta.timbroder.com/2009/12/22/share-google-reader-folders-with-friends/
 date: 2009-12-22 17:09:00 -05:00
 comments: true
+tags: []
+
 ---
 A quick rundown on how to share whole folders with friends so they can see what you are reading, there might be an easier way to do this but this was the quickest I found<br />
 <ol><li>Click explore</li>

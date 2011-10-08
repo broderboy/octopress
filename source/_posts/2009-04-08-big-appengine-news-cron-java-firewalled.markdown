@@ -4,6 +4,8 @@ title: "Big Appengine news: Cron, Java, Firewalled Data, DB Import"
 wordpress_url: http://beta.timbroder.com/2009/04/08/big-appengine-news-cron-java-firewalled-data-db-import/
 date: 2009-04-08 13:45:00 -04:00
 comments: true
+tags: 
+- appengine
 ---
 <a href="http://googleappengine.blogspot.com/2009/04/seriously-this-time-new-language-on-app.html">Java Support</a>: This was the first, and most popular <a href="http://code.google.com/p/googleappengine/issues/detail?id=1">request </a>in the bug tracker. Followed closely by PHP support.&nbsp; Google has merged the simplicity of appengine with the robustness of java, and added it to their <a href="http://code.google.com/eclipse">Eclipse plugin</a> to boot.<br />
 <br />

@@ -4,6 +4,9 @@ title: Digg and Facebook Heading to the Future of Web Apps expo
 wordpress_url: http://beta.timbroder.com/2008/09/30/digg-and-facebook-heading-to-the-future-of-web-apps-expo/
 date: 2008-09-30 14:17:00 -04:00
 comments: true
+tags: 
+- digg
+- facebook
 ---
 <a href="http://developers.facebook.com/news.php?blog=1&amp;story=157">This </a>sounds like a lot of fun, some good presentations (interesting topics and good presenters), a live <a href="http://revision3.com/diggnation/">Diggnation</a>, and I LOVE London.&nbsp; Wish I could go<br />
 <br />

@@ -4,6 +4,8 @@ title: Blogger resumes service
 wordpress_url: http://beta.timbroder.com/2007/08/22/blogger-resumes-service/
 date: 2007-08-22 14:52:00 -04:00
 comments: true
+tags: 
+- blogger
 ---
 Blogger was down this morning from a little after 9:30 until a few minutes ago, but now, all is well...<br /><br /><br />
 

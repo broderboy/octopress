@@ -4,6 +4,8 @@ title: Google hosting popular javascript libraries
 wordpress_url: http://beta.timbroder.com/2008/05/28/google-hosting-popular-javascript-libraries/
 date: 2008-05-28 16:04:00 -04:00
 comments: true
+tags: []
+
 ---
 I came across this yesterday looking for the <a href="http://mootools.net/">mootools</a> download link.  Google is hosting a bunch of the popular javascript libraries on their server for you.<br /><br />
 <br />
@@ -54,4 +56,4 @@ Example jQuery:
       });
     });
 </script>
-</pre>
+``` 

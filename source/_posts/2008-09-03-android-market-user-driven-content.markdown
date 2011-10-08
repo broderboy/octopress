@@ -4,6 +4,8 @@ title: "Android Market: a user-driven content distribution system"
 wordpress_url: http://beta.timbroder.com/2008/09/03/android-market-a-user-driven-content-distribution-system/
 date: 2008-09-03 14:31:00 -04:00
 comments: true
+tags: 
+- android
 ---
 <a href="http://android-developers.blogspot.com/2008/08/android-market-user-driven-content.html">Android Developers Blog: Android Market: a user-driven content distribution system</a><br /><br />
 

@@ -4,6 +4,9 @@ title: Social Badges
 wordpress_url: http://beta.timbroder.com/2008/06/20/social-badges/
 date: 2008-06-20 00:25:00 -04:00
 comments: true
+tags: 
+- gpowered.net
+- socialgraph
 ---
 So, for whatever reason. I never added my social network badges to this site.  I should have, a long time ago. Feel free to follow me on <a href="http://friendfeed.com/broderboy" rel="me">FriendFeed</a> or <a href="http://twitter.com/broderboy" rel="me">Twitter</a>, be my friend on <a href="http://www.facebook.com/profile.php?id=17500954" rel="me">Facebook</a> or <a href="http://www.linkedin.com/pub/5/749/644" rel="me">linkedin</a>, see what I've <a href="http://www.digg.com/users/timothybroder" rel="me">Dugg</a> or <a href="http://www.last.fm/user/broderboy/" rel="me">listened</a> to, take a look at my <a href="http://picasaweb.google.com/timothy.broder" rel="me">photos</a>, and more.  Will definitly be seeing how this effects my <a href="http://code.google.com/apis/socialgraph/">social graph</a><br /><br />
 

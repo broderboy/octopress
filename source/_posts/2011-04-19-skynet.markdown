@@ -4,6 +4,9 @@ title: Skynet Becomes Self Aware Tonight
 wordpress_url: http://timbroder.com/?p=918
 date: 2011-04-19 21:25:05 -04:00
 comments: true
+tags: 
+- terminator
+- skynet
 ---
 <h2>Terminator: The Sarah Connor Chronicles<a href="http://terminator.wikia.com/index.php?title=2011/04/21&amp;action=edit&amp;section=1"><img src="http://images1.wikia.nocookie.net/__cb35594/common/skins/common/blank.gif" alt="Edit Terminator: The Sarah Connor Chronicles section" /></a></h2>
 <ul>

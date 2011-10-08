@@ -4,6 +4,9 @@ title: Fixing Nvidia 8600 GT on Hardy Heron
 wordpress_url: http://beta.timbroder.com/2008/04/26/fixing-nvidia-8600-gt-on-hardy-heron/
 date: 2008-04-26 19:22:00 -04:00
 comments: true
+tags: 
+- howto
+- ubuntu
 ---
 After updating to Hardy I got a white screen of death upon rebooting.  After some research it turned out that this was more of an Nvidia driver issue rather then Ubuntu.  This may not have been the most correct way to fix it, but it worked for me.
 <ol>

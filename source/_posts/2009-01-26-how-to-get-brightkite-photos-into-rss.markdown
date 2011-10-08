@@ -4,8 +4,14 @@ title: How to get brightkite photos into an RSS feed (to post to a blog)
 wordpress_url: http://beta.timbroder.com/2009/01/26/how-to-get-brightkite-photos-into-an-rss-feed-to-post-to-a-blog/
 date: 2009-01-26 15:11:00 -05:00
 comments: true
+tags: 
+- howto
+- wordpress
+- brightkite
+- timbroder.com
+- yahoo pipes
 ---
-I started another <a href="http://timbroder.com">blog </a>so I have a place to rant about comics or movies or whatever else I need to get off my chest, and I needed an excuse to play with wordpress (something I've been wanting to do for a while).  I plan on posting how I did certain things on that blog on gPowered.
+I started another <a href="http://www.timbroder.com">blog </a>so I have a place to rant about comics or movies or whatever else I need to get off my chest, and I needed an excuse to play with wordpress (something I've been wanting to do for a while).  I plan on posting how I did certain things on that blog on gPowered.
 
 
 

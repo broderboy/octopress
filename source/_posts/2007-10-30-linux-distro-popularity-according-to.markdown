@@ -4,6 +4,8 @@ title: Linux Distro Popularity According to Google
 wordpress_url: http://beta.timbroder.com/2007/10/30/linux-distro-popularity-according-to-google/
 date: 2007-10-30 02:30:00 -04:00
 comments: true
+tags: 
+- ubuntu
 ---
 Over the years I've used a variety of Linux Distros: Mandrake, Red Hat, FreeBSD, Fedora, Gentoo, and Ubuntu.  <a href="http://distrowatch.com/">Distrowatch</a> keeps track of everything we need to know about the distros, and recently there has been an enormous push in desktop Linux thanks to Dell putting Ubuntu on desktops and <a href="http://www.compiz-fusion.org">Compiz-Fusion</a> bringing snazzy eye candy to even low end machines.  Distrowatch gives some pretty decent stats on the main Distros but for a while I've wanted to know how Google sees their popularity; mainly by how many pages mention specific distros.  <br /><br />
 

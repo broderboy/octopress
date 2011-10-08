@@ -4,6 +4,9 @@ title: Picasa Web Api updates
 wordpress_url: http://beta.timbroder.com/2007/07/24/picasa-web-api-updates/
 date: 2007-07-24 02:17:00 -04:00
 comments: true
+tags: 
+- gdata
+- picasa web
 ---
 <a href="http://googledataapis.blogspot.com/2007/07/picasa-web-albums-adds-new-api-features.html">Google Data Api's</a> posted a few updates today, a few of which I've really been looking forward to; Community Search, Retrieving a user's recently uploaded photos, Retrieving recently added comments for a particular user, Searching a user's photos, Filtering by tag, Uploading non-JPEG photos, <span style="font-weight: bold;">Downloading the original photo.</span>
 <br /><br />

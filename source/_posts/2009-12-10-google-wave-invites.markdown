@@ -4,6 +4,8 @@ title: Google Wave Invites
 wordpress_url: http://beta.timbroder.com/2009/12/10/google-wave-invites/
 date: 2009-12-10 15:01:00 -05:00
 comments: true
+tags: []
+
 ---
 I have quite a few Google Wave invites left, if you would like one <a href="mailto:timothy.broder@gmail.com">email</a> me, <a href="http://www.twitter.com/">@broderboy</a> me, or leave a comment below.&nbsp; In all cases, please leave the email address to send the invite to.<br />
 <br />

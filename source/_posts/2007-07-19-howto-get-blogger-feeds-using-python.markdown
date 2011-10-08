@@ -4,6 +4,11 @@ title: "HOWTO: Displaying Blogger feeds with Python"
 wordpress_url: http://beta.timbroder.com/2007/07/19/howto-displaying-blogger-feeds-with-python/
 date: 2007-07-19 03:07:00 -04:00
 comments: true
+tags: 
+- blogger
+- gdata
+- python
+- howto
 ---
 This first HOWTO is going to cover how I did the basic structure of the posts section of gPowered: pulling from blogger. 
 The main functions we'll need are to show a range of posts, a single post, and a function to get the total number of posts that are in the blog.
@@ -16,7 +21,8 @@ To start out you'll have to grab the following modules.<br />
 <br />
 We then import the parts the we'll need (you can ignore the Django part for your own methods):<br />
 
-<br /><pre name="code" class="python">
+<br />``` python
+
 from Django.shortcuts import render_to_response
 
 from gdata import service
@@ -26,34 +32,40 @@ import getopt
 import sys
 
 from mx import DateTime
-</pre><br />
+``` 
+<br />
 
 One of the first things we're going to have to do is authenticate with google services.
 There are two ways to do this: <a href="http://code.google.com/apis/blogger/developers_guide_python.html#auth_sub">AuthSub proxy authentication</a> which has a user login using their own credentials, and
  <a href="http://code.google.com/apis/blogger/developers_guide_python.html#client_login"> ClientLogin username/password authentication</a> where you send a username and password.  We will be using ClientLogin.
  First off, set your login credentials to use later.<br />
-<br /><pre name="code" class="python">
+<br />``` python
+
 #login info
 user = 'timothy.broder@gmail.com'
 password = '********'
-</pre><br />
+``` 
+<br />
 
 Then we start setting up our call to the service.
 <br />
-<br /><pre name="code" class="python">
+<br />``` python
+
 #set up service
 blogger_service = service.GDataService(user, password)
 blogger_service.source = 'gpowered'
 blogger_service.service = 'blogger'
 blogger_service.server = 'www.blogger.com'
 blogger_service.ProgrammaticLogin()
-</pre><br />
+``` 
+<br />
 
 For more info see the <a href="http://code.google.com/apis/blogger/developers_guide_python.html">blogger developer's guide with python</a> or the <a href="http://code.google.com/apis/accounts/Authentication.html">Google Account Authentication documentation</a><br />
 After we have authenticated with Google we need to start building up our query to <a href="http://code.google.com/apis/gdata/">GData</a>, which will return as an ElementTree of data.  The first thing you'll need is your blog's id. <br />
 You can use the function in the dev guide to help you with this if you don't already know it.
 <br />
-<br /><pre name="code" class="python">
+<br />``` python
+
 def PrintUserBlogTitles(blogger_service):
   query = service.Query()
   query.feed = '/feeds/default/blogs'
@@ -62,20 +74,24 @@ def PrintUserBlogTitles(blogger_service):
   print feed.title.text
   for entry in feed.entry:
     print "\t" + entry.title.text
-</pre><br />
+``` 
+<br />
 
 
 After you have the blog id we can start working on the query
 <br />
-<br /><pre name="code" class="python">
+<br />``` python
+
 blog_id = 413573351281770670
 feed_url = '/feeds/%s/posts/default' % str(blog_id)
 query = service.Query()
 query.feed = feed_url
-</pre><br />
+``` 
+<br />
 
 The below function returns the total number of posts that are in the feed.  We can get a small response by sending 0 for the max results.  Below is the function and the small response we get from it.<br />
-<br /><pre name="code" class="python">
+<br />``` python
+
 #get the total number of posts for this feed
 def get_total(query):
  #query for no posts
@@ -85,8 +101,10 @@ def get_total(query):
  #get back entryless feed
  feed = blogger_service.Get(query.ToUri()) 
  return int(feed.total_results.text)
-</pre><br />
-<br /><pre name="code" class="xml">
+``` 
+<br />
+<br />``` xml
+
 <ns0:feed xmlns:ns0="http://www.w3.org/2005/Atom">
  <ns1:totalresults xmlns:ns1="http://a9.com/-/spec/opensearchrss/1.0/">1</ns1:totalresults>
  <ns1:itemsperpage xmlns:ns1="http://a9.com/-/spec/opensearchrss/1.0/">0</ns1:itemsperpage>
@@ -101,13 +119,15 @@ def get_total(query):
  <ns0:title type="text">gPowered</ns0:title>
  <ns0:updated>2007-07-18T10:55:06.728-05:00</ns0:updated>
 </ns0:feed>
-</pre><br />
+``` 
+<br />
 
 So we get the total number of posts and then we can start pulling data.  Lets make a generic function, PostFrom, that can be used to show multiple posts, or just single ones, depending on what you pass to it.  The start number that is passed to
  PostFrom has been set to the first post in the blog is considered to have an id of 1 and the latest post is the same as total_posts.  This is useful so if viewers want to bookmark the page they are looking at, the post that is being displayed will not change.
 The following are the different functions that will make use of it.
 <br />
-<br /><pre name="code" class="python">
+<br />``` python
+
 #show latest posts
 def Posts(request):
  return ListPosts(request, total_posts)
@@ -127,12 +147,14 @@ def PostFrom(request, start, count):
  query.max_results = str(count)
  query.start_index = str(start)
  feed = blogger_service.Get(query.ToUri())
-</pre><br />
+``` 
+<br />
 
 now we have all the data we need in the feed variable.  Its been turned into an element tree so we don't have to worry about XML parsing here.  Every node has become an objects and lists.  Objects for single nodes(title), and lists for where there are multiple nodes of the same name (entry, link)
 At this stage I play with the data a little so it's easier to use in my Django template.
 <br />
-<br /><pre name="code" class="python">
+<br />``` python
+
  #normalize data for output
  for entry in feed.entry:
   #get link for template
@@ -146,10 +168,12 @@ At this stage I play with the data a little so it's easier to use in my Django t
   dt = DateTime.ISO.ParseDateTimeUTC(entry.published.text)
   entry.my_date = dt.strftime('%m/%d/%Y')
   entry.my_time = dt.strftime('%I:%M %p') 
-</pre><br />
+``` 
+<br />
 
 Of course we're going to need next and previous buttons as well.  The way we've set up the math with total_posts and the start number, we only have to increment or decrement these by count (the number of posts to display on a page).  I also set part of the link, as well as the page title, that I will use in my template.<br />
-<br /><pre name="code" class="python">
+<br />``` python
+
  prev = total_posts - (start - count) + 1
  if prev > total_posts:
   prev = None
@@ -167,11 +191,14 @@ Of course we're going to need next and previous buttons as well.  The way we've 
  else:
   link = 'posts'
   title = 'home'
-</pre><br />
+``` 
+<br />
 
 The final part of the function is a return to the Django framework to populate my template.  I'm going to get into the template more in the next post, but you now have all the information you need stored.
 <br />
-<br /></pre><pre name="code" class="python">
+<br />``` 
+``` python
+
  return render_to_response('posts/index.html', {
   'entries': feed.entry,
   'title': title,
@@ -181,45 +208,50 @@ The final part of the function is a return to the Django framework to populate m
   'link': link,
   'tab_home': True,
   })
-</pre><br />
+``` 
+<br />
 
 To the template!<br />
 <br />
 The first part consists of displaying the post itself, along with its relevant information
 <br />
-<br /><pre name="code" class="html">
-{% for entry in entries %}
+<br />``` html
 
-  &lt;h2&gt;&lt;a href="/post/{{ entry.my_id }}"&gt;{{ entry.title.text }}&lt;/h2&gt;&lt;/a&gt;
+{{ "{% for entry in entries " }}%}
+
+  <h2><a href="/post/{{ entry.my_id }}">{{ entry.title.text }}</h2></a>
   {{ entry.content.text }}
-  &lt;p&gt;Posted by {% for auth in entry.author %}{{ auth.name.text }}{% if not forloop.last %}, {% endif %}{% endfor %} 
-  on {{ entry.my_date }} at {{ entry.my_time }}&lt;/p&gt;
-  {% if entry.category %}&lt;p&gt;Labels: {% for cat in entry.category %}
-   &lt;a href="{{ tag_link }}{{ cat.term }}"&gt;{{ cat.term }}&lt;/a&gt;
-   {% if not forloop.last %}, {% endif %}
-   {% endfor %}&lt;/p&gt;{% endif %}&lt;p&gt;&lt;a href="{{ entry.my_link }}"&gt;More...&lt;/a&gt;&lt;/p&gt;
+  <p>Posted by {{ "{% for auth in entry.author " }}%}{{ auth.name.text }}{{ "{% if not forloop.last " }}%}, {{ "{% endif " }}%}{{ "{% endfor " }}%} 
+  on {{ entry.my_date }} at {{ entry.my_time }}</p>
+  {{ "{% if entry.category " }}%}<p>Labels: {{ "{% for cat in entry.category " }}%}
+   <a href="{{ tag_link }}{{ cat.term }}">{{ cat.term }}</a>
+   {{ "{% if not forloop.last " }}%}, {{ "{% endif " }}%}
+   {{ "{% endfor " }}%}</p>{{ "{% endif " }}%}<p><a href="{{ entry.my_link }}">More...</a></p>
    
-{% endfor %}
-</pre><br />
+{{ "{% endfor " }}%}
+``` 
+<br />
 
 And the second part handles the prev and next links
 <br />
-<br /><pre name="code" class="html">
+<br />``` html
+
 <br />
 <div class="nav">
-{% if prev %}
+{{ "{% if prev " }}%}
 <a href="/{{ link }}/{{ prev }}">prev</a>
-{% else %}
+{{ "{% else " }}%}
 &nbsp;&nbsp;&nbsp;&nbsp;
-{% endif %}
+{{ "{% endif " }}%}
 &nbsp;&nbsp;&nbsp;&nbsp;
-{% if next %}
+{{ "{% if next " }}%}
 <a href="/{{ link }}/{{ next }}">next</a>
-{% else %}
+{{ "{% else " }}%}
 &nbsp;&nbsp;&nbsp;&nbsp;
-{% endif %}
+{{ "{% endif " }}%}
 </div>
-{% include 'bottom.html' %}
-</pre><br />
+{{ "{% include 'bottom.html' " }}%}
+``` 
+<br />
 
 That's all for now. A working example is the <a href="http://gpowered.net/g/">gPowered.net</a> site I'm putting up.  All posts on there are getting pulled from this blog.  I'm going to get into tags and comments next time, as well as javascript and php versions. Stay tuned!

@@ -4,6 +4,8 @@ title: Twitter enters the Porn industry
 wordpress_url: http://beta.timbroder.com/2008/09/23/twitter-enters-the-porn-industry/
 date: 2008-09-23 14:23:00 -04:00
 comments: true
+tags: 
+- twitter
 ---
 Just got this at work, I must have missed the memo... <br />
 <br />

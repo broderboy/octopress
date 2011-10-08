@@ -4,6 +4,9 @@ title: Gadgets now on Google Calendar!
 wordpress_url: http://beta.timbroder.com/2007/08/22/gadgets-now-on-google-calendar/
 date: 2007-08-22 02:52:00 -04:00
 comments: true
+tags: 
+- calendar
+- gadgets
 ---
 Google Gadgets can now be added to your calendar.  Previously the only gadgets I had on my calendar were Google Doodles, Weather, phases of the moon, and PicasaWeb Photo of the day.  Now just about anything is going to be possible.  I briefly played around with it this morning and added horoscopes and Sudoku to my calendar.<br /><br />
 

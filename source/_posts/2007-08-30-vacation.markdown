@@ -4,6 +4,8 @@ title: Vacation!
 wordpress_url: http://beta.timbroder.com/2007/08/30/vacation/
 date: 2007-08-30 20:21:00 -04:00
 comments: true
+tags: []
+
 ---
 Hi All,
 <br /><br />

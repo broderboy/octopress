@@ -4,6 +4,8 @@ title: New Digg reverse paywall coming
 wordpress_url: http://timbroder.com/?p=897
 date: 2011-04-06 13:45:21 -04:00
 comments: true
+tags: 
+- digg
 ---
 Interesting: <a href="http://about.digg.com/blog/cha-ching" target="_blank">http://about.digg.com/blog/cha-ching</a>
 <blockquote><em>Welcome to the future of killing time on the internet, and  getting paid for it: Digg is implementing a reverse pay wall! We believe  this will greatly enhance the Digg experience. Early reaction from test  users has been great. Can Duruk, developer at Digg, sums it up well:</em>

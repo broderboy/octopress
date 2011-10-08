@@ -4,6 +4,8 @@ title: Mashup of the Week
 wordpress_url: http://beta.timbroder.com/2007/10/23/mashup-of-the-week/
 date: 2007-10-23 22:16:00 -04:00
 comments: true
+tags: 
+- mashups
 ---
 It's been a little more then a week... Chalk it up to quite a bit of traveling. I'm around now until December, I promise ;)<br /><br />
 

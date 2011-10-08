@@ -4,27 +4,40 @@ title: "HOWTO: Displaying Blogger feeds with PHP"
 wordpress_url: http://beta.timbroder.com/2007/08/05/howto-displaying-blogger-feeds-with-php/
 date: 2007-08-05 22:44:00 -04:00
 comments: true
+tags: 
+- blogger
+- gdata
+- howto
+- php
 ---
 This HOWTO is going to follow the basic structure of the <a href="http://gpowered.net/g/post/2/">Python</a> one.
 <br /><br />
 To start out you'll have to grab the <a href="http://framework.zend.com/download/gdata">Zend Google data Client Library</a> and then set the include_path so you can use it<br />
-<pre name="code" class="php">
+``` php
+<?php
+
 ini_set("include_path", ".:../:./include:../include:/home/gpowered/webapps/php/includes/ZendGdata-1.0.1/library");
-</pre>
+``` 
+
 <br />
 We then import the parts the we'll need:<br />
 
-<br /><pre name="code" class="php">
+<br />``` php
+<?php
+
 require_once 'Zend/Loader.php';
 Zend_Loader::loadClass('Zend_Gdata');
 Zend_Loader::loadClass('Zend_Gdata_Query'); 
 Zend_Loader::loadClass('Zend_Gdata_ClientLogin');
-</pre><br />
+``` 
+<br />
 
 One of the first things we're going to have to do is authenticate with google services.
 There are two ways to do this: <a href="http://code.google.com/apis/blogger/developers_guide_php.html#auth_sub">AuthSub proxy authentication</a> which has a user login using their own credentials, and
  <a href="http://code.google.com/apis/blogger/developers_guide_php.html#client_login"> ClientLogin username/password authentication</a> where you send a username and password.  We will be using ClientLogin.  I built a small class called gPoweredBlogger to hold the different parts I will need for this example.<br /><br />
-<pre name="code" class="php">
+``` php
+<?php
+
 class gPoweredBlogger{
  private $user;// = 'timothy.broder';
  private $pass;// = '**************';
@@ -41,11 +54,14 @@ class gPoweredBlogger{
  private $total_posts;
  
  public $output;
-</pre>
+``` 
+
 
 Then we start setting up our call to the service.
 <br />
-<br /><pre name="code" class="php">
+<br />``` php
+<?php
+
  public function __construct($user, $pass, $blog_id){
   $this->user = $user;
   $this->pass = $pass;
@@ -60,7 +76,8 @@ Then we start setting up our call to the service.
   $this->query = new Zend_Gdata_Query($this->uri);
   $this->total_posts = $this->get_total($this->query);
  }
-</pre><br />
+``` 
+<br />
 
 For more info see the <a href="http://code.google.com/apis/blogger/developers_guide_php.html">blogger developer's guide with php</a> or the <a href="http://code.google.com/apis/accounts/Authentication.html">Google Account Authentication documentation</a><br />
 After we have authenticated with Google we need to start building up our query to <a href="http://code.google.com/apis/gdata/">GData</a>.  The first thing you'll need is your blog's id. <br />
@@ -69,7 +86,9 @@ You can use the function in the dev guide to help you with this if you don't alr
 
 
 Like the Python version, the below function returns the total number of posts that are in the feed.  We can get a small response by sending 0 for the max results.  Below is the function and the small response we get from it.<br />
-<br /><pre name="code" class="php">
+<br />``` php
+<?php
+
  private function get_total($query){
   //query for no posts
   $this->query->setParam('max-results', '0');
@@ -79,8 +98,10 @@ Like the Python version, the below function returns the total number of posts th
   $feed = $this->gdClient->getFeed($this->query);
   return $feed->totalResults->text;
  }
-</pre><br />
-<br /><pre name="code" class="xml">
+``` 
+<br />
+<br />``` xml
+
 <ns0:feed xmlns:ns0="http://www.w3.org/2005/Atom">
  <ns1:totalresults xmlns:ns1="http://a9.com/-/spec/opensearchrss/1.0/">5</ns1:totalresults>
  <ns1:itemsperpage xmlns:ns1="http://a9.com/-/spec/opensearchrss/1.0/">0</ns1:itemsperpage>
@@ -95,13 +116,16 @@ Like the Python version, the below function returns the total number of posts th
  <ns0:title type="text">gPowered</ns0:title>
  <ns0:updated>2007-07-18T10:55:06.728-05:00</ns0:updated>
 </ns0:feed>
-</pre><br />
+``` 
+<br />
 
 So we get the total number of posts and then we can start pulling data.  Lets make a generic function, PostFrom, that can be used to show multiple posts, or just single ones, depending on what you pass to it.  The start number that is passed to
  PostFrom has been set to the first post in the blog is considered to have an id of 1 and the latest post is the same as total_posts.  This is useful so if viewers want to bookmark the page they are looking at, the post that is being displayed will not change.
 The following are the different functions that will make use of it.
 <br />
-<br /><pre name="code" class="php">
+<br />``` php
+<?php
+
  //show latest posts
  public function Posts(){
   return $this->ListPosts($this->total_posts);
@@ -125,12 +149,15 @@ The following are the different functions that will make use of it.
   $this->query->setParam('max-results', $count);
   $this->query->setParam('start-index', $start);
   $feed = $this->gdClient->getFeed($this->query);
-</pre><br />
+``` 
+<br />
 
 Now we have all the data we need in the feed variable.  Its been turned into an object so we don't have to worry about XML parsing here.  Every node has become an objects and lists.  Objects for single nodes(title), and lists for where there are multiple nodes of the same name (entry, link)
 
 <br />
-<br /><pre name="code" class="php">
+<br />``` php
+<?php
+
   //for links
   $curr_id = $this->total_posts - $start + 1;
   
@@ -141,10 +168,13 @@ Now we have all the data we need in the feed variable.  Its been turned into an 
    $curr_id -= 1;
 
   }
-</pre><br />
+``` 
+<br />
 
 Of course we're going to need next and previous buttons as well.  The way we've set up the math with total_posts and the start number, we only have to increment or decrement these by count (the number of posts to display on a page).  I also set part of the link, as well as the page title, that I will use below in the HTML.<br />
-<br /><pre name="code" class="php">
+<br />``` php
+<?php
+
   $prev = $this->total_posts - ($start - $count) + 1;
   if($prev > $total_posts){
    $prev = null;
@@ -166,10 +196,13 @@ Of course we're going to need next and previous buttons as well.  The way we've 
    $link = 'posts';
    $title = 'home';
   }
-</pre><br />
+``` 
+<br />
 
 The final part is to make a quick object that we can use in the HTML to output everything
-<br /><pre name="code" class="php">
+<br />``` php
+<?php
+
   $this->output = new Output($feed->entries, $title, $prev, $next, $link);
  }
 } 
@@ -188,31 +221,37 @@ class Output{
   $this->link=$link;
  }
 }
-</pre><br />
+``` 
+<br />
 
 To the HTML!<br />
 <br />
 The first part consists of displaying the post itself, along with its relevant information. So lets built up our objects
 <br />
-<br /><pre name="code" class="php">
+<br />``` php
+<?php
+
 $blog = new gPoweredBlogger('timothy.broder', '*************', '413573351281770670');
 $blog->Posts();
 
 $output = $blog->output;
-</pre><br />
+``` 
+<br />
 
 Below all the php we can run through out output object and display the posts
 <br />
-<br /><pre name="code" class="html">
-&lt;? foreach($output-&gt;entries as $entry){ ?&gt;
-     &lt;h2&gt;&lt;a href="/post/&lt;? echo $entry-&gt;my_id ?&gt;"&gt;&lt;? echo $entry-&gt;title-&gt;text ?&gt;&lt;/h2&gt;&lt;/a&gt;
-     &lt;? echo $entry-&gt;content-&gt;text;
-     $datetime = strtotime(substr($entry-&gt;published, 0, 10) . ' ' . substr($entry-&gt;published, 11, 8 ));
-     ?&gt;
-     &lt;p&gt;Posted by &lt;? echo $entry-&gt;author[0]-&gt;name-&gt;text ?&gt; on &lt;? echo date("m/d/Y",$datetime) ?&gt; at &lt;? echo date("g:i a",$datetime) ?&gt;&lt;/p&gt;
+<br />``` html
+
+<? foreach($output->entries as $entry){ ?>
+     <h2><a href="/post/<? echo $entry->my_id ?>"><? echo $entry->title->text ?></h2></a>
+     <? echo $entry->content->text;
+     $datetime = strtotime(substr($entry->published, 0, 10) . ' ' . substr($entry->published, 11, 8 ));
+     ?>
+     <p>Posted by <? echo $entry->author[0]->name->text ?> on <? echo date("m/d/Y",$datetime) ?> at <? echo date("g:i a",$datetime) ?></p>
      
-      &lt;div id="divider"&gt;&lt;/div&gt;
-      &lt;?}?&gt;
-</pre><br />
+      <div id="divider"></div>
+      <?}?>
+``` 
+<br />
 
 That's all for now. A working example is <a href="http://gpowered.net/php/blogger.php">here</a>

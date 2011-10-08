@@ -4,6 +4,8 @@ title: Bring on the GDrive!
 wordpress_url: http://beta.timbroder.com/2007/09/20/bring-on-the-gdrive/
 date: 2007-09-20 01:07:00 -04:00
 comments: true
+tags: 
+- gdrive
 ---
 Do you want the GDrive?  I know I do.  Rumors have been flying around for almost 2 years about this thing, its been the brunt of an April Fool's joke, complete with official announcement and a Google Group (see below).  Googlers use it, and if it ever comes out, it would change the way both home and corporate users think about file storage.  Google is almost there, almost.  When they integrate Gears into Docs they'll be one step closer.  They would just need a few more features on the main Docs UI (bulk file upload, share files right from there instead of having to publish from within the document) and allow for any file type. <br /><br />
 

@@ -4,6 +4,8 @@ title: Codeless Embedded Maps
 wordpress_url: http://beta.timbroder.com/2007/08/29/codeless-embedded-maps/
 date: 2007-08-29 03:42:00 -04:00
 comments: true
+tags: []
+
 ---
 Google Maps released <a href="http://google-latlong.blogspot.com/2007/08/youtube-style-embeddable-maps_21.html">Embeddable Maps</a>.  It's as easy as embedding youtube
 videos.  All you have to do is create your map, and then under the "Link

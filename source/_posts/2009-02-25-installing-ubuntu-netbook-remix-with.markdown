@@ -4,6 +4,10 @@ title: Installing Ubuntu Netbook Remix (with Jaunty) on an MSI Wind
 wordpress_url: http://beta.timbroder.com/2009/02/25/installing-ubuntu-netbook-remix-with-jaunty-on-an-msi-wind/
 date: 2009-02-25 20:51:00 -05:00
 comments: true
+tags: 
+- howto
+- ubuntu
+- netbook
 ---
 I recently picked up a MSI Wind Netbook and love the damn thing.  <a href="http://www.canonical.com/projects/ubuntu/unr">Ubuntu Netbook Remix</a> brings in a great UI which makes navigating on the small screen much easier.I used Ubuntu Jaunty Jackalope Alpha 4 as the base install, mainly because I didn't want to go through the trouble of converting my ext3 partitions to ext4 when it comes out on April 23rd, and the driver support is more complete.&nbsp; I haven't had many problems with it aside from a few random firefox crashes.<br />
 <br />
@@ -17,7 +21,7 @@ I recently picked up a MSI Wind Netbook and love the damn thing.  <a href="http:
 <li> burn the image to a cd<br />
 </li>
 <li>Boot to the cd, do not install, load the demo OS</li>
-<li>click System-&gt;Administration-&gt;Create a USB startup disk</li>
+<li>click System->Administration->Create a USB startup disk</li>
 <li>point it to either the cd in your drive, or the iso</li>
 <li>point to the correct USB stick</li>
 <li>the rest of the settings can stay default</li>
@@ -43,10 +47,10 @@ deb-src http://ppa.launchpad.net/netbook-remix-team/ubuntu intrepid main</li>
 sudo apt-get install window-picker-applet <br />
 sudo apt-get install maximus <br />
 sudo apt-get install human-netbook-theme&nbsp;</li>
-<li>Select the "Human Netbook Theme" in System Preferences&gt;Apperance </li>
-<li>go into System Preferences-&gt; sessions-&gt;startup programs and confirm that "Maximus" and "window-picker-applet" are thre<br />
+<li>Select the "Human Netbook Theme" in System Preferences>Apperance </li>
+<li>go into System Preferences-> sessions->startup programs and confirm that "Maximus" and "window-picker-applet" are thre<br />
 </li>
-<li><b>Disable Compiz Effects</b> System Preferences-&gt;Appearance-&gt;None<br />
+<li><b>Disable Compiz Effects</b> System Preferences->Appearance->None<br />
 <br />
 This is what is required to get netbook remix running, I continued with the following to tweak it some more<br />
 &nbsp;</li>
@@ -55,7 +59,7 @@ This is what is required to get netbook remix running, I continued with the foll
 <li>Delete all the applets on the top panel by right clicking on them</li>
 <li>Add applets to the top panel so it ends up like:<br />
 Window Picker Applet | Trash Can |Notification Area | MixerApplet | Clock</li>
-<li>I also made alt+q the hotkey to show the desktop, makes navigating to it faster. Another option is the show desktop applet button that can be added to the top bar.&nbsp; Preferences-&gt;keyboard shortcuts-&gt;"Hide all normal windows....."<br />
+<li>I also made alt+q the hotkey to show the desktop, makes navigating to it faster. Another option is the show desktop applet button that can be added to the top bar.&nbsp; Preferences->keyboard shortcuts->"Hide all normal windows....."<br />
 <br />
 More info is available <a href="http://wiki.msiwind.net/index.php/Ubuntu_8.04_Hardy_Heron">here</a>.<br />
 </li>

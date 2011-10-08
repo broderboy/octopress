@@ -4,6 +4,8 @@ title: My picks for the 2011 Oscars
 wordpress_url: http://timbroder.com/?p=786
 date: 2011-01-25 16:24:40 -05:00
 comments: true
+tags: []
+
 ---
 <h2>Best Supporting Actress</h2>
 Amy Adams, <em>The Fighter</em>

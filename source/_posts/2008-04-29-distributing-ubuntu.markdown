@@ -4,6 +4,8 @@ title: Distributing Ubuntu
 wordpress_url: http://beta.timbroder.com/2008/04/29/distributing-ubuntu/
 date: 2008-04-29 20:39:00 -04:00
 comments: true
+tags: 
+- ubuntu
 ---
 ... is much better then Windows ;-)<br /><br />
 

@@ -4,6 +4,8 @@ title: Google Overheard in New York
 wordpress_url: http://beta.timbroder.com/2007/10/19/google-overheard-in-new-york/
 date: 2007-10-19 00:42:00 -04:00
 comments: true
+tags: []
+
 ---
 If you haven't heard about <a href="http://www.overheardinnewyork.com">Overheard in New York</a> ( OHNY ), or don't subscribe to it, I can't recommend it more.  It's absolutely hilarious.  It's been around for a while and is constantly updated with a dozen or so quotes a day that people hear while walking / riding around New York City.  You don't have to live in the city to enjoy it, though you might not get all of the humor.  I used <a href="http://gpowered.blogspot.com/2007/09/google-reader-adds-search-box.html">Google Reader Search</a> to go through the feed looking for Google references.  Here are a few, note: there were a lot more but not all were appropriate for all audiences.<br /><br />
 

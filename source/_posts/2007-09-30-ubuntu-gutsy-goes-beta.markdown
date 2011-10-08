@@ -4,6 +4,8 @@ title: Ubuntu Gutsy Goes Beta
 wordpress_url: http://beta.timbroder.com/2007/09/30/ubuntu-gutsy-goes-beta/
 date: 2007-09-30 04:59:00 -04:00
 comments: true
+tags: 
+- ubuntu
 ---
 Ubuntu Gutsy Gibbon has gone beta and is on track for its October 18th Release.  So, if you haven't been using it since tribe 2 like me, and want to upgrade from Fiesty Fawn, follow the below steps.
 <br /><br />

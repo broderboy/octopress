@@ -4,6 +4,8 @@ title: "Google Mashup Editor Blog: New Stuff - 10/4 Feature Release"
 wordpress_url: http://beta.timbroder.com/2007/10/11/google-mashup-editor-blog-new-stuff-104-feature-release/
 date: 2007-10-11 01:43:00 -04:00
 comments: true
+tags: 
+- gme
 ---
 <a href="http://googlemashupeditor.blogspot.com/2007/10/new-stuff-104-feature-release.html">Google Mashup Editor Blog: New Stuff - 10/4 Feature Release</a>
 <br /><br />

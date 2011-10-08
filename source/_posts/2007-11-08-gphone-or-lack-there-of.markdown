@@ -4,6 +4,8 @@ title: gPhone, or lack there of
 wordpress_url: http://beta.timbroder.com/2007/11/08/gphone-or-lack-there-of/
 date: 2007-11-08 01:09:00 -05:00
 comments: true
+tags: 
+- android
 ---
 To be honest, when I heard that Google was going to announce whatever it is they have been working on with a "gPhone" I was really excited.  The announcement of Android, their new open mobile platform is cool and all, but I was a little disappointed.  Granted thats because might have been expecting something as cool as the iPhone, or that I desperately need a new phone.  I've been following the <a href="http://www.openmoko.com/">openmoko</a> project and its going to be intersting how Android compares to it.  
 

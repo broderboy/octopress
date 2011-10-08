@@ -4,6 +4,8 @@ title: Use Google Voice with your existing number
 wordpress_url: http://beta.timbroder.com/2009/10/27/use-google-voice-with-your-existing-number/
 date: 2009-10-27 14:17:00 -04:00
 comments: true
+tags: []
+
 ---
 WOOHOO!!!!  It's working on my verizon blackberry!<br /><br />
 

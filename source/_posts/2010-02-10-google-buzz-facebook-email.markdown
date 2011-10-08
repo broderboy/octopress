@@ -4,6 +4,8 @@ title: Google Buzz? Facebook Email?
 wordpress_url: http://beta.timbroder.com/2010/02/10/google-buzz-facebook-email/
 date: 2010-02-10 16:55:00 -05:00
 comments: true
+tags: []
+
 ---
 <a href="http://www.google.com/buzz">Google Buzz</a> quetly came out, adds friendfeed like functionality to gmail<br />
 <br />

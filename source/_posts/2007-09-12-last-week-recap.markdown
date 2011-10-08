@@ -4,6 +4,8 @@ title: Last week recap
 wordpress_url: http://beta.timbroder.com/2007/09/12/last-week-recap/
 date: 2007-09-12 01:24:00 -04:00
 comments: true
+tags: []
+
 ---
 These are just a few highlights from while I was gone...<br /><br />
 

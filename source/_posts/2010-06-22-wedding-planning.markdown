@@ -4,6 +4,8 @@ title: Wedding Planning
 wordpress_url: http://timbroder.com/?p=545
 date: 2010-06-22 21:39:41 -04:00
 comments: true
+tags: []
+
 ---
 Tim:  aside from not being a buffet, the food looks redic
 Tim: also, they are using joomla for their site

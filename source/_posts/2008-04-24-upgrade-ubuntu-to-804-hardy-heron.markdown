@@ -4,6 +4,9 @@ title: Upgrade Ubuntu to 8.04 Hardy Heron
 wordpress_url: http://beta.timbroder.com/2008/04/24/upgrade-ubuntu-to-8-04-hardy-heron/
 date: 2008-04-24 14:09:00 -04:00
 comments: true
+tags: 
+- howto
+- ubuntu
 ---
 Hardy Heron came out this morning and ubuntu.com is very much down for the count
 <br /><br />

@@ -4,6 +4,8 @@ title: Google Developer Podcast Ep 9 QuickCap
 wordpress_url: http://beta.timbroder.com/2007/09/27/google-developer-podcast-ep-9-quickcap/
 date: 2007-09-27 23:36:00 -04:00
 comments: true
+tags: []
+
 ---
 I got some time today to listen to this Podcast today on the way to and from one of our other buildings today uptown.  I was attending <a href="http://www.sas.com">SAS</a> training which is a pretty cool data mining / report generation tool.
 <br /><br />

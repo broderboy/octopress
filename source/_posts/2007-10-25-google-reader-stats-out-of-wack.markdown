@@ -4,6 +4,8 @@ title: Google Reader stats out of Wack
 wordpress_url: http://beta.timbroder.com/2007/10/25/google-reader-stats-out-of-wack/
 date: 2007-10-25 00:27:00 -04:00
 comments: true
+tags: 
+- reader
 ---
 First, <a href="http://www.techcrunch.com/2007/10/14/top-blogs-on-google-reader/">Techcrunch</a> came up with a list of the top blogs that users subscribe to using Google Reader. The top 3 on the list were BBC with 202,463, Google News wih 192,100, and ESPN with 189,274 .  Remember, these are only the stats if the subscriber is using Google Reader, obviously there are blogs with a higher subscription count, such as the <a href="http://googleblog.blogspot.com/">Official Google Blog</a> (They still haven't moved over to blogs.google.com eh?) with over 669,000 subscribers as reported by FeedBurner.  
 <br /><br />

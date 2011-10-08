@@ -4,6 +4,8 @@ title: By the Power of Grayskull.... I mean Google
 wordpress_url: http://beta.timbroder.com/2007/09/30/by-the-power-of-grayskull-i-mean-google/
 date: 2007-09-30 15:10:00 -04:00
 comments: true
+tags: 
+- gpowered.net
 ---
 Most of my friends got the reference to the "By the Power of Google" tagline that I chose to use for gPowered.  Being a child of the 80's I had the privilege to watch some of the greatest cartoons ever created.  One of those, was He-Man where one of the popular lines is "BY THE POWER OF GRAYSKULL."  When I was throwing around taglines with "powered by" (powered by Google), He-Man's line kept popping into my head and stuck.  If you don't know what He-Man is, check out the short summery from wikipedia.<br /><br />
 

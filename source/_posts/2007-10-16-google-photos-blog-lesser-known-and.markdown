@@ -4,6 +4,8 @@ title: Top Secret Picasa Features
 wordpress_url: http://beta.timbroder.com/2007/10/16/top-secret-picasa-features/
 date: 2007-10-16 02:14:00 -04:00
 comments: true
+tags: 
+- picasa web
 ---
 <a href="http://googlephotos.blogspot.com/2007/10/lesser-known-and-secret-picasa-features.html">Google Photos Blog: Lesser-known (and secret) Picasa features</a>
 <br /><br />

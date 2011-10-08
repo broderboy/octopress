@@ -4,6 +4,8 @@ title: Google Developer Podcast Ep 8 Summary
 wordpress_url: http://beta.timbroder.com/2007/09/25/google-developer-podcast-ep-8-summary/
 date: 2007-09-25 03:24:00 -04:00
 comments: true
+tags: []
+
 ---
 I got some time today on the train today to listen to Episode 8 of the Google Developer Podcast.  Normally I'll listen to it at work when it first comes out but it's been way to hectic.  Here are some highlights some commentary thrown in.<br /><br />
 

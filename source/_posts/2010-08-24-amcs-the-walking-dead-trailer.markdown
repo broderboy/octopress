@@ -4,6 +4,8 @@ title: AMC'S THE WALKING DEAD Trailer
 wordpress_url: http://timbroder.com/?p=614
 date: 2010-08-24 17:53:49 -04:00
 comments: true
+tags: 
+- walking dead
 ---
 Very excited for this!
 

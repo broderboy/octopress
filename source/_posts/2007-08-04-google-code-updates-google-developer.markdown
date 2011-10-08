@@ -4,12 +4,17 @@ title: First Google Gadget
 wordpress_url: http://beta.timbroder.com/2007/08/04/first-google-gadget/
 date: 2007-08-04 22:48:00 -04:00
 comments: true
+tags: 
+- gdata
+- howto
+- calendar
+- gadgets
 ---
 After being inspired about Google Gadgets from the <a href="http://google-code-updates.blogspot.com/2007/07/google-developer-podcast-episode-five.html">Google  Developer Podcast</a> I came up with on that my old <a href="http://www.rpicrew.com">crew team</a> can use.  We have a shared google calendar that some of us use to keep track of races, meetings, etc.  This gadget pulls and formats it nicely for the google IG or desktop.<br /><br />
 <a href="http://fusion.google.com/add?moduleurl=http%3A//hosting.gmodules.com/ig/gadgets/file/109141966999504040851/RPICrewSchedule.xml"><img src="http://buttons.googlesyndication.com/fusion/add.gif" width="104" height="17" border="0" alt="Add to Google"/></a><br /><br />
 Javascript code for the gadget:<br />
 <pre name="code" class="javascript" rows="20">
-&lt;style type="text/css"&gt;
+<style type="text/css">
 div.exp{
 padding: 0;
 margin: 0;
@@ -17,9 +22,9 @@ margin: 0;
 div.loc{
 margin-left: 19px;
 }
-&lt;/style&gt;
-&lt;script type="text/javascript"&gt;
-&lt;!--
+</style>
+<script type="text/javascript">
+<!--
 /**
 * Season info *
 * 0 Fall: Aug 26 - Nov 1
@@ -45,7 +50,7 @@ var season = getSeason(now);
 var events = document.getElementById(divId);
 
 //clear "Loading..."
-if (events.childNodes.length &gt; 0){
+if (events.childNodes.length > 0){
 events.removeChild(events.childNodes[0]);
 }
 
@@ -55,7 +60,7 @@ d.appendChild(document.createTextNode(getSeasonText(season)));
 events.appendChild(d);
 
 //loop races
-for (var i=0; i&lt;feed.entry.length; i++){
+for (var i=0; i<feed.entry.length; i++){
 var entry = feed.entry[i];
 
 var d = getDate(entry['gd$when'][0].startTime);
@@ -75,7 +80,7 @@ div.appendChild(toggle);
 div.appendChild(document.createTextNode(' ' + d.getMonth() + "/" + d.getDay() + ' - '));
 
 // get the href to link to the event
-for(var j=0; j&lt;entry['link'].length; j++){
+for(var j=0; j<entry['link'].length; j++){
 if (entry['link'][j]['type'] == 'text/html' && entry['link'][j]['rel'] == 'alternate'){
 var href = entry['link'][j]['href'];
 }
@@ -143,9 +148,9 @@ var nov = new Date(year, 11, 1);
 var mar = new Date(year, 3, 1);
 var may = new Date(year, 5, 25);
 
-if(aug &lt; d && d &lt;= nov) return 0; //fall
-else if(mar &lt; d && d &lt;= may) return 2; //spring
-else if(may &lt; d && d &lt;= aug) return 3; //summer
+if(aug < d && d <= nov) return 0; //fall
+else if(mar < d && d <= may) return 2; //spring
+else if(may < d && d <= aug) return 3; //summer
 else return 1; //winter
 }
 
@@ -197,18 +202,19 @@ function spaceLink(name){
 return name.replace(' ', ',+');
 }
 
-//--&gt;
-&lt;/script&gt;
+//-->
+</script>
 
-&lt;div id="races"&gt;&lt;p&gt;Loading...&lt;/p&gt;&lt;/div&gt;
-&lt;script type="text/javascript" src="http://www.google.com/calendar/feeds/rpicrew@gmail.com/public/full?alt=json-in-script&callback=processRaces&orderby=starttime&singleevents=true&sortorder=ascending&start-min=2007-01-01T00:00:00"&gt;&lt;/script&gt;
-</pre>
+<div id="races"><p>Loading...</p></div>
+<script type="text/javascript" src="http://www.google.com/calendar/feeds/rpicrew@gmail.com/public/full?alt=json-in-script&callback=processRaces&orderby=starttime&singleevents=true&sortorder=ascending&start-min=2007-01-01T00:00:00"></script>
+``` 
+
 <br /><br />
 And the XML for the gadget<br /><br />
 <pre name="code" class="xml" rows="20">
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;Module&gt;
-&lt;ModulePrefs title="RPI Crew Schedule"
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<ModulePrefs title="RPI Crew Schedule"
 title_url="http://gpowered.net"
 author="Tim Broder"
 height="150"
@@ -221,18 +227,18 @@ author_location="NYC"
 author_affiliation="gPowered"
 author_link="http://www.gpowered.net"
 screenshot="http://timothy.broder.googlepages.com/RPICrewScheduleScreen.jpg"
-&gt;
-&lt;Require feature="dynamic-height"/&gt;
-&lt;Require feature="analytics"/&gt;
-&lt;/ModulePrefs&gt;
-&lt;Content type="html"&gt;&lt;![CDATA[
+>
+<Require feature="dynamic-height"/>
+<Require feature="analytics"/>
+</ModulePrefs>
+<Content type="html"><![CDATA[
 
 
-&lt;script&gt;
+<script>
 // Track this gadget using Google Analytics.
 _IG_Analytics("UA-793489-6", "/RPICrewScheduleG");
-&lt;/script&gt;
-&lt;style type="text/css"&gt;
+</script>
+<style type="text/css">
 div.exp{
 padding: 0;
 margin: 0;
@@ -240,9 +246,9 @@ margin: 0;
 div.loc{
 margin-left: 19px;
 }
-&lt;/style&gt;
-&lt;script type="text/javascript"&gt;
-&lt;!--
+</style>
+<script type="text/javascript">
+<!--
 /**
 * Season info *
 * 0 Fall: Aug 26 - Nov 1
@@ -268,7 +274,7 @@ var season = getSeason(now);
 var events = document.getElementById(divId);
 
 //clear "Loading..."
-if (events.childNodes.length &gt; 0){
+if (events.childNodes.length > 0){
 events.removeChild(events.childNodes[0]);
 }
 
@@ -278,7 +284,7 @@ d.appendChild(document.createTextNode(getSeasonText(season)));
 events.appendChild(d);
 
 //loop races
-for (var i=0; i&lt;feed.entry.length; i++){
+for (var i=0; i<feed.entry.length; i++){
 var entry = feed.entry[i];
 
 var d = getDate(entry['gd$when'][0].startTime);
@@ -298,7 +304,7 @@ div.appendChild(toggle);
 div.appendChild(document.createTextNode(' ' + d.getMonth() + "/" + d.getDay() + ' - '));
 
 // get the href to link to the event
-for(var j=0; j&lt;entry['link'].length; j++){
+for(var j=0; j<entry['link'].length; j++){
 if (entry['link'][j]['type'] == 'text/html' && entry['link'][j]['rel'] == 'alternate'){
 var href = entry['link'][j]['href'];
 }
@@ -366,9 +372,9 @@ var nov = new Date(year, 11, 1);
 var mar = new Date(year, 3, 1);
 var may = new Date(year, 5, 25);
 
-if(aug &lt; d && d &lt;= nov) return 0; //fall
-else if(mar &lt; d && d &lt;= may) return 2; //spring
-else if(may &lt; d && d &lt;= aug) return 3; //summer
+if(aug < d && d <= nov) return 0; //fall
+else if(mar < d && d <= may) return 2; //spring
+else if(may < d && d <= aug) return 3; //summer
 else return 1; //winter
 }
 
@@ -420,16 +426,16 @@ function spaceLink(name){
 return name.replace(' ', ',+');
 }
 
-//--&gt;
-&lt;/script&gt;
+//-->
+</script>
 
-&lt;div id="races"&gt;&lt;p&gt;Loading...&lt;/p&gt;&lt;/div&gt;
-&lt;script type="text/javascript" src="http://www.google.com/calendar/feeds/rpicrew@gmail.com/public/full?alt=json-in-script&callback=processRaces&orderby=starttime&singleevents=true&sortorder=ascending&start-min=2007-01-01T00:00:00"&gt;&lt;/script&gt;
-
-
+<div id="races"><p>Loading...</p></div>
+<script type="text/javascript" src="http://www.google.com/calendar/feeds/rpicrew@gmail.com/public/full?alt=json-in-script&callback=processRaces&orderby=starttime&singleevents=true&sortorder=ascending&start-min=2007-01-01T00:00:00"></script>
 
 
-]]&gt;&lt;/Content&gt;
-&lt;/Module&gt;
 
-</pre>
+
+]]></Content>
+</Module>
+
+``` 

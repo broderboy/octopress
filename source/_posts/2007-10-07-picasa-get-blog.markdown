@@ -4,6 +4,8 @@ title: Picasa gets a blog!
 wordpress_url: http://beta.timbroder.com/2007/10/07/picasa-gets-a-blog/
 date: 2007-10-07 15:47:00 -04:00
 comments: true
+tags: 
+- picasa web
 ---
 <a href="http://googlephotos.blogspot.com/2007/09/posted-by-jason-cook-product-marketing_28.html">Google Photos Blog: Ready for our close-up</a><br /><br />
 

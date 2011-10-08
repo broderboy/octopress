@@ -4,6 +4,10 @@ title: Google goes Instant
 wordpress_url: http://timbroder.com/?p=657
 date: 2010-09-08 19:21:05 -04:00
 comments: true
+tags: 
+- google
+- autocomplete
+- search
 ---
 Google Instant is a new search enhancement that shows results as you type. We are             pushing the limits of our technology and infrastructure to help you get better search             results, faster. Our key technical insight was that people type slowly, but read             quickly, typically taking 300 milliseconds between keystrokes, but only 30 milliseconds             (a tenth of the time!) to glance at another part of the page. This means that you can             scan a results page while you type.
 

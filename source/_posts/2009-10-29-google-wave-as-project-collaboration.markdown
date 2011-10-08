@@ -4,6 +4,8 @@ title: Google Wave as a Project Collaboration Tool
 wordpress_url: http://beta.timbroder.com/2009/10/29/google-wave-as-a-project-collaboration-tool/
 date: 2009-10-29 17:21:00 -04:00
 comments: true
+tags: []
+
 ---
 I'm a'bloggin on the company blog! (Alexander Interactive)
 

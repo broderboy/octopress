@@ -4,6 +4,10 @@ title: Update Google Talk status with Twitter
 wordpress_url: http://beta.timbroder.com/2008/03/30/update-google-talk-status-with-twitter/
 date: 2008-03-30 23:11:00 -04:00
 comments: true
+tags: 
+- python
+- gchat
+- twitter
 ---
 I've had this idea in my head for a while and just got it to work this morning.<br /><br />
 Basically you send a tweet from <a href="http://twitter.com/broderboy" rel="me">Twitter</a> and this script runs, picks up your current twitter status, and if need be, updates your gChat status.  I'm working on a service version of this where you could use gpowered.net to do all this for you. Stay tuned =)  If I change the version of the script that I have running in the service, you will be able to see the source code that I have checked in <a href="http://code.google.com/p/gpowered/source/browse/trunk/gpowered/scripts/twitter2gChat.py">here</a>
@@ -18,7 +22,8 @@ Requirements:<br />
 <a href="http://code.google.com/p/python-twitter/">python-twitter</a><br />
 <br /><br />
 
-<pre name="code" class="python">
+``` python
+
 import sys, xmpp, os, twitter
 
 class Twitter2gChat:
@@ -135,4 +140,4 @@ class Twitter2gChat:
 t = Twitter2gChat()
 t.getTwitterStatus()
 t.updateGtalkStatus()
-</pre>
+``` 

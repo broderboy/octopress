@@ -4,6 +4,16 @@ title: October Speedlinking
 wordpress_url: http://beta.timbroder.com/2007/11/05/october-speedlinking/
 date: 2007-11-05 23:17:00 -05:00
 comments: true
+tags: 
+- blogger
+- gdata
+- picasa web
+- calendar
+- gadgets
+- docs spreadsheets
+- gears
+- gme
+- mashups
 ---
 I haven't been able to post as often or as in depth as I'd like to have this past month.  I chalk it up mostly to work, we all love 12 hour days right?  But now that sign-off has passed and our last release of 2007 is calmly approaching (its on Friday), things have settled down a bit.  Below are some great links from October, most of which I wanted to mention at some point and haven't gotten a chance to until now.  Enjoy.
 

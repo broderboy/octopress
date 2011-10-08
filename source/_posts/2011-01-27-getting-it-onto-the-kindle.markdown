@@ -4,6 +4,14 @@ title: Getting it onto the Kindle
 wordpress_url: http://timbroder.com/?p=792
 date: 2011-01-27 15:05:49 -05:00
 comments: true
+tags: 
+- google reader
+- rss
+- sony reader
+- kindle
+- atom
+- drm
+- calibre
 ---
 Been loving my Kindle 3 since I upgraded from my sony reader. There are so many options for getting various reading materials onto it.  Here are a few of the ones I like the best:
 <ul>

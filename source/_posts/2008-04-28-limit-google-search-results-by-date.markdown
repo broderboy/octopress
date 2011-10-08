@@ -4,6 +4,8 @@ title: Limit Google Search Results by Date
 wordpress_url: http://beta.timbroder.com/2008/04/28/limit-google-search-results-by-date/
 date: 2008-04-28 14:43:00 -04:00
 comments: true
+tags: 
+- howto
 ---
 <a href="http://www.tech-recipes.com/rx/2860/google_how_to_access_filter_by_date_dropdown_box">Tech Recipes</a> goes into how how to restrict Google search results by date: Appending "&as_qdr=d" to a search will display a drop down that lets you choose how far back in time to search.<br /><br />
 

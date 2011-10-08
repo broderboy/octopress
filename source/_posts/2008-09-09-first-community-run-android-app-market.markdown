@@ -4,6 +4,8 @@ title: First Community run Android App Market goes live
 wordpress_url: http://beta.timbroder.com/2008/09/09/first-community-run-android-app-market-goes-live/
 date: 2008-09-09 16:38:00 -04:00
 comments: true
+tags: 
+- android
 ---
 <a href="http://www.google-phone.com/android-developer-challenge-winners-android-market-is-up-and-accessories-store-goes-live-08316.php">Check it out</a>
 <br /><br />

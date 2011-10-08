@@ -4,21 +4,28 @@ title: Want to dump every SQL query Magento runs?
 wordpress_url: http://timbroder.com/?p=697
 date: 2010-12-02 22:35:04 -05:00
 comments: true
+tags: 
+- php
+- magento
+- sql
+- zend
 ---
 In: lib/Zend/DB/Adapter/Adapter.php 
 
-[php]public function query($sql, $bind = array())
+``` php
+<?php
+public function query($sql, $bind = array())
     {
         // connect to the database if needed
-        $this-&gt;_connect();
+        $this->_connect();
 
         // is the $sql a Zend_Db_Select object?
         if ($sql instanceof Zend_Db_Select) {
             if (empty($bind)) {
-                $bind = $sql-&gt;getBind();
+                $bind = $sql->getBind();
             }
 
-            $sql = $sql-&gt;assemble();
+            $sql = $sql->assemble();
         }
         $time_start = microtime(true);
 
@@ -31,16 +38,16 @@ In: lib/Zend/DB/Adapter/Adapter.php
         }
 
         // prepare and execute the statement with profiling
-        $stmt = $this-&gt;prepare($sql);
-        $stmt-&gt;execute($bind);
+        $stmt = $this->prepare($sql);
+        $stmt->execute($bind);
 
         // return the results embedded in the prepared statement object
-        $stmt-&gt;setFetchMode($this-&gt;_fetchMode);
+        $stmt->setFetchMode($this->_fetchMode);
         
         
         $time_end = microtime(true);
         $time = $time_end - $time_start;
         
-        echo &quot;SQL[$time | $sql ]&quot; . &quot;\n&lt;br /&gt;\n&quot;;
+        echo &quot;SQL[$time | $sql ]&quot; . &quot;\n<br />\n&quot;;
         return $stmt;
-    }[/php]
+    }```

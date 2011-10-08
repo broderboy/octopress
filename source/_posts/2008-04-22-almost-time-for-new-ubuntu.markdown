@@ -4,6 +4,8 @@ title: Almost time for a new Ubuntu
 wordpress_url: http://beta.timbroder.com/2008/04/22/almost-time-for-a-new-ubuntu/
 date: 2008-04-22 10:59:00 -04:00
 comments: true
+tags: 
+- ubuntu
 ---
 Ubuntu 8.04, <a href="https://wiki.ubuntu.com/HardyHeron/">Hardy Heron</a> comes out in two days<br /><br />
 

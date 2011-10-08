@@ -4,6 +4,10 @@ title: How to stream video to an Xbox 360 from linux
 wordpress_url: http://beta.timbroder.com/2008/09/22/how-to-stream-video-to-an-xbox-360-from-linux/
 date: 2008-09-22 22:05:00 -04:00
 comments: true
+tags: 
+- howto
+- ubuntu
+- xbox
 ---
 There are a couple of different methods floating around to do this, but I think this is the quickest and easiest to get set up.  So far, I like this better then FTP'ing files over to my old modded xbox.  Some notes about further investigating will be at the bottom. Note: this was tested on an Ubuntu machine.
 

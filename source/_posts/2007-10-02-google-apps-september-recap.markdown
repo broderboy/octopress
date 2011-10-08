@@ -4,6 +4,8 @@ title: Google Apps September recap
 wordpress_url: http://beta.timbroder.com/2007/10/02/google-apps-september-recap/
 date: 2007-10-02 23:28:00 -04:00
 comments: true
+tags: []
+
 ---
 Its definitely been a busy month for Google Apps with the launch of presentations (finally).  As a result, there is a new <a href="http://youtube.com/watch?v=eRqUE6IHTEA">video</a> as well as an updated <a href="http://www.google.com/google-d-s/tour1.html">tour</a>.  There is no API available yet but as soon as it comes out I'll post a HOWTO.<br /><br />
 

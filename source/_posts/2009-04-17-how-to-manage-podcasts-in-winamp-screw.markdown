@@ -4,6 +4,10 @@ title: How to manage podcasts in Winamp (screw itunes)
 wordpress_url: http://beta.timbroder.com/2009/04/17/how-to-manage-podcasts-in-winamp-screw-itunes/
 date: 2009-04-17 19:11:00 -04:00
 comments: true
+tags: 
+- howto
+- podcasts
+- winamp
 ---
 So I really have been digging the Windows 7 beta.&nbsp; However, Itunes does not sync podcasts correctly on the 64 bit version.&nbsp; IF syncing works at all, it takes a while. I had used winamp to listen to my music a while ago, but had switched to amarok when I started single booting linux (yes, I hated Vista that much).&nbsp; Now that I'm back to using windows a bit, I wanted my podcast experience to go flawlessly.<br />
 <br />

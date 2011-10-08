@@ -4,6 +4,8 @@ title: "Google Books \x93My Library\x94 Vs. LibraryThing vs. Shelfari"
 wordpress_url: http://beta.timbroder.com/2007/09/19/google-books-%e2%80%9cmy-library%e2%80%9d-vs-librarything-vs-shelfari/
 date: 2007-09-19 02:11:00 -04:00
 comments: true
+tags: []
+
 ---
 I love to read.  I always have and I probably always will.  When people ask me why I read so much or about how fast I can, I usually attest to the fact that when I was a child, the household rule was no television on weekdays, so, lots of books and reading.  I still remember the first book I was able to finish on my own without any help from my mother; The Mouse and the Motorcycle.<br /><br />
 

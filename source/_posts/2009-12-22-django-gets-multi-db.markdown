@@ -4,6 +4,8 @@ title: Django gets Multi-DB
 wordpress_url: http://beta.timbroder.com/2009/12/22/django-gets-multi-db/
 date: 2009-12-22 19:58:00 -05:00
 comments: true
+tags: []
+
 ---
 For his Google Summer of Code project <a href="http://lazypython.blogspot.com/">Alex Gaynor</a> added Multiple Database support to Django, which just got pushed to Trunk.<br />
 <br />

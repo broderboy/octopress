@@ -4,6 +4,8 @@ title: Django Admin inline preview
 wordpress_url: http://beta.timbroder.com/2010/02/09/django-admin-inline-preview/
 date: 2010-02-09 19:17:00 -05:00
 comments: true
+tags: []
+
 ---
 To get inline Admin Previews in the list view<br />
 <br />
@@ -25,7 +27,8 @@ Access your Article object through {{ object }} in the template<br />
 <br />
 code updates on <a href="http://github.com/broderboy/django-admin-preview">github</a><br />
 <br />
-<pre name="code" class="python">class PreviewAdmin(admin.ModelAdmin):
+``` python
+class PreviewAdmin(admin.ModelAdmin):
     #add to your ModelAdmin
     #list_display = ('headline','created_date', 'state', 'admin_slide_preview')
     def admin_slide_preview(self, obj):
@@ -48,14 +51,16 @@ code updates on <a href="http://github.com/broderboy/django-admin-preview">githu
     class Media:
         js = js = ('js/jquery.js',
                    'js/jquery.adminpreview.js'
-</object_id></pre><br />
+</object_id>``` 
+<br />
 <pre name="code" class="javascript">
 //base.css
 .previewslide {
 cursor:pointer;
 cursor:hand;
 }
-</pre><br />
+``` 
+<br />
 <br />
 <pre name="code" class="javascript">
 //jquery.adminpreview.js
@@ -80,4 +85,4 @@ $(document).ready(function(){
   });
  });
 });
-</pre>
+``` 

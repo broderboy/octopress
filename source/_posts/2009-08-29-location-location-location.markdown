@@ -4,6 +4,8 @@ title: Location, Location, Location
 wordpress_url: http://beta.timbroder.com/2009/08/29/location-location-location/
 date: 2009-08-29 18:39:00 -04:00
 comments: true
+tags: []
+
 ---
 This will be pretty cool when it comes out<br />
 <br />

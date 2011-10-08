@@ -4,6 +4,8 @@ title: Twitter recap of the superbowl halftime show
 wordpress_url: http://timbroder.com/?p=821
 date: 2011-02-07 01:36:05 -05:00
 comments: true
+tags: []
+
 ---
 <p>Ok so, the superbowl halftime was just god awful </p>
 <p>@tomkaters I just put Prince on the turntable. #MakeMyOwnHalftimeShow</p>

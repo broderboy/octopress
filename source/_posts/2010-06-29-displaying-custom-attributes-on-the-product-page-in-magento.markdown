@@ -4,6 +4,10 @@ title: Displaying Custom Attributes on the Product Page in Magento
 wordpress_url: http://timbroder.com/?p=551
 date: 2010-06-29 16:27:47 -04:00
 comments: true
+tags: 
+- howto
+- php
+- magento
 ---
 At some point you may not want to use the canned attributes.phtml groupings that magento provides, or you just want to cherry pick which attributes to show on your product listing page
 

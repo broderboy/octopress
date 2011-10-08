@@ -4,6 +4,8 @@ title: Playing Halo 3 on IMAX!
 wordpress_url: http://beta.timbroder.com/2007/09/16/playing-halo-3-on-imax/
 date: 2007-09-16 16:12:00 -04:00
 comments: true
+tags: []
+
 ---
 Completely off topic, but I had to share.  Last Thursday I had the amazing privilege to play Halo 3 on the Lincoln Center IMAX Screen.  It was amazing.  For those of you that don't know, the Lincoln center IMAX screen is 70-something feet tall.  The master chief was bigger then me.  My buddy who got the tickets was on line around 6:30, I shower up around 8 or so (they were only letting the first 200 people play), and we got into the theater around 9pm.<br /><br />
 

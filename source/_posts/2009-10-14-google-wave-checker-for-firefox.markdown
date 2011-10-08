@@ -4,6 +4,8 @@ title: Google Wave checker for firefox
 wordpress_url: http://beta.timbroder.com/2009/10/14/google-wave-checker-for-firefox/
 date: 2009-10-14 20:12:00 -04:00
 comments: true
+tags: []
+
 ---
 I'm liking google wave so far (not loving yet, but there aren't that many people on it yet), but one of the annoying things was actually having to be in the app to see if I have new waves.
 

@@ -4,6 +4,8 @@ title: GrandCentral finally resurected
 wordpress_url: http://beta.timbroder.com/2009/03/12/grandcentral-finally-resurected/
 date: 2009-03-12 13:46:00 -04:00
 comments: true
+tags: []
+
 ---
 GrandCentral <a href="http://googleblog.blogspot.com/2009/03/here-comes-google-voice.html">lives again</a>, as Google Voice.&nbsp; Google voice is rolling out, although currently only open to current GrandCentral users.&nbsp; To request an invite when it is open to all, click <a href="http://services.google.com/fb/forms/googlevoiceinvite">here</a><br />
 <br />

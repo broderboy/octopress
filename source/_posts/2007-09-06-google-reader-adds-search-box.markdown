@@ -4,6 +4,8 @@ title: Google Reader adds Search Box!!
 wordpress_url: http://beta.timbroder.com/2007/09/06/google-reader-adds-search-box/
 date: 2007-09-06 18:20:00 -04:00
 comments: true
+tags: 
+- reader
 ---
 Finally!! No more using Yahoo Pipes to search the feeds!<br /><br />
 

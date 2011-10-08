@@ -4,6 +4,8 @@ title: "I JUST WON \xA3500,000.00 GBP FROM GOOGLE UK!!!"
 wordpress_url: http://beta.timbroder.com/2008/09/25/i-just-won-500000-00-gbp-from-google-uk/
 date: 2008-09-25 15:27:00 -04:00
 comments: true
+tags: []
+
 ---
 Now, normally gmail's spam system picks up on these.&nbsp; I apparently was entered by using the "Googler" Search Engine.&nbsp; Oh well, next time it will know, and knowing is half the battle! ::hits spam button::<br />
 <br />

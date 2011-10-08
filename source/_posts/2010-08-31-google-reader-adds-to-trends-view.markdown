@@ -4,6 +4,8 @@ title: Google Reader adds to trends view
 wordpress_url: http://timbroder.com/?p=628
 date: 2010-08-31 13:22:38 -04:00
 comments: true
+tags: 
+- google reader
 ---
 Google Reader has added some more stats up at the top. Number of subscriptions, 30 days summary, when you started using Google reader, and total number of articles read
 

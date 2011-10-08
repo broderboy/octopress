@@ -4,6 +4,8 @@ title: Google Overheard in the Office
 wordpress_url: http://beta.timbroder.com/2007/10/26/google-overheard-in-the-office/
 date: 2007-10-26 01:20:00 -04:00
 comments: true
+tags: []
+
 ---
 A few days ago I <a href="http://blog.gpowered.net/2007/10/google-overheard-in-new-york.html">posted</a> some <a href="www.overheardinnewyork.com">Overheard in New York</a> Google Posts.  Today is some <a href="http://www.overheardintheoffice.com">Overhead in the Office</a>.  It's not quite as good as the orriginal, but the office posts are still really funny.  If you like these, <a href="http://www.overheardintheoffice.com/atom.xml">subscribe</a> to the feed, enjoy!
 <br /><br />

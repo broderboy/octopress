@@ -4,6 +4,8 @@ title: Lazy bum
 wordpress_url: http://beta.timbroder.com/2010/06/03/lazy-bum/
 date: 2010-06-03 17:49:39 -04:00
 comments: true
+tags: 
+- aiaio
 ---
 <img style="display:block;margin-right:auto;margin-left:auto;" alt="image" src="http://beta.timbroder.com/wp-content/uploads/2010/06/wpid-IMAG0048.jpg" />
 

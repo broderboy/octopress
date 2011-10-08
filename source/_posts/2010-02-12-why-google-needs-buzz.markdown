@@ -4,6 +4,8 @@ title: Why Google Needs Buzz
 wordpress_url: http://beta.timbroder.com/2010/02/12/why-google-needs-buzz/
 date: 2010-02-12 14:34:00 -05:00
 comments: true
+tags: []
+
 ---
 <a href="http://kevinrose.com/post/385156078">Why Google Needs Buzz</a>: "<p>
 

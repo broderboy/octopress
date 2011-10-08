@@ -4,6 +4,8 @@ title: Using Blogger and Feedburner Sitemaps in Webmaster Tools
 wordpress_url: http://beta.timbroder.com/2007/09/20/using-blogger-and-feedburner-sitemaps-in-webmaster-tools/
 date: 2007-09-20 00:20:00 -04:00
 comments: true
+tags: 
+- blogger
 ---
 Blogger, good.  FeedBurner, good.  Google Webmaster tools, good.  The 3 working together? A little more difficult.  A few months ago blogger <a href="http://buzz.blogger.com/2007/07/attention-FeedBurner-fans.html">added support</a> to have FeedBurner + blogger integration.  No more editing template code, just change a setting in blogger, and viola, FeedBurner will track all your subscribers.  However, this method did not go over so well with Google Webmaster Tools.  Previously you could just add your blog's feed as a sitemap for you blog and the Google Bot would have no problem.  If you turned on FeedBurner however, sitemap errors popped up all over because the FeedBurner links were on a different domain from the blog, etc..<br /><br />
 

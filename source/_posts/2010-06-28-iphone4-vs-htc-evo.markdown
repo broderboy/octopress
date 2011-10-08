@@ -4,6 +4,9 @@ title: iPhone4 vs HTC Evo
 wordpress_url: http://timbroder.com/?p=547
 date: 2010-06-28 17:24:17 -04:00
 comments: true
+tags: 
+- android
+- iphone
 ---
 Warning: cursing
 

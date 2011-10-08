@@ -4,6 +4,8 @@ title: But Daddy! I want and Andoid phone NOW!
 wordpress_url: http://beta.timbroder.com/2008/04/25/but-daddy-i-want-and-andoid-phone-now/
 date: 2008-04-25 14:02:00 -04:00
 comments: true
+tags: 
+- android
 ---
 A Microsoft Office editor should be available at launch and based on these <a href="http://www.talkandroid.com/85-quickoffice-for-android/">screenshots</a>, its going to be pretty useful.  <br /><br />I'll have to fire up the Android emulator this weekend and see how this stacks up against mobile Google Docs and Spreadsheets.
 

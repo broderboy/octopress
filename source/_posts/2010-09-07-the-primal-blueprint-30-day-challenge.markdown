@@ -4,6 +4,8 @@ title: The Primal Blueprint 30-Day Challenge
 wordpress_url: http://timbroder.com/?p=631
 date: 2010-09-07 17:24:45 -04:00
 comments: true
+tags: 
+- primal
 ---
 <p style="text-align: center;"><img class="aligncenter" title="The Primal Blueprint 30-Day Challenge" src="http://i247.photobucket.com/albums/gg158/MDA2008/MDA2009/primal_30day_challenge-1.gif" alt="primal 30day challenge 1" width="320" height="240" /></p>
 If you want to lose weight, gain muscle, reduce stress, increase energy or just generally look and feel healthier youve come to the right place. Oh, and you can win lots of cool Primal gear, too (Over $10,000 in prizes!). Thats right, its the annual Primal Blueprint 30-Day Challenge!

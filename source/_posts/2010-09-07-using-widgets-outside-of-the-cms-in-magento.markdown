@@ -4,6 +4,9 @@ title: Using widgets outside of the CMS in Magento
 wordpress_url: http://timbroder.com/?p=638
 date: 2010-09-07 19:51:46 -04:00
 comments: true
+tags: 
+- php
+- magento
 ---
 Magento ships with widget functionality that lets you build out data models and then reuse them on product and CMS pages. If you want to use these in a custom template however, you are out of luck. This can be done by extending the Widget Collection class.
 
@@ -21,7 +24,7 @@ class Mage_Widget_Model_Mysql4_Widget_Instance_Collection extends Mage_Core_Mode
     protected function _construct()
     {
         parent::_construct();
-        $this-&gt;_init('widget/widget_instance');
+        $this->_init('widget/widget_instance');
     }
 
     /**
@@ -39,25 +42,25 @@ class Mage_Widget_Model_Mysql4_Widget_Instance_Collection extends Mage_Core_Mode
         if ($withDefaultStore &amp;&amp; !in_array(0, $storeIds)) {
             array_unshift($storeIds, 0);
         }
-        $select = $this-&gt;getSelect();
+        $select = $this->getSelect();
         foreach ($storeIds as $storeId) {
-            $select-&gt;orWhere('FIND_IN_SET(?, `store_ids`)', $storeId);
+            $select->orWhere('FIND_IN_SET(?, `store_ids`)', $storeId);
         }
         return $this;
     }
 
     public function addTypeFilter($type) {
-    	$this-&gt;getSelect()-&gt;where('type=?', $type);
+    	$this->getSelect()->where('type=?', $type);
     	return $this;
     }
 
     public function addTitleFilter($type) {
-    	$this-&gt;getSelect()-&gt;where('title=?', $type);
+    	$this->getSelect()->where('title=?', $type);
     	return $this;
     }
 
     public function addAttributeToSort($attribute, $dir='asc') {
-    	$this-&gt;getSelect()-&gt;order("{$attribute} {$dir}");
+    	$this->getSelect()->order("{$attribute} {$dir}");
     	return $this;
     }
 }

@@ -4,6 +4,8 @@ title: Google Maps F-Bombs street names!
 wordpress_url: http://beta.timbroder.com/2009/05/01/google-maps-f-bombs-street-names/
 date: 2009-05-01 00:16:00 -04:00
 comments: true
+tags: 
+- maps
 ---
 Good stuff. <a href="http://maps.google.co.uk/maps?&amp;ll=48.067541,12.862533&amp;spn=0.006345,0.010267&amp;t=h&amp;z=17">Link</a>
 

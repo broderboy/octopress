@@ -4,6 +4,8 @@ title: Take your batch into the cloud
 wordpress_url: http://beta.timbroder.com/2009/11/16/take-your-batch-into-the-cloud/
 date: 2009-11-16 22:07:00 -05:00
 comments: true
+tags: []
+
 ---
 from the work blog:<br /><br />
 

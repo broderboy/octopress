@@ -4,6 +4,8 @@ title: Twitter get phone calls, Facebook gets voice chat
 wordpress_url: http://beta.timbroder.com/2009/09/18/twitter-get-phone-calls-facebook-gets-voice-chat/
 date: 2009-09-18 19:40:00 -04:00
 comments: true
+tags: []
+
 ---
 Twitter users on Thursday will, for the first time, be able to <a href="http://digg.com/d314ZwX">make voice calls</a> directly to each other through the microblogging service. <br />
 <br />

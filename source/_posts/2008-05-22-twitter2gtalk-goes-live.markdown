@@ -4,6 +4,10 @@ title: twitter2gTalk Goes Live!
 wordpress_url: http://beta.timbroder.com/2008/05/22/twitter2gtalk-goes-live/
 date: 2008-05-22 19:01:00 -04:00
 comments: true
+tags: 
+- twitter
+- appengine
+- twitter2gtalk
 ---
 <b>Get your tweets onto Google Talk!</b><br /><br />
 

@@ -4,6 +4,8 @@ title: Webmaster tools adds Internationalization support
 wordpress_url: http://beta.timbroder.com/2007/08/29/webmaster-tools-adds-internationalization-support/
 date: 2007-08-29 03:27:00 -04:00
 comments: true
+tags: []
+
 ---
 You can now register domains in <a href="http://www.google.com/webmasters/">Webmaster Central</a> with non-English characters in them by
 supporting IDNA (Internationalizing Domain Names in Applications).

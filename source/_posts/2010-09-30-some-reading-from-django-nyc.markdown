@@ -4,6 +4,10 @@ title: Some reading from django-nyc
 wordpress_url: http://timbroder.com/?p=664
 date: 2010-09-30 18:04:45 -04:00
 comments: true
+tags: 
+- python
+- javascript
+- django
 ---
 Went to the <a href="http://www.djangonyc.org/" target="_blank">django-nyc</a> meetup last night, it was in Manhattan and much easier to get to then when it's at huge in bk. Wrote down a few things to read up on:
 <ul>

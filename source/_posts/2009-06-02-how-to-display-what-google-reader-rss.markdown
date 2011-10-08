@@ -4,6 +4,11 @@ title: "Wordpress Plugin: Displaying your Google Reader RSS subscriptions"
 wordpress_url: http://beta.timbroder.com/2009/06/02/wordpress-plugin-displaying-your-google-reader-rss-subscriptions/
 date: 2009-06-02 15:07:00 -04:00
 comments: true
+tags: 
+- howto
+- php
+- reader
+- wordpress
 ---
 I've been meaning to write this code for a while, and I really wanted to take a stab at writing a wordpress plugin so here it goes.<br />
 <br />

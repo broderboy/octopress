@@ -4,6 +4,8 @@ title: Online advertising moving to.... your car?
 wordpress_url: http://beta.timbroder.com/2009/11/10/online-advertising-moving-to-your-car/
 date: 2009-11-10 22:38:00 -05:00
 comments: true
+tags: []
+
 ---
 Another one of mine on the work blog - <br /><br />
 

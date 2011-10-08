@@ -4,6 +4,9 @@ title: GWTPHP = Google Web Toolkit + PHP 5
 wordpress_url: http://beta.timbroder.com/2008/10/09/gwtphp-google-web-toolkit-php-5/
 date: 2008-10-09 20:28:00 -04:00
 comments: true
+tags: 
+- php
+- gwt
 ---
 I know there is a pretty high number of programmers who haven't tried to dable GWT yet because out of the box, the back end is java only.&nbsp; PHP developers rejoice! <br />
 <br />

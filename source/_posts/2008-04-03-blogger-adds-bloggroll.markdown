@@ -4,6 +4,10 @@ title: Blogger adds bloggroll
 wordpress_url: http://beta.timbroder.com/2008/04/03/blogger-adds-bloggroll/
 date: 2008-04-03 22:37:00 -04:00
 comments: true
+tags: 
+- blogger
+- reader
+- socialgraph
 ---
 <a href="http://buzz.blogger.com/2008/04/blog-list-scheduled-post-publishing-on.html">Blogger</a> in  <a href="http://draft.blogger.com/">draft</a> added 2 new features today: a blogroll page element, and post scheduling.  Post scheduling is pretty useful, you can write up your post, set the time (in the future) that you want it to post, and Blogger will do it automatically.
 
@@ -13,10 +17,12 @@ The second feature, a blogroll, I would like a lot more if it was done better.  
 
 
 
-<pre name="code" class="html">
+``` html
+
 <a href='http://maybe-not.net/' target='_blank'>Maybe-Not</a>
 
-</pre>
+``` 
+
 
 
 
@@ -24,9 +30,11 @@ A better link, for example from a <a href="http://www.wordpress.org">wordpress</
 
 
 
-<pre name="code" class="html">
-<a href="http://maybe-not.net/" rel="friend sweetheart" title="Laura&#8217;s blog">Maybe-Not</a>< </pre>
+``` html
+
+<a href="http://maybe-not.net/" rel="friend sweetheart" title="Laura&#8217;s blog">Maybe-Not</a>< ``` 
 
 
 
-...and get picked up but the SocialGraph as having a relationship to me.  Blogger is great and I love using it, but the features of wordpress are blowing it out of the water.</pre>
+
+...and get picked up but the SocialGraph as having a relationship to me.  Blogger is great and I love using it, but the features of wordpress are blowing it out of the water.``` 

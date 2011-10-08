@@ -4,6 +4,8 @@ title: Diggnation in your living room!
 wordpress_url: http://beta.timbroder.com/2008/09/17/diggnation-in-your-living-room/
 date: 2008-09-17 14:23:00 -04:00
 comments: true
+tags: 
+- digg
 ---
 This could be a lot of fun.&nbsp; If you win, Kevin, Alex, Prager, the Hippie, and whoever else will come shoot an episode of Diggnation from your living room. I love Diggnation, either way, it will be a great episode.<br />
 <br />

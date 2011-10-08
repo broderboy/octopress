@@ -4,6 +4,8 @@ title: Gmail adds voice and video chat
 wordpress_url: http://beta.timbroder.com/2008/11/11/gmail-adds-voice-and-video-chat/
 date: 2008-11-11 22:54:00 -05:00
 comments: true
+tags: 
+- gmail
 ---
 Is the death of Skype iminent?<br />
 <br />

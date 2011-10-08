@@ -4,6 +4,8 @@ title: gPowered Rated 8.2 on Blogged.com!
 wordpress_url: http://beta.timbroder.com/2008/07/02/gpowered-rated-8-2-on-blogged-com/
 date: 2008-07-02 01:19:00 -04:00
 comments: true
+tags: 
+- gpowered.net
 ---
 I recently recieved an email about someone submitting gPowered to <a href="http://www.blogged.com/blogs/gpowered-by-the-power-of-google.html">blogged.com</a>.  To whoever submitted it, thank you so much!!<br /><br />
 <i>

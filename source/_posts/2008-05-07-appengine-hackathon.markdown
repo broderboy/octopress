@@ -4,6 +4,9 @@ title: Appengine Hackathon!
 wordpress_url: http://beta.timbroder.com/2008/05/07/appengine-hackathon/
 date: 2008-05-07 12:07:00 -04:00
 comments: true
+tags: 
+- appengine
+- events
 ---
 I'm heading to Google NY for the day for an appengine hackathon.  I have a bazillion ideas banging around in my head.  We'll see what I come back with.  If anyone else is going to be there send me an <a href="mailto:timothy.broder@gmail.com">email</a> me or send me a <a href="http://twitter.com/broderboy">tweet</a>
 

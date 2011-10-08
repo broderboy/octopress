@@ -4,6 +4,8 @@ title: "ProBlogger Birthday Bash: $54,000 in prizes!"
 wordpress_url: http://beta.timbroder.com/2007/10/03/problogger-birthday-bash-54000-in-prizes/
 date: 2007-10-03 15:53:00 -04:00
 comments: true
+tags: []
+
 ---
 ProBlogger's Birthday is <a href="http://www.problogger.net/archives/2007/10/02/54000-worth-of-prizes-on-offer-in-the-problogger-birthday-bash-competitions/">here</a> and Darren is running small contests throughout the week with over $54,000 in prizes. I missed the first few, thank you work and being on call, but the prizes have been pretty good so far.
 <br /><br />

@@ -4,6 +4,8 @@ title: How to turn any webpage into an RSS feed
 wordpress_url: http://beta.timbroder.com/2008/10/06/how-to-turn-any-webpage-into-an-rss-feed/
 date: 2008-10-06 12:55:00 -04:00
 comments: true
+tags: 
+- howto
 ---
 Using a tool called <a href="http://www.dapper.net/">Dapper</a> and <a href="http://pipes.yahoo.com/pipes/">Yahoo Pipes</a>, its fairly easy to turn any webpage into an RSS feed. Dapper is a powerful HTML scrapping system and Pipes is a handy data remixing tool.&nbsp; Head on over to dapper.net and check to make sure someone hasn't already done what you are planning on doing (Do this by using dapper's search function.)&nbsp; If you can't find any, you are ready to go.<br />
 <br />

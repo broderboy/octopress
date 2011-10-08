@@ -4,6 +4,10 @@ title: Quick Google Authentication in PHP
 wordpress_url: http://beta.timbroder.com/2009/06/02/quick-google-authentication-in-php/
 date: 2009-06-02 15:02:00 -04:00
 comments: true
+tags: 
+- gdata
+- howto
+- php
 ---
 Here is a quick way to authenticate against Google and retrieve a protected feed.  It does not use the supported ClientLogin method but it does allow you to get to some unsupported feeds (Reader, Bookmarks, etc)
 
@@ -25,23 +29,23 @@ $subscription_list_url  = 'http://www.google.com/reader/api/0/subscription/list'
 $client = new Zend_Http_Client($login_url);
 
 //connect, authenticate, and handshake with Google
-$client-&gt;setCookieJar()
--&gt;setMethod(Zend_Http_Client::POST)
--&gt;setParameterPost(array(
- 'continue'             =&gt; $subscription_list_url,
- 'service'              =&gt; 'reader',
- 'niu'                  =&gt; 1,
- 'hl'                   =&gt; 'en',
- 'Email'              =&gt; $login,
- 'Passwd'               =&gt; $pass,
- 'PersistentCookie'     =&gt; 'yes',
- 'asts'                 =&gt; ''
+$client->setCookieJar()
+->setMethod(Zend_Http_Client::POST)
+->setParameterPost(array(
+ 'continue'             => $subscription_list_url,
+ 'service'              => 'reader',
+ 'niu'                  => 1,
+ 'hl'                   => 'en',
+ 'Email'              => $login,
+ 'Passwd'               => $pass,
+ 'PersistentCookie'     => 'yes',
+ 'asts'                 => ''
 ));
 
 
-$response = $client-&gt;request('POST');
-$client-&gt;setUri($subscription_list_url)-&gt;setMethod(Zend_Http_Client::GET);
-$response = $client-&gt;request()-&gt;getBody();
+$response = $client->request('POST');
+$client->setUri($subscription_list_url)->setMethod(Zend_Http_Client::GET);
+$response = $client->request()->getBody();
 
-if ($client-&gt;request()-&gt;getStatus() == 400) {
-?&gt;Unable to login with supplied Google login/password</pre>
+if ($client->request()->getStatus() == 400) {
+?>Unable to login with supplied Google login/password</pre>

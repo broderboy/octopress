@@ -4,6 +4,9 @@ title: "HOWTO: Getting the Numer of Diggs from Digg (Python)"
 wordpress_url: http://beta.timbroder.com/2007/08/30/howto-getting-the-numer-of-diggs-from-digg-python/
 date: 2007-08-30 03:32:00 -04:00
 comments: true
+tags: 
+- python
+- howto
 ---
 After 2 of my posts were on the Digg front page this morning (Thank you all very much to those that dugg them), I took my first look into the <a href="http://apidoc.digg.com/">Digg API</a>.  I wanted a way to take a quick look to see how many Diggs certain stories were getting.  In some ways it is similar to GData: make a call to a URL, get some XML back, parse it, etc.  It does, however, feel lighter, probably due to its streamlined nature.  It has one purpose, get information off of Digg.  Using this, I've added a section in the <a href="http://gpowered.net/g/postlist/">Post List</a> section of gPowered.net that shows the Diggs of a few of the articles that I have submitted on Digg.   <br /><br />
 
@@ -16,7 +19,8 @@ The API is broken into 5 main sections or endpoints.  Each of these will return 
 
 In this quick HOWTO I'm going to take a quick look into the Stories endpoint so I can display the number of Diggs specific stories have.  We'll start off by making a small class to hold our returned data (useful to send to a template or just for working with later on.  We don't want to keep having to hit the ElementTree to get data out).  All of the calls will be send to 'http://services.digg.com/'.  In this example I will only be querying 'http://services.digg.com/story/{story clean title}'.<br /><br />
 
-<pre name="code" class="python">
+``` python
+
 import httplib2  
 from elementtree import ElementTree  
 
@@ -52,11 +56,13 @@ trailer = '?count=1&appkey=http%3A%2F%2Fgpowered.blogspot.com'
 
 #keep track of total diggs
 total_diggs = 0
-</pre>
+``` 
+
 <br /><br />
 After we are set up, we will want to loop through each story we want to get Digg data for.  Add the well formed title into the query string, and send it to the Digg service.  Then, parse the response, and get the information we need.
 <br /><br />
-<pre name="code" class="python">
+``` python
+
 for story in posts:
  curr_story = service_endpoint % story
  url = curr_story + trailer
@@ -72,6 +78,7 @@ for story in posts:
  print d
 
 print 'Total: ' + str(total_diggs)
-</pre>
+``` 
+
 <br /><br />
 And that's that.  my_diggs now has all the information we need!

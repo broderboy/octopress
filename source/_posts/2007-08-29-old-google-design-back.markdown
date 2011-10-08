@@ -4,6 +4,8 @@ title: Old Google Design back?
 wordpress_url: http://beta.timbroder.com/2007/08/29/old-google-design-back/
 date: 2007-08-29 03:29:00 -04:00
 comments: true
+tags: []
+
 ---
 <a href="http://blogoscoped.com/archive/2007-08-27.html#n55">Blogoscoped</a> reports that some people have the old design (Google App
 links are above the search bar instead of the upper left).  I checked at

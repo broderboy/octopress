@@ -4,6 +4,22 @@ title: Google I/O session videos posted with slides
 wordpress_url: http://beta.timbroder.com/2008/06/16/google-io-session-videos-posted-with-slides/
 date: 2008-06-16 19:11:00 -04:00
 comments: true
+tags: 
+- blogger
+- gdata
+- picasa web
+- calendar
+- gadgets
+- docs spreadsheets
+- bookmarks
+- gears
+- maps
+- gwt
+- reader
+- mashups
+- android
+- gchat
+- appengine
 ---
 As I said <a href="http://blog.gpowered.net/2008/04/select-google-io-sessions-to-be-posted.html">earlier</a>, Quite a few presentations from Google I/O have been <a href="http://sites.google.com/site/io/">posted</a> for your viewing pleasure.  I'll be glued to these this weekend while I'm on call.<br /><br />
 Topics include<br />

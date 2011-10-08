@@ -4,6 +4,8 @@ title: Django 1.0 released!
 wordpress_url: http://beta.timbroder.com/2008/09/05/django-1-0-released/
 date: 2008-09-05 01:00:00 -04:00
 comments: true
+tags: 
+- python
 ---
 No, youre not hallucinating, its really here.<br />
 <br />

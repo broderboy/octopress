@@ -4,12 +4,18 @@ title: Want to trace the call stack in Magento?
 wordpress_url: http://timbroder.com/?p=736
 date: 2011-01-04 21:35:38 -05:00
 comments: true
+tags: 
+- howto
+- php
+- magento
 ---
 This has helped me immensely in situations like "Where is this getting called from??!?"
 
 Create a helper like so:
 
-[php]
+``` php
+<?php
+
 class Timbroder_Stack_Helper_Callstack extends Mage_Core_Helper_Abstract
 {
 	private function get_callstack($delim=&quot;\n&quot;) {
@@ -23,30 +29,36 @@ class Timbroder_Stack_Helper_Callstack extends Mage_Core_Helper_Abstract
 	}
 
 	public function toLog() {
-		Mage::log($this-&gt;get_callstack());
+		Mage::log($this->get_callstack());
 	}
 
 	public function toFirePhp() {
-		$stack = $this-&gt;get_callstack();
+		$stack = $this->get_callstack();
 		foreach (explode(&quot;\n&quot;, $stack) as $line) {
-			Mage::helper('firephp')-&gt;send($line);
+			Mage::helper('firephp')->send($line);
 		}
 	}
 }
-[/php]
+```
+
 
 That can be called from anywhere:
 
-[php]
-Mage::helper('stack/callstack')-&gt;toFirePhp();
-Mage::helper('stack/callstack')-&gt;toLog();
-[/php]
+``` php
+<?php
+
+Mage::helper('stack/callstack')->toFirePhp();
+Mage::helper('stack/callstack')->toLog();
+```
+
 
 I've also wrapped this into a module that you can drop right into your project.  Details here: <a href="https://bitbucket.org/broderboy/magento_callstack/src" target="_blank">https://bitbucket.org/broderboy/magento_callstack/src</a>
 
 Example output:
 
-[php]
+``` php
+<?php
+
 .../app/code/community/Timbroder/Stack/Helper/Callstack.php line 16 calls get_callstack()
 .../app/design/frontend/mongoose/default/template/catalog/cms/bikes_bmx.phtml line 12 calls toLog()
 .../app/design/frontend/mongoose/default/template/catalog/cms/bikes.phtml line 21 calls require_once()
@@ -83,6 +95,7 @@ Example output:
 .../app/code/core/Mage/Core/Model/App.php line 304 calls dispatch()
 .../app/Mage.php line 598 calls run()
 .../index.php line 155 calls run()
-[/php]
+```
+
 
 Thanks to <a href="http://www.nextide.ca/node/518" target="_blank">nextide</a> for some of the code

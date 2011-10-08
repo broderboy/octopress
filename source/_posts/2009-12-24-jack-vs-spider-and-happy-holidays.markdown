@@ -4,6 +4,8 @@ title: Jack Vs Spider and Happy Holidays
 wordpress_url: http://beta.timbroder.com/2009/12/24/jack-vs-spider-and-happy-holidays/
 date: 2009-12-24 15:46:00 -05:00
 comments: true
+tags: 
+- ai
 ---
 Happy Holidays and thanks everyone for a great year.<br />
 <br />

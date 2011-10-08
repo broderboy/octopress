@@ -4,10 +4,13 @@ title: Remaining character count in django admin
 wordpress_url: http://beta.timbroder.com/2010/02/01/remaining-character-count-in-django-admin/
 date: 2010-02-01 19:28:00 -05:00
 comments: true
+tags: []
+
 ---
 Want to display the remaining characters on a text field in admin? (based off of maxlength or an override) <br />
 <br />
-<pre name="code" class="python">#have your ModelAdmin inherit this to use
+``` python
+#have your ModelAdmin inherit this to use
 class CounterAdmin(admin.ModelAdmin):
     counted_fields = ()
     
@@ -134,4 +137,4 @@ form .exceeded{color:#e00;}
 */
 """
 
-</pre>
+``` 

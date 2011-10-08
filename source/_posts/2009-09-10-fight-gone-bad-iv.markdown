@@ -4,6 +4,8 @@ title: Fight Gone Bad IV
 wordpress_url: http://beta.timbroder.com/2009/09/10/fight-gone-bad-iv/
 date: 2009-09-10 19:18:00 -04:00
 comments: true
+tags: []
+
 ---
 Anyone want to help me out by donating?<br /><br />
 

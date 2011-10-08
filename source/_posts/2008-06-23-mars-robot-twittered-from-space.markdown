@@ -4,6 +4,8 @@ title: Mars Robot twittered from Space
 wordpress_url: http://beta.timbroder.com/2008/06/23/mars-robot-twittered-from-space/
 date: 2008-06-23 18:34:00 -04:00
 comments: true
+tags: 
+- twitter
 ---
 The Mars Phoenix robot found water on mars and what does it do? Sends a <a href="http://blog.twitter.com/2008/06/nasa-twitter-and-news-from-mars.html">tweet</a><br /><br />
 

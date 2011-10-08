@@ -4,6 +4,8 @@ title: NEW! Google Mashup of the Week
 wordpress_url: http://beta.timbroder.com/2007/10/09/new-google-mashup-of-the-week/
 date: 2007-10-09 03:47:00 -04:00
 comments: true
+tags: 
+- mashups
 ---
 So I've decided to add a new feature to gPowered, the Google Mashup of the week.  So many of these get created all the time using various Google APIs and services.  Each week I'm going to search around find a dozen or so  of the newest ones, pick out the one I like the best and why... with a possible runner up.  As for when I'll be doing these, the new mashups will be posted sometime in between Saturday and Monday.  Usually on the weekend unless I'm going away... like next weekend (Tennessee).... and the weekend after that (Boston)...<br /><br /> 
 ... and the Mashup of the Week goes to:<br /><br />

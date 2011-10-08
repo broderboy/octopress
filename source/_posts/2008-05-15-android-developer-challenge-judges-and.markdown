@@ -4,6 +4,8 @@ title: Android Developer Challenge Judges and Top 50 Details
 wordpress_url: http://beta.timbroder.com/2008/05/15/android-developer-challenge-judges-and-top-50-details/
 date: 2008-05-15 12:27:00 -04:00
 comments: true
+tags: 
+- android
 ---
 The Android developer's challenge has release most of the top 50 (a few opted to not be made public for now).  A slide deck of the winners is available <a href="http://code.google.com/android/images/adc1r1_deck.pdf">here</a>.  I've gone through some of them and they have been blowing me away. <a href="http://www.talkandroid.com/92-developer-challenge-top-50-android-application/">Lists</a> are being put together with the websites for the winners.  There is some really exciting work being done.
 

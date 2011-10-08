@@ -4,6 +4,9 @@ title: Gmail to real phone calling
 wordpress_url: http://timbroder.com/?p=617
 date: 2010-08-25 19:07:05 -04:00
 comments: true
+tags: 
+- gmail
+- skype
 ---
 We're playing with this at the office, pretty slick. Seems like google just really wants to be skype though
 

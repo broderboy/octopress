@@ -4,6 +4,9 @@ title: Live Diggnation NY Photos
 wordpress_url: http://beta.timbroder.com/2008/06/05/live-diggnation-ny-photos/
 date: 2008-06-05 11:31:00 -04:00
 comments: true
+tags: 
+- events
+- digg
 ---
 The show was absolutely nuts. Had a great time at Studio B.  Sorry for the crappy photo quality, I forgot my camera and the blackberry doesn't do so well in the dark... I think the estimate for this meetup was about 2,000 people inside and 600 waiting outside in the rain? Great turnout, great show.  Diggnation better come back to NY. (As they said at the show, NY creates/diggs the most content on Digg then anywhere else in the world, GO NEW YORK!
 

@@ -4,6 +4,8 @@ title: NY State Fair Embedded Map
 wordpress_url: http://beta.timbroder.com/2007/08/29/ny-state-fair-embedded-map/
 date: 2007-08-29 03:58:00 -04:00
 comments: true
+tags: []
+
 ---
 It's really, really easy to put maps onto any site or blog now using <a href="http://google-latlong.blogspot.com/2007/08/youtube-style-embeddable-maps_21.html">Embedded Maps</a>.  I threw this together real quick to demonstrate.  This past weekend I drove up to Syracuse for the New York State fair.  A great time if you have never been.  Plenty of fantastic food and drink.  I also had to pick up my old roomie, and using Google Maps new multiple destination feature this was easy as well.<br /><br />
 First stop:<br /><br />

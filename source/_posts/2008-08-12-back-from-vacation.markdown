@@ -4,6 +4,8 @@ title: Back from Vacation
 wordpress_url: http://beta.timbroder.com/2008/08/12/back-from-vacation/
 date: 2008-08-12 23:22:00 -04:00
 comments: true
+tags: []
+
 ---
 I did as much relaxing as I could on Vacation down at the Jersey Shore.  No computers at all. Just me, the beach and a bunch of books.  Went on the Human Sling shot (spring shot?) which was a lot of fun, see the video and pictures below.  <br /><br />
 Also, Check out goodreads.com.  Its a lot better then any of the other bookshelving services I've reviewed <a href="http://blog.gpowered.net/2007/09/google-books-my-library-vs-librarything.html">in the past</a>.  The reasons why will be in a future post in the not so distant future.<br /><br />

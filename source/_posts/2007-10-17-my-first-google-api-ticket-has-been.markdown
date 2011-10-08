@@ -4,6 +4,8 @@ title: My First Google API ticket has been fixed
 wordpress_url: http://beta.timbroder.com/2007/10/17/my-first-google-api-ticket-has-been-fixed/
 date: 2007-10-17 02:57:00 -04:00
 comments: true
+tags: 
+- docs spreadsheets
 ---
 My first <a href="http://code.google.com/p/gdata-issues/issues/detail?id=44">ticket</a> for the Google Document List API has been fixed.  As I posted about <a href="http://gpowered.blogspot.com/2007/08/quick-docs-api-example-python.html">before</a>, the Document List API did not have the ability to just retrieve the documents from a given folder or tag.  This has now been made possible, thanks API team!<br /><br />
 

@@ -4,5 +4,7 @@ title: test
 wordpress_url: http://timbroder.com/?p=749
 date: 2011-01-09 21:11:54 -05:00
 comments: true
+tags: []
+
 ---
 

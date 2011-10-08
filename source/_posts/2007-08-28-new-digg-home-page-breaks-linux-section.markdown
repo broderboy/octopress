@@ -4,6 +4,8 @@ title: New Digg Home Page breaks the Linux section on IE?
 wordpress_url: http://beta.timbroder.com/2007/08/28/new-digg-home-page-breaks-the-linux-section-on-ie/
 date: 2007-08-28 17:05:00 -04:00
 comments: true
+tags: []
+
 ---
 So I'm sitting here eating lunch and go to see if there is anything new on Digg. Saw the new layout, looks nice, haven't really had a chance to play around with it yet. However, when i got to the <a href="http://digg.com/linux_unix">Linux/Unix</a> section, it wouldn't show up in Internet Explorer (6). It works fine in FireFox. Does someone over at Digg have a sense of humor or is my browser just acting on the bunk?
 

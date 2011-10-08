@@ -4,6 +4,8 @@ title: Tennessee for the weekend
 wordpress_url: http://beta.timbroder.com/2007/10/12/tennessee-for-the-weekend/
 date: 2007-10-12 19:33:00 -04:00
 comments: true
+tags: []
+
 ---
 Be back Sunday
 

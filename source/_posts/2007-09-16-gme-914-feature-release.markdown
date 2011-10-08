@@ -4,6 +4,8 @@ title: GME 9/14 Feature Release
 wordpress_url: http://beta.timbroder.com/2007/09/16/gme-914-feature-release/
 date: 2007-09-16 17:21:00 -04:00
 comments: true
+tags: 
+- gme
 ---
 A new version of the <a href="http://editor.googlemashups.com">Google Mashup Editor</a> was released on Friday.  Highlights of new features include:<br />
 

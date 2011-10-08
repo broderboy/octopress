@@ -4,6 +4,9 @@ title: Debate 2.0
 wordpress_url: http://beta.timbroder.com/2008/10/02/debate-2-0/
 date: 2008-10-02 21:00:00 -04:00
 comments: true
+tags: 
+- twitter
+- friendfeed
 ---
 Last week during the presidential debate, the country was a-twitter.&nbsp; There were a bunch of sites doing some sort of realtime web 2.0 shows of the debate, with a lot of these using twitter and hashtags.&nbsp; If anyone knows of any sites that I haven't listed below, please let me know<br />
 <br />

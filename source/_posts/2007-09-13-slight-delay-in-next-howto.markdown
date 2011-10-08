@@ -4,6 +4,8 @@ title: Slight delay in next HOWTO
 wordpress_url: http://beta.timbroder.com/2007/09/13/slight-delay-in-next-howto/
 date: 2007-09-13 11:30:00 -04:00
 comments: true
+tags: []
+
 ---
 I was trying very hard to get the next HOWTO online last night.  I got it about 3/4 of the way done but then went to bed so I could go to the gym this morning, but then I ended up setting my alarm for 6pm instead of 6am.... so that was a waste I probably could have finished it.  Tonight I'm going to test out Halo 3 on the <a href="http://www.fandango.com/amcloewslincolnsquare13withimax_aabqi/theaterpage">Lincoln Center Imax Screen</a> which should just be crazy.  Until then here's a good article I read yesterday entitled <a href="http://performancing.com/will-the-google-bashers-please-shut-up">Will The Google Bashers Please Shut Up?</a><br /><br />
 

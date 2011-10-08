@@ -4,6 +4,8 @@ title: Ubuntu 7.10 Gutsy Gibbon is out!
 wordpress_url: http://beta.timbroder.com/2007/10/18/ubuntu-7-10-gutsy-gibbon-is-out/
 date: 2007-10-18 12:01:00 -04:00
 comments: true
+tags: 
+- ubuntu
 ---
 <a href="http://www.ubuntu.com/getubuntu/download">Get</a> it while its hot!  (Or try to, the servers, as usual, are bogged.  <br /><br />
 

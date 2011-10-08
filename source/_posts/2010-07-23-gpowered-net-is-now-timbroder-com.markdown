@@ -4,6 +4,10 @@ title: gpowered.net is now timbroder.com
 wordpress_url: http://timbroder.com/?p=575
 date: 2010-07-23 19:48:27 -04:00
 comments: true
+tags: 
+- blogger
+- wordpress
+- aiaio
 ---
 Hi all,
 

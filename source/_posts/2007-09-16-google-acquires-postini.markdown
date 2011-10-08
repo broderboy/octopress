@@ -4,6 +4,8 @@ title: Google acquires Postini
 wordpress_url: http://beta.timbroder.com/2007/09/16/google-acquires-postini/
 date: 2007-09-16 17:31:00 -04:00
 comments: true
+tags: []
+
 ---
 Google has acquired <a href="http://www.postini.com/index.php">Postini</a> to better improve Google Apps.<br /><br />
 

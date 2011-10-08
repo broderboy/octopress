@@ -4,6 +4,8 @@ title: AppEngine Pricing announced
 wordpress_url: http://beta.timbroder.com/2008/05/28/appengine-pricing-announced/
 date: 2008-05-28 13:55:00 -04:00
 comments: true
+tags: 
+- appengine
 ---
 These look pretty cheap for what you get, and if one of my little apps actually got popular enough to fall outside of the free range, I'd gladly pay for it<br /><br />
 

@@ -4,6 +4,8 @@ title: Android Market now open. Full source released
 wordpress_url: http://beta.timbroder.com/2008/11/03/android-market-now-open-full-source-released/
 date: 2008-11-03 14:28:00 -05:00
 comments: true
+tags: 
+- android
 ---
 The Android Market is now open, register to add your apps! <a href="http://www.android.com/market/">http://www.android.com/market/</a><br />
 <br />

@@ -4,6 +4,8 @@ title: Send To Tumblr And Track With Bitly Google Reader Custom Link
 wordpress_url: http://beta.timbroder.com/2009/08/14/send-to-tumblr-and-track-with-bitly-google-reader-custom-link/
 date: 2009-08-14 13:43:00 -04:00
 comments: true
+tags: 
+- reader
 ---
 Testing the "send to blogger" button...
 
