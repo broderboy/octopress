@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title>TimBroder.com</title>
-  <link href="http://timbroder.com/atom.xml" rel="self"/>
-  <link href="http://timbroder.com/"/>
-  <updated>2011-10-08T18:10:07-04:00</updated>
-  <id>http://timbroder.com/</id>
+  <link href="http://www.timbroder.com/atom.xml" rel="self"/>
+  <link href="http://www.timbroder.com/"/>
+  <updated>2011-10-08T23:12:56-04:00</updated>
+  <id>http://www.timbroder.com/</id>
   <author>
     <name>Tim Broder</name>
     
@@ -14,9 +14,9 @@
   
   <entry>
     <title>Jira Tabs: Open all those Jira&#8217;s at once! </title>
-    <link href="http://timbroder.com/blog/2011/04/jira-tabs-open-all-those-jiras-at-once.html"/>
+    <link href="http://www.timbroder.com/2011/04/jira-tabs-open-all-those-jiras-at-once.html"/>
     <updated>2011-04-22T18:21:22-04:00</updated>
-    <id>http://timbroder.com/blog/2011/04/jira-tabs-open-all-those-jiras-at-once</id>
+    <id>http://www.timbroder.com/2011/04/jira-tabs-open-all-those-jiras-at-once</id>
     <content type="html">&lt;p&gt;Ever want to open all the Jiras on the screen in new tabs? Jess does, I do, and you should too!&lt;/p&gt;
 
 &lt;p&gt;For firefox and chrome we now have the JiraTabs bookmark button.&lt;/p&gt;
@@ -34,18 +34,18 @@
   
   <entry>
     <title>Googles Groupon Competitor Goes Live</title>
-    <link href="http://timbroder.com/blog/2011/04/google%25e2%2580%2599s-groupon-competitor-goes-live.html"/>
+    <link href="http://www.timbroder.com/2011/04/google%25e2%2580%2599s-groupon-competitor-goes-live.html"/>
     <updated>2011-04-21T21:43:56-04:00</updated>
-    <id>http://timbroder.com/blog/2011/04/google%e2%80%99s-groupon-competitor-goes-live</id>
+    <id>http://www.timbroder.com/2011/04/google%e2%80%99s-groupon-competitor-goes-live</id>
     <content type="html">&lt;p&gt;&lt;a href=&quot;http://bit.ly/eFvNwn &quot; target=&quot;_blank&quot;&gt;http://bit.ly/eFvNwn&lt;/a&gt;&lt;/p&gt;
 </content>
   </entry>
   
   <entry>
     <title>Skynet Becomes Self Aware Tonight</title>
-    <link href="http://timbroder.com/blog/2011/04/skynet.html"/>
+    <link href="http://www.timbroder.com/2011/04/skynet.html"/>
     <updated>2011-04-19T21:25:05-04:00</updated>
-    <id>http://timbroder.com/blog/2011/04/skynet</id>
+    <id>http://www.timbroder.com/2011/04/skynet</id>
     <content type="html">&lt;h2&gt;Terminator: The Sarah Connor Chronicles&lt;a href=&quot;http://terminator.wikia.com/index.php?title=2011/04/21&amp;amp;action=edit&amp;amp;section=1&quot;&gt;&lt;img src=&quot;http://images1.wikia.nocookie.net/__cb35594/common/skins/common/blank.gif&quot; alt=&quot;Edit Terminator: The Sarah Connor Chronicles section&quot; /&gt;&lt;/a&gt;&lt;/h2&gt;
 
 
@@ -61,9 +61,9 @@
   
   <entry>
     <title>Extending a Magento Controller</title>
-    <link href="http://timbroder.com/blog/2011/04/extending-a-magento-controller.html"/>
+    <link href="http://www.timbroder.com/2011/04/extending-a-magento-controller.html"/>
     <updated>2011-04-19T21:16:46-04:00</updated>
-    <id>http://timbroder.com/blog/2011/04/extending-a-magento-controller</id>
+    <id>http://www.timbroder.com/2011/04/extending-a-magento-controller</id>
     <content type="html">&lt;p&gt;We&amp;#8217;re ajaxing part of the Magento shopping cart so we need to modify/extend some of the cart controller functionality. Sometimes when modifying controller&amp;#8217;s you have to worry about updating the routes. For this, we don&amp;#8217;t need to, we still want all the urls to be used the same way.&lt;/p&gt;
 
 &lt;p&gt;app/code/local/Ai/Checkout/etc/config.xml:&lt;/p&gt;
@@ -138,12 +138,12 @@
   
   <entry>
     <title>Moving Gmail Gadgets to the Right Side</title>
-    <link href="http://timbroder.com/blog/2011/04/moving-gmail-gadgets-to-the-right-side.html"/>
+    <link href="http://www.timbroder.com/2011/04/moving-gmail-gadgets-to-the-right-side.html"/>
     <updated>2011-04-07T14:56:39-04:00</updated>
-    <id>http://timbroder.com/blog/2011/04/moving-gmail-gadgets-to-the-right-side</id>
+    <id>http://www.timbroder.com/2011/04/moving-gmail-gadgets-to-the-right-side</id>
     <content type="html">&lt;p&gt;I started using Remember the Milk recently but didn&amp;#8217;t want the &lt;a href=&quot;http://www.rememberthemilk.com/services/gmail/gadget/&quot; target=&quot;_blank&quot;&gt;gmail gadget&lt;/a&gt; to be so far down on the left hand side of my screen. There is no built in way to move gadgets to the right hand side with the exception of chat (labels used to do this but was removed in favor of drag in drop back in late 2009).&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://timbroder.com/images/wp-content/uploads/2011/04/gmail_right_widgets.png&quot;&gt;&lt;img class=&quot;size-full wp-image-901 alignleft&quot; title=&quot;gmail_right_widgets&quot; src=&quot;http://timbroder.com/images/wp-content/uploads/2011/04/gmail_right_widgets.png&quot; alt=&quot;&quot; width=&quot;513&quot; height=&quot;455&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.timbroder.com/images/wp-content/uploads/2011/04/gmail_right_widgets.png&quot;&gt;&lt;img class=&quot;size-full wp-image-901 alignleft&quot; title=&quot;gmail_right_widgets&quot; src=&quot;http://www.timbroder.com/images/wp-content/uploads/2011/04/gmail_right_widgets.png&quot; alt=&quot;&quot; width=&quot;513&quot; height=&quot;455&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
@@ -168,9 +168,9 @@ width:164px;
   
   <entry>
     <title>New Digg reverse paywall coming</title>
-    <link href="http://timbroder.com/blog/2011/04/new-digg-reverse-paywall-coming.html"/>
+    <link href="http://www.timbroder.com/2011/04/new-digg-reverse-paywall-coming.html"/>
     <updated>2011-04-06T13:45:21-04:00</updated>
-    <id>http://timbroder.com/blog/2011/04/new-digg-reverse-paywall-coming</id>
+    <id>http://www.timbroder.com/2011/04/new-digg-reverse-paywall-coming</id>
     <content type="html">&lt;p&gt;Interesting: &lt;a href=&quot;http://about.digg.com/blog/cha-ching&quot; target=&quot;_blank&quot;&gt;http://about.digg.com/blog/cha-ching&lt;/a&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;&lt;em&gt;Welcome to the future of killing time on the internet, and  getting paid for it: Digg is implementing a reverse pay wall! We believe  this will greatly enhance the Digg experience. Early reaction from test  users has been great. Can Duruk, developer at Digg, sums it up well:&lt;/em&gt;
@@ -194,9 +194,9 @@ width:164px;
   
   <entry>
     <title>42.75&#8221; New Box Jump PR</title>
-    <link href="http://timbroder.com/blog/2011/04/42-75-new-box-jump-pr.html"/>
+    <link href="http://www.timbroder.com/2011/04/42-75-new-box-jump-pr.html"/>
     <updated>2011-04-05T13:24:33-04:00</updated>
-    <id>http://timbroder.com/blog/2011/04/42-75-new-box-jump-pr</id>
+    <id>http://www.timbroder.com/2011/04/42-75-new-box-jump-pr</id>
     <content type="html">&lt;object width=&quot;266&quot; height=&quot;400&quot; &gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot; /&gt;&lt;param name=&quot;movie&quot; value=&quot;http://www.facebook.com/v/608117101466&quot; /&gt;&lt;embed src=&quot;http://www.facebook.com/v/608117101466&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; width=&quot;266&quot; height=&quot;400&quot;&gt;&lt;/embed&gt;&lt;/object&gt;
 
 </content>
@@ -204,9 +204,9 @@ width:164px;
   
   <entry>
     <title>Firefox 4 landing</title>
-    <link href="http://timbroder.com/blog/2011/03/firefox-4-landing.html"/>
+    <link href="http://www.timbroder.com/2011/03/firefox-4-landing.html"/>
     <updated>2011-03-21T20:01:55-04:00</updated>
-    <id>http://timbroder.com/blog/2011/03/firefox-4-landing</id>
+    <id>http://www.timbroder.com/2011/03/firefox-4-landing</id>
     <content type="html">&lt;p&gt;&lt;img class=&quot;alignnone&quot; title=&quot;http://content.screencast.com/users/broderboy/folders/Jing/media/f18ea796-51be-45a3-b4f7-58a8b1104c99/2011-03-21_1559.png&quot; src=&quot;http://content.screencast.com/users/broderboy/folders/Jing/media/f18ea796-51be-45a3-b4f7-58a8b1104c99/2011-03-21_1559.png&quot; alt=&quot;&quot; width=&quot;777&quot; height=&quot;651&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;It will be updating on your current installs tomorrow.&lt;/p&gt;
@@ -217,9 +217,9 @@ width:164px;
   
   <entry>
     <title>Setting a project as the default redmine homepage</title>
-    <link href="http://timbroder.com/blog/2011/03/setting-a-project-as-the-default-redmine-homepage.html"/>
+    <link href="http://www.timbroder.com/2011/03/setting-a-project-as-the-default-redmine-homepage.html"/>
     <updated>2011-03-15T23:31:01-04:00</updated>
-    <id>http://timbroder.com/blog/2011/03/setting-a-project-as-the-default-redmine-homepage</id>
+    <id>http://www.timbroder.com/2011/03/setting-a-project-as-the-default-redmine-homepage</id>
     <content type="html">&lt;p&gt;Only have a single project running on &lt;a href=&quot;http://www.redmine.org/&quot; target=&quot;_blank&quot;&gt;redmine&lt;/a&gt;? want it to be the homepage?
 in config/routes.rb&lt;/p&gt;
 
@@ -231,9 +231,9 @@ map.home &#8221;, :controller =&amp;gt; &#8216;projects&#8217;, :action =&amp;gt
   
   <entry>
     <title>Jump Higher</title>
-    <link href="http://timbroder.com/blog/2011/03/jump-higher.html"/>
+    <link href="http://www.timbroder.com/2011/03/jump-higher.html"/>
     <updated>2011-03-15T21:22:42-04:00</updated>
-    <id>http://timbroder.com/blog/2011/03/jump-higher</id>
+    <id>http://www.timbroder.com/2011/03/jump-higher</id>
     <content type="html">&lt;iframe title=&quot;YouTube video player&quot; width=&quot;560&quot; height=&quot;349&quot; src=&quot;http://www.youtube.com/embed/tPZdYboa-HY?rel=0&amp;amp;hd=1&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
 </content>
@@ -241,9 +241,9 @@ map.home &#8221;, :controller =&amp;gt; &#8216;projects&#8217;, :action =&amp;gt
   
   <entry>
     <title>Crossfit 2011. Are you Ready?</title>
-    <link href="http://timbroder.com/blog/2011/03/crossfit-2011-are-you-ready.html"/>
+    <link href="http://www.timbroder.com/2011/03/crossfit-2011-are-you-ready.html"/>
     <updated>2011-03-04T18:25:24-05:00</updated>
-    <id>http://timbroder.com/blog/2011/03/crossfit-2011-are-you-ready</id>
+    <id>http://www.timbroder.com/2011/03/crossfit-2011-are-you-ready</id>
     <content type="html">&lt;iframe title=&quot;YouTube video player&quot; width=&quot;560&quot; height=&quot;349&quot; src=&quot;http://www.youtube.com/embed/xqbw6hZW91k?rel=0&amp;amp;hd=1&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
 </content>
@@ -251,9 +251,9 @@ map.home &#8221;, :controller =&amp;gt; &#8216;projects&#8217;, :action =&amp;gt
   
   <entry>
     <title>Stress Relief: Blow things up</title>
-    <link href="http://timbroder.com/blog/2011/02/stress-relief-blow-things-up.html"/>
+    <link href="http://www.timbroder.com/2011/02/stress-relief-blow-things-up.html"/>
     <updated>2011-02-28T20:09:35-05:00</updated>
-    <id>http://timbroder.com/blog/2011/02/stress-relief-blow-things-up</id>
+    <id>http://www.timbroder.com/2011/02/stress-relief-blow-things-up</id>
     <content type="html">&lt;div align=&quot;center&quot;&gt;&lt;object width=&quot;600&quot; height=&quot;500&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://www.physicsgames.net/swf/blowthingsup.swf&quot;&gt;&lt;/param&gt;&lt;embed src=&quot;http://www.physicsgames.net/swf/blowthingsup.swf&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;450&quot; height=&quot;375&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;br /&gt;&lt;a href=&quot;http://www.physicsgames.net/&quot;&gt;Online Physics Games&lt;/a&gt;&lt;/div&gt;
 
 </content>
@@ -261,9 +261,9 @@ map.home &#8221;, :controller =&amp;gt; &#8216;projects&#8217;, :action =&amp;gt
   
   <entry>
     <title>Running Mongodb as a service on windows</title>
-    <link href="http://timbroder.com/blog/2011/02/running-mongodb-as-a-service-on-windows.html"/>
+    <link href="http://www.timbroder.com/2011/02/running-mongodb-as-a-service-on-windows.html"/>
     <updated>2011-02-23T20:55:22-05:00</updated>
-    <id>http://timbroder.com/blog/2011/02/running-mongodb-as-a-service-on-windows</id>
+    <id>http://www.timbroder.com/2011/02/running-mongodb-as-a-service-on-windows</id>
     <content type="html">&lt;blockquote&gt;&lt;p&gt;c:\mongodb\mongod.exe &amp;#8211;logpath &amp;#8220;c:\mongodb\logs\mongo.log&amp;#8221; &amp;#8211;logappend &amp;#8211;dbpath &amp;#8220;c:\mongodb\dat
 a&amp;#8221; &amp;#8211;directoryperdb &amp;#8211;install
 all output going to: c:\mongodb\logs\mongo.log
@@ -282,9 +282,9 @@ connecting to: test&lt;/p&gt;&lt;/blockquote&gt;
   
   <entry>
     <title>A note on Magento and multiple nodes using Memcached</title>
-    <link href="http://timbroder.com/blog/2011/02/a-note-on-magento-and-multiple-nodes-using-memcached.html"/>
+    <link href="http://www.timbroder.com/2011/02/a-note-on-magento-and-multiple-nodes-using-memcached.html"/>
     <updated>2011-02-11T18:35:44-05:00</updated>
-    <id>http://timbroder.com/blog/2011/02/a-note-on-magento-and-multiple-nodes-using-memcached</id>
+    <id>http://www.timbroder.com/2011/02/a-note-on-magento-and-multiple-nodes-using-memcached</id>
     <content type="html">&lt;p&gt;If you have multiple nodes using a shared memcached server, make sure you define a shared prefix for the keys to use.&lt;/p&gt;
 
 &lt;p&gt;In local.xml:&lt;/p&gt;
@@ -310,18 +310,18 @@ connecting to: test&lt;/p&gt;&lt;/blockquote&gt;
   
   <entry>
     <title>Wolverine? Or 2 Batmen?</title>
-    <link href="http://timbroder.com/blog/2011/02/wolverine-or-2-batmen.html"/>
+    <link href="http://www.timbroder.com/2011/02/wolverine-or-2-batmen.html"/>
     <updated>2011-02-08T20:59:49-05:00</updated>
-    <id>http://timbroder.com/blog/2011/02/wolverine-or-2-batmen</id>
+    <id>http://www.timbroder.com/2011/02/wolverine-or-2-batmen</id>
     <content type="html">&lt;p&gt;&lt;img class=&quot;alignnone&quot; title=&quot;http://www.igeektrooper.com/wp-content/uploads/2011/02/wolverinebatmen.jpg&quot; src=&quot;http://www.igeektrooper.com/wp-content/uploads/2011/02/wolverinebatmen.jpg&quot; alt=&quot;&quot; width=&quot;456&quot; height=&quot;545&quot; /&gt;&lt;/p&gt;
 </content>
   </entry>
   
   <entry>
     <title>Twitter recap of the superbowl halftime show</title>
-    <link href="http://timbroder.com/blog/2011/02/twitter-recap-of-the-superbowl-halftime-show.html"/>
+    <link href="http://www.timbroder.com/2011/02/twitter-recap-of-the-superbowl-halftime-show.html"/>
     <updated>2011-02-07T01:36:05-05:00</updated>
-    <id>http://timbroder.com/blog/2011/02/twitter-recap-of-the-superbowl-halftime-show</id>
+    <id>http://www.timbroder.com/2011/02/twitter-recap-of-the-superbowl-halftime-show</id>
     <content type="html">&lt;p&gt;Ok so, the superbowl halftime was just god awful &lt;/p&gt;
 
 
@@ -364,9 +364,9 @@ connecting to: test&lt;/p&gt;&lt;/blockquote&gt;
   
   <entry>
     <title>Want to output the full xml config Magento is running?</title>
-    <link href="http://timbroder.com/blog/2011/01/want-to-output-the-full-xml-config-magento-is-running.html"/>
+    <link href="http://www.timbroder.com/2011/01/want-to-output-the-full-xml-config-magento-is-running.html"/>
     <updated>2011-01-27T19:56:14-05:00</updated>
-    <id>http://timbroder.com/blog/2011/01/want-to-output-the-full-xml-config-magento-is-running</id>
+    <id>http://www.timbroder.com/2011/01/want-to-output-the-full-xml-config-magento-is-running</id>
     <content type="html">&lt;figure class=&#8217;code&#8217;&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class=&#8217;line-number&#8217;&gt;1&lt;/span&gt;
 &lt;span class=&#8217;line-number&#8217;&gt;2&lt;/span&gt;
 &lt;span class=&#8217;line-number&#8217;&gt;3&lt;/span&gt;
@@ -382,9 +382,9 @@ connecting to: test&lt;/p&gt;&lt;/blockquote&gt;
   
   <entry>
     <title>Getting it onto the Kindle</title>
-    <link href="http://timbroder.com/blog/2011/01/getting-it-onto-the-kindle.html"/>
+    <link href="http://www.timbroder.com/2011/01/getting-it-onto-the-kindle.html"/>
     <updated>2011-01-27T15:05:49-05:00</updated>
-    <id>http://timbroder.com/blog/2011/01/getting-it-onto-the-kindle</id>
+    <id>http://www.timbroder.com/2011/01/getting-it-onto-the-kindle</id>
     <content type="html">&lt;p&gt;Been loving my Kindle 3 since I upgraded from my sony reader. There are so many options for getting various reading materials onto it.  Here are a few of the ones I like the best:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -401,9 +401,9 @@ connecting to: test&lt;/p&gt;&lt;/blockquote&gt;
   
   <entry>
     <title>My picks for the 2011 Oscars</title>
-    <link href="http://timbroder.com/blog/2011/01/my-picks-for-the-2011-oscars.html"/>
+    <link href="http://www.timbroder.com/2011/01/my-picks-for-the-2011-oscars.html"/>
     <updated>2011-01-25T16:24:40-05:00</updated>
-    <id>http://timbroder.com/blog/2011/01/my-picks-for-the-2011-oscars</id>
+    <id>http://www.timbroder.com/2011/01/my-picks-for-the-2011-oscars</id>
     <content type="html">&lt;h2&gt;Best Supporting Actress&lt;/h2&gt;
 
 
@@ -516,10 +516,10 @@ Joel &amp;amp; Ethan Coen, &lt;em&gt;True Grit&lt;/em&gt;&lt;/p&gt;
   
   <entry>
     <title>Breaking them in</title>
-    <link href="http://timbroder.com/blog/2011/01/breaking-them-in.html"/>
+    <link href="http://www.timbroder.com/2011/01/breaking-them-in.html"/>
     <updated>2011-01-23T18:24:49-05:00</updated>
-    <id>http://timbroder.com/blog/2011/01/breaking-them-in</id>
-    <content type="html">&lt;p&gt;&lt;img style=&quot;display:block;margin-right:auto;margin-left:auto;&quot; alt=&quot;image&quot; src=&quot;http://timbroder.com/images/wp-content/uploads/2011/01/wpid-IMAG0003.jpg&quot; /&gt;&lt;/p&gt;
+    <id>http://www.timbroder.com/2011/01/breaking-them-in</id>
+    <content type="html">&lt;p&gt;&lt;img style=&quot;display:block;margin-right:auto;margin-left:auto;&quot; alt=&quot;image&quot; src=&quot;http://www.timbroder.com/images/wp-content/uploads/2011/01/wpid-IMAG0003.jpg&quot; /&gt;&lt;/p&gt;
 </content>
   </entry>
   

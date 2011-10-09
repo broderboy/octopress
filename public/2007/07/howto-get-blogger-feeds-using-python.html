@@ -1,0 +1,647 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>HOWTO: Displaying Blogger feeds with Python - TimBroder.com</title>
+  <meta name="author" content="Tim Broder">
+
+  
+  <meta name="description" content="This first HOWTO is going to cover how I did the basic structure of the posts section of gPowered: pulling from blogger.The main functions we&#8217...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.timbroder.com/2007/07/howto-get-blogger-feeds-using-python.html">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="http://feeds.feedburner.com/timbroder" rel="alternate" title="TimBroder.com" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">TimBroder.com</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://feeds.feedburner.com/timbroder" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.timbroder.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">HOWTO: Displaying Blogger Feeds With Python</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2007-07-19T03:07:00-04:00" pubdate  data-updated="true" >Jul 19<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>This first HOWTO is going to cover how I did the basic structure of the posts section of gPowered: pulling from blogger.
+The main functions we&#8217;ll need are to show a range of posts, a single post, and a function to get the total number of posts that are in the blog.
+The reason I try to get the total number is so the different pages can be bookmarkable.  When retrieving a GData feed from blogger.  Entry 1 in the feed is going to be the newest post so there is no &#8216;id&#8217; that is going to be static, so we&#8217;ll do a little math to get a number we can later use as the id.
+I use Django to handle rendering the python to the browser.  I probably won&#8217;t get into other methods.<br /><br />
+To start out you&#8217;ll have to grab the following modules.<br />
+- the <a href="http://code.google.com/p/gdata-python-client/downloads/list">gdata python client</a><br />
+- <a href="http://effbot.org/zone/element-index.htm">ElementTree</a><br />
+- <a href="http://www.egenix.com/products/python/mxBase/mxDateTime/">mxDateTime</a> (I used this for date formatting)<br /></p>
+
+<br />
+
+
+<p>We then import the parts the we&#8217;ll need (you can ignore the Django part for your own methods):<br /></p>
+
+<br />&#8220;` python
+
+
+<p>from Django.shortcuts import render_to_response</p>
+
+<p>from gdata import service
+import gdata
+import atom
+import getopt
+import sys</p>
+
+<p>from mx import DateTime</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;br /&gt;
+</span><span class='line'>
+</span><span class='line'>One of the first things we're going to have to do is authenticate with google services.
+</span><span class='line'>There are two ways to do this: &lt;a href="http://code.google.com/apis/blogger/developers_guide_python.html#auth_sub"&gt;AuthSub proxy authentication&lt;/a&gt; which has a user login using their own credentials, and
+</span><span class='line'> &lt;a href="http://code.google.com/apis/blogger/developers_guide_python.html#client_login"&gt; ClientLogin username/password authentication&lt;/a&gt; where you send a username and password.  We will be using ClientLogin.
+</span><span class='line'> First off, set your login credentials to use later.&lt;br /&gt;
+</span><span class='line'>&lt;br /&gt;``` python
+</span><span class='line'>
+</span><span class='line'>#login info
+</span><span class='line'>user = 'timothy.broder@gmail.com'
+</span><span class='line'>password = '********'</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<br />
+
+
+<p>Then we start setting up our call to the service.</p>
+
+<br />
+
+
+<br />&#8220;` python
+
+
+<h1>set up service</h1>
+
+<p>blogger_service = service.GDataService(user, password)
+blogger_service.source = &#8216;gpowered&#8217;
+blogger_service.service = &#8216;blogger&#8217;
+blogger_service.server = &#8216;www.blogger.com&#8217;
+blogger_service.ProgrammaticLogin()</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;br /&gt;
+</span><span class='line'>
+</span><span class='line'>For more info see the &lt;a href="http://code.google.com/apis/blogger/developers_guide_python.html"&gt;blogger developer's guide with python&lt;/a&gt; or the &lt;a href="http://code.google.com/apis/accounts/Authentication.html"&gt;Google Account Authentication documentation&lt;/a&gt;&lt;br /&gt;
+</span><span class='line'>After we have authenticated with Google we need to start building up our query to &lt;a href="http://code.google.com/apis/gdata/"&gt;GData&lt;/a&gt;, which will return as an ElementTree of data.  The first thing you'll need is your blog's id. &lt;br /&gt;
+</span><span class='line'>You can use the function in the dev guide to help you with this if you don't already know it.
+</span><span class='line'>&lt;br /&gt;
+</span><span class='line'>&lt;br /&gt;``` python
+</span><span class='line'>
+</span><span class='line'>def PrintUserBlogTitles(blogger_service):
+</span><span class='line'>  query = service.Query()
+</span><span class='line'>  query.feed = '/feeds/default/blogs'
+</span><span class='line'>  feed = blogger_service.Get(query.ToUri())
+</span><span class='line'>
+</span><span class='line'>  print feed.title.text
+</span><span class='line'>  for entry in feed.entry:
+</span><span class='line'>    print "\t" + entry.title.text</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<br />
+
+
+<p>After you have the blog id we can start working on the query</p>
+
+<br />
+
+
+<br />&#8220;` python
+
+
+<p>blog_id = 413573351281770670
+feed_url = &#8216;/feeds/%s/posts/default&#8217; % str(blog_id)
+query = service.Query()
+query.feed = feed_url</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;br /&gt;
+</span><span class='line'>
+</span><span class='line'>The below function returns the total number of posts that are in the feed.  We can get a small response by sending 0 for the max results.  Below is the function and the small response we get from it.&lt;br /&gt;
+</span><span class='line'>&lt;br /&gt;``` python
+</span><span class='line'>
+</span><span class='line'>#get the total number of posts for this feed
+</span><span class='line'>def get_total(query):
+</span><span class='line'> #query for no posts
+</span><span class='line'> query.max_results = '0'
+</span><span class='line'> query.start_index = '1'
+</span><span class='line'> 
+</span><span class='line'> #get back entryless feed
+</span><span class='line'> feed = blogger_service.Get(query.ToUri()) 
+</span><span class='line'> return int(feed.total_results.text)</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<br />
+
+
+<br />&#8220;` xml
+
+
+<p>&lt;ns0:feed xmlns:ns0=&#8221;http://www.w3.org/2005/Atom&#8221;>
+ &lt;ns1:totalresults xmlns:ns1=&#8221;http://a9.com/-/spec/opensearchrss/1.0/&#8221;>1&lt;/ns1:totalresults>
+ &lt;ns1:itemsperpage xmlns:ns1=&#8221;http://a9.com/-/spec/opensearchrss/1.0/&#8221;>0&lt;/ns1:itemsperpage>
+ &lt;ns1:startindex xmlns:ns1=&#8221;http://a9.com/-/spec/opensearchrss/1.0/&#8221;>1&lt;/ns1:startindex>
+ &lt;ns0:generator uri=&#8221;http://www.blogger.com&#8221; version=&#8221;7.00&#8221;>Blogger&lt;/ns0:generator>
+ &lt;ns0:author>&lt;ns0:name>Tim&lt;/ns0:name>&lt;/ns0:author>
+ &lt;ns0:id>tag:blogger.com,1999:blog-413573351281770670&lt;/ns0:id>
+ &lt;ns0:link href=&#8221;http://gpowered.blogspot.com/&#8221; rel=&#8221;alternate&#8221; type=&#8221;text/html&#8221; />
+ &lt;ns0:link href=&#8221;http://gpowered.blogspot.com/feeds/posts/default&#8221; rel=&#8221;http://schemas.google.com/g/2005#feed&#8221; type=&#8221;application/atom+xml&#8221; />
+ &lt;ns0:link href=&#8221;http://www.blogger.com/feeds/413573351281770670/posts/default?max-results=0&#8221; rel=&#8221;self&#8221; type=&#8221;application/atom+xml&#8221; />
+ &lt;ns0:link href=&#8221;http://www.blogger.com/feeds/413573351281770670/posts/default&#8221; rel=&#8221;http://schemas.google.com/g/2005#post&#8221; type=&#8221;application/atom+xml&#8221; />
+ &lt;ns0:title type=&#8221;text&#8221;>gPowered&lt;/ns0:title>
+ &lt;ns0:updated>2007-07-18T10:55:06.728-05:00&lt;/ns0:updated>
+&lt;/ns0:feed></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;br /&gt;
+</span><span class='line'>
+</span><span class='line'>So we get the total number of posts and then we can start pulling data.  Lets make a generic function, PostFrom, that can be used to show multiple posts, or just single ones, depending on what you pass to it.  The start number that is passed to
+</span><span class='line'> PostFrom has been set to the first post in the blog is considered to have an id of 1 and the latest post is the same as total_posts.  This is useful so if viewers want to bookmark the page they are looking at, the post that is being displayed will not change.
+</span><span class='line'>The following are the different functions that will make use of it.
+</span><span class='line'>&lt;br /&gt;
+</span><span class='line'>&lt;br /&gt;``` python
+</span><span class='line'>
+</span><span class='line'>#show latest posts
+</span><span class='line'>def Posts(request):
+</span><span class='line'> return ListPosts(request, total_posts)
+</span><span class='line'>
+</span><span class='line'>#show posts starting from a certain point 
+</span><span class='line'>def ListPosts(request, start):
+</span><span class='line'> start = total_posts - int(start) + 1
+</span><span class='line'> return PostFrom(request, start, show_num)
+</span><span class='line'>
+</span><span class='line'>#show a single post
+</span><span class='line'>def Post(request, start):
+</span><span class='line'> start = total_posts - int(start) + 1
+</span><span class='line'> return PostFrom(request, start, 1)
+</span><span class='line'> 
+</span><span class='line'>def PostFrom(request, start, count):
+</span><span class='line'> #query for count number of posts starting at the given post
+</span><span class='line'> query.max_results = str(count)
+</span><span class='line'> query.start_index = str(start)
+</span><span class='line'> feed = blogger_service.Get(query.ToUri())</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<br />
+
+
+<p>now we have all the data we need in the feed variable.  Its been turned into an element tree so we don&#8217;t have to worry about XML parsing here.  Every node has become an objects and lists.  Objects for single nodes(title), and lists for where there are multiple nodes of the same name (entry, link)
+At this stage I play with the data a little so it&#8217;s easier to use in my Django template.</p>
+
+<br />
+
+
+<br />&#8220;` python
+
+
+<p> #normalize data for output
+ for entry in feed.entry:
+  #get link for template
+  entry.my_link = entry.link[0].href</p>
+
+<p>  #id for links
+  entry.my_id = curr_id
+  curr_id -= 1</p>
+
+<p>  #format published date
+  dt = DateTime.ISO.ParseDateTimeUTC(entry.published.text)
+  entry.my_date = dt.strftime(&#8216;%m/%d/%Y&#8217;)
+  entry.my_time = dt.strftime(&#8216;%I:%M %p&#8217;)</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;br /&gt;
+</span><span class='line'>
+</span><span class='line'>Of course we're going to need next and previous buttons as well.  The way we've set up the math with total_posts and the start number, we only have to increment or decrement these by count (the number of posts to display on a page).  I also set part of the link, as well as the page title, that I will use in my template.&lt;br /&gt;
+</span><span class='line'>&lt;br /&gt;``` python
+</span><span class='line'>
+</span><span class='line'> prev = total_posts - (start - count) + 1
+</span><span class='line'> if prev &gt; total_posts:
+</span><span class='line'>  prev = None
+</span><span class='line'>  
+</span><span class='line'>  
+</span><span class='line'> next = total_posts - (start + count) + 1
+</span><span class='line'> if next &lt; 1:
+</span><span class='line'>  next = None
+</span><span class='line'> 
+</span><span class='line'> #showing single post 
+</span><span class='line'> if count == 1:
+</span><span class='line'>  link = 'post'
+</span><span class='line'>  title = feed.entry[0].title.text
+</span><span class='line'> #listing posts
+</span><span class='line'> else:
+</span><span class='line'>  link = 'posts'
+</span><span class='line'>  title = 'home'</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<br />
+
+
+<p>The final part of the function is a return to the Django framework to populate my template.  I&#8217;m going to get into the template more in the next post, but you now have all the information you need stored.</p>
+
+<br />
+
+
+<br />&#8220;` 
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'> <span class="k">return</span> <span class="n">render_to_response</span><span class="p">(</span><span class="s">&#39;posts/index.html&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span><span class='line'>  <span class="s">&#39;entries&#39;</span><span class="p">:</span> <span class="n">feed</span><span class="o">.</span><span class="n">entry</span><span class="p">,</span>
+</span><span class='line'>  <span class="s">&#39;title&#39;</span><span class="p">:</span> <span class="n">title</span><span class="p">,</span>
+</span><span class='line'>  <span class="s">&#39;tag_link&#39;</span><span class="p">:</span> <span class="n">tag_link</span><span class="p">,</span>
+</span><span class='line'>  <span class="s">&#39;prev&#39;</span><span class="p">:</span> <span class="n">prev</span><span class="p">,</span>
+</span><span class='line'>  <span class="s">&#39;next&#39;</span><span class="p">:</span> <span class="nb">next</span><span class="p">,</span>
+</span><span class='line'>  <span class="s">&#39;link&#39;</span><span class="p">:</span> <span class="n">link</span><span class="p">,</span>
+</span><span class='line'>  <span class="s">&#39;tab_home&#39;</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+</span><span class='line'>  <span class="p">})</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<br />
+
+
+<p>To the template!<br /></p>
+
+<br />
+
+
+<p>The first part consists of displaying the post itself, along with its relevant information</p>
+
+<br />
+
+
+<br />&#8220;` html
+
+
+<p>{% for entry in entries %}</p>
+
+<p>  <h2><a href="/post/"></h2></a></p>
+
+<p>  <p>Posted by {% for auth in entry.author %}{% if not forloop.last %}, {% endif %}{% endfor %}
+  on  at </p>
+  {% if entry.category %}<p>Labels: {% for cat in entry.category %}
+   <a href=""></a>
+   {% if not forloop.last %}, {% endif %}
+   {% endfor %}</p>{% endif %}<p><a href="">More&#8230;</a></p></p>
+
+<p>{% endfor %}</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&lt;</span><span class="n">br</span> <span class="o">/&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">And</span> <span class="n">the</span> <span class="n">second</span> <span class="n">part</span> <span class="n">handles</span> <span class="n">the</span> <span class="n">prev</span> <span class="ow">and</span> <span class="nb">next</span> <span class="n">links</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">br</span> <span class="o">/&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">br</span> <span class="o">/&gt;</span><span class="sb">``</span><span class="err">`</span> <span class="n">html</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">br</span> <span class="o">/&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s">&quot;nav&quot;</span><span class="o">&gt;</span>
+</span><span class='line'><span class="p"></span><span class="o">%</span><span class="p">}</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s">&quot;//&quot;</span><span class="o">&gt;</span><span class="n">prev</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
+</span><span class='line'><span class="p"></span><span class="o">%</span><span class="p">}</span>
+</span><span class='line'><span class="o">&amp;</span><span class="n">nbsp</span><span class="p">;</span><span class="o">&amp;</span><span class="n">nbsp</span><span class="p">;</span><span class="o">&amp;</span><span class="n">nbsp</span><span class="p">;</span><span class="o">&amp;</span><span class="n">nbsp</span><span class="p">;</span>
+</span><span class='line'><span class="p"></span><span class="o">%</span><span class="p">}</span>
+</span><span class='line'><span class="o">&amp;</span><span class="n">nbsp</span><span class="p">;</span><span class="o">&amp;</span><span class="n">nbsp</span><span class="p">;</span><span class="o">&amp;</span><span class="n">nbsp</span><span class="p">;</span><span class="o">&amp;</span><span class="n">nbsp</span><span class="p">;</span>
+</span><span class='line'><span class="p"></span><span class="o">%</span><span class="p">}</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s">&quot;//&quot;</span><span class="o">&gt;</span><span class="nb">next</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
+</span><span class='line'><span class="p"></span><span class="o">%</span><span class="p">}</span>
+</span><span class='line'><span class="o">&amp;</span><span class="n">nbsp</span><span class="p">;</span><span class="o">&amp;</span><span class="n">nbsp</span><span class="p">;</span><span class="o">&amp;</span><span class="n">nbsp</span><span class="p">;</span><span class="o">&amp;</span><span class="n">nbsp</span><span class="p">;</span>
+</span><span class='line'><span class="p"></span><span class="o">%</span><span class="p">}</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+</span><span class='line'><span class="p"></span><span class="o">%</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<br />
+
+
+<p>That&#8217;s all for now. A working example is the <a href="http://gpowered.net/g/">gPowered.net</a> site I&#8217;m putting up.  All posts on there are getting pulled from this blog.  I&#8217;m going to get into tags and comments next time, as well as javascript and php versions. Stay tuned!</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Tim Broder</span></span>
+
+      
+
+
+
+
+
+  
+
+
+
+<time datetime="2007-07-19T03:07:00-04:00" pubdate  data-updated="true" >Jul 19<span>th</span>, 2007</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.timbroder.com/2007/07/howto-get-blogger-feeds-using-python.html" data-via="" data-counturl="http://www.timbroder.com/2007/07/howto-get-blogger-feeds-using-python.html" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+</div>
+
+    
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2011/04/jira-tabs-open-all-those-jiras-at-once.html">Jira Tabs: Open all those Jira's at once! </a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/04/google%25e2%2580%2599s-groupon-competitor-goes-live.html">Googles Groupon Competitor Goes Live</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/04/skynet.html">Skynet Becomes Self Aware Tonight</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/04/extending-a-magento-controller.html">Extending a Magento Controller</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/04/moving-gmail-gadgets-to-the-right-side.html">Moving Gmail Gadgets to the Right Side</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2011 - Tim Broder -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+    (function () {
+      var disqus_shortname = 'broderboy';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://www.timbroder.com/2007/07/howto-get-blogger-feeds-using-python.html';
+        var disqus_url = 'http://www.timbroder.com/2007/07/howto-get-blogger-feeds-using-python.html';
+        var disqus_script = 'embed.js'
+      
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+
+
+</body>
+</html>
