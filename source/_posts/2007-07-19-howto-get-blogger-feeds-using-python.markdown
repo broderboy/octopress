@@ -21,195 +21,53 @@ To start out you'll have to grab the following modules.<br />
 <br />
 We then import the parts the we'll need (you can ignore the Django part for your own methods):<br />
 
-<br />``` python
-
-from Django.shortcuts import render_to_response
-
-from gdata import service
-import gdata
-import atom
-import getopt
-import sys
-
-from mx import DateTime
-``` 
-<br />
+{% gist 1304954 %}
 
 One of the first things we're going to have to do is authenticate with google services.
 There are two ways to do this: <a href="http://code.google.com/apis/blogger/developers_guide_python.html#auth_sub">AuthSub proxy authentication</a> which has a user login using their own credentials, and
  <a href="http://code.google.com/apis/blogger/developers_guide_python.html#client_login"> ClientLogin username/password authentication</a> where you send a username and password.  We will be using ClientLogin.
  First off, set your login credentials to use later.<br />
-<br />``` python
 
-#login info
-user = 'timothy.broder@gmail.com'
-password = '********'
-``` 
-<br />
+{% gist 1304957 %}
 
 Then we start setting up our call to the service.
-<br />
-<br />``` python
 
-#set up service
-blogger_service = service.GDataService(user, password)
-blogger_service.source = 'gpowered'
-blogger_service.service = 'blogger'
-blogger_service.server = 'www.blogger.com'
-blogger_service.ProgrammaticLogin()
-``` 
-<br />
+{% gist 1304962 %}
 
 For more info see the <a href="http://code.google.com/apis/blogger/developers_guide_python.html">blogger developer's guide with python</a> or the <a href="http://code.google.com/apis/accounts/Authentication.html">Google Account Authentication documentation</a><br />
 After we have authenticated with Google we need to start building up our query to <a href="http://code.google.com/apis/gdata/">GData</a>, which will return as an ElementTree of data.  The first thing you'll need is your blog's id. <br />
 You can use the function in the dev guide to help you with this if you don't already know it.
-<br />
-<br />``` python
 
-def PrintUserBlogTitles(blogger_service):
-  query = service.Query()
-  query.feed = '/feeds/default/blogs'
-  feed = blogger_service.Get(query.ToUri())
-
-  print feed.title.text
-  for entry in feed.entry:
-    print "\t" + entry.title.text
-``` 
-<br />
-
+{% gist 1304970 %}
 
 After you have the blog id we can start working on the query
-<br />
-<br />``` python
 
-blog_id = 413573351281770670
-feed_url = '/feeds/%s/posts/default' % str(blog_id)
-query = service.Query()
-query.feed = feed_url
-``` 
-<br />
+{% gist 1304970 %}
 
 The below function returns the total number of posts that are in the feed.  We can get a small response by sending 0 for the max results.  Below is the function and the small response we get from it.<br />
-<br />``` python
 
-#get the total number of posts for this feed
-def get_total(query):
- #query for no posts
- query.max_results = '0'
- query.start_index = '1'
- 
- #get back entryless feed
- feed = blogger_service.Get(query.ToUri()) 
- return int(feed.total_results.text)
-``` 
-<br />
-<br />``` xml
+{% gist 1304970 %}
 
-<ns0:feed xmlns:ns0="http://www.w3.org/2005/Atom">
- <ns1:totalresults xmlns:ns1="http://a9.com/-/spec/opensearchrss/1.0/">1</ns1:totalresults>
- <ns1:itemsperpage xmlns:ns1="http://a9.com/-/spec/opensearchrss/1.0/">0</ns1:itemsperpage>
- <ns1:startindex xmlns:ns1="http://a9.com/-/spec/opensearchrss/1.0/">1</ns1:startindex>
- <ns0:generator uri="http://www.blogger.com" version="7.00">Blogger</ns0:generator>
- <ns0:author><ns0:name>Tim</ns0:name></ns0:author>
- <ns0:id>tag:blogger.com,1999:blog-413573351281770670</ns0:id>
- <ns0:link href="http://gpowered.blogspot.com/" rel="alternate" type="text/html" />
- <ns0:link href="http://gpowered.blogspot.com/feeds/posts/default" rel="http://schemas.google.com/g/2005#feed" type="application/atom+xml" />
- <ns0:link href="http://www.blogger.com/feeds/413573351281770670/posts/default?max-results=0" rel="self" type="application/atom+xml" />
- <ns0:link href="http://www.blogger.com/feeds/413573351281770670/posts/default" rel="http://schemas.google.com/g/2005#post" type="application/atom+xml" />
- <ns0:title type="text">gPowered</ns0:title>
- <ns0:updated>2007-07-18T10:55:06.728-05:00</ns0:updated>
-</ns0:feed>
-``` 
-<br />
+{% gist 1304978 %}
 
 So we get the total number of posts and then we can start pulling data.  Lets make a generic function, PostFrom, that can be used to show multiple posts, or just single ones, depending on what you pass to it.  The start number that is passed to
  PostFrom has been set to the first post in the blog is considered to have an id of 1 and the latest post is the same as total_posts.  This is useful so if viewers want to bookmark the page they are looking at, the post that is being displayed will not change.
 The following are the different functions that will make use of it.
-<br />
-<br />``` python
 
-#show latest posts
-def Posts(request):
- return ListPosts(request, total_posts)
-
-#show posts starting from a certain point 
-def ListPosts(request, start):
- start = total_posts - int(start) + 1
- return PostFrom(request, start, show_num)
-
-#show a single post
-def Post(request, start):
- start = total_posts - int(start) + 1
- return PostFrom(request, start, 1)
- 
-def PostFrom(request, start, count):
- #query for count number of posts starting at the given post
- query.max_results = str(count)
- query.start_index = str(start)
- feed = blogger_service.Get(query.ToUri())
-``` 
-<br />
+{% gist 1304981 %}
 
 now we have all the data we need in the feed variable.  Its been turned into an element tree so we don't have to worry about XML parsing here.  Every node has become an objects and lists.  Objects for single nodes(title), and lists for where there are multiple nodes of the same name (entry, link)
 At this stage I play with the data a little so it's easier to use in my Django template.
-<br />
-<br />``` python
 
- #normalize data for output
- for entry in feed.entry:
-  #get link for template
-  entry.my_link = entry.link[0].href
-  
-  #id for links
-  entry.my_id = curr_id
-  curr_id -= 1
-  
-  #format published date
-  dt = DateTime.ISO.ParseDateTimeUTC(entry.published.text)
-  entry.my_date = dt.strftime('%m/%d/%Y')
-  entry.my_time = dt.strftime('%I:%M %p') 
-``` 
-<br />
+{% gist 1304985 %}
 
 Of course we're going to need next and previous buttons as well.  The way we've set up the math with total_posts and the start number, we only have to increment or decrement these by count (the number of posts to display on a page).  I also set part of the link, as well as the page title, that I will use in my template.<br />
-<br />``` python
 
- prev = total_posts - (start - count) + 1
- if prev > total_posts:
-  prev = None
-  
-  
- next = total_posts - (start + count) + 1
- if next < 1:
-  next = None
- 
- #showing single post 
- if count == 1:
-  link = 'post'
-  title = feed.entry[0].title.text
- #listing posts
- else:
-  link = 'posts'
-  title = 'home'
-``` 
-<br />
+{% gist 1304986 %}
 
 The final part of the function is a return to the Django framework to populate my template.  I'm going to get into the template more in the next post, but you now have all the information you need stored.
-<br />
-<br />``` 
-``` python
 
- return render_to_response('posts/index.html', {
-  'entries': feed.entry,
-  'title': title,
-  'tag_link': tag_link, 
-  'prev': prev,
-  'next': next,  
-  'link': link,
-  'tab_home': True,
-  })
-``` 
-<br />
+{% gist 1304987 %}
 
 To the template!<br />
 <br />
