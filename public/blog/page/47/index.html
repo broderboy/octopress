@@ -1,0 +1,578 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>TimBroder.com</title>
+  <meta name="author" content="Tim Broder">
+
+  
+  <meta name="description" content="Quick update while I&#8217;m sitting here waiting for my friends in Seattle to get home from work, and its dinner time in NY, I need food! Anyway, ...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.timbroder.com/blog/page/47/index.html">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="http://feeds.feedburner.com/timbroder" rel="alternate" title="TimBroder.com" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">TimBroder.com</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://feeds.feedburner.com/timbroder" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.timbroder.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2007/08/gpowerednet-update-diggs-and-howto-list.html">gPowered.net Update: Diggs and HOWTO List</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2007-08-31T23:50:00-04:00" pubdate  data-updated="true" >Aug 31<span>st</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Quick update while I&#8217;m sitting here waiting for my friends in Seattle to get home from work, and its dinner time in NY, I need food! Anyway, I added the Digg count and HOWTO lists to the <a href="http://gpowered.net/g/postlist/">Post List</a> page as YUI tabview tabs.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2007/08/howto-yui-tabview.html">HOWTO: YUI Tabview</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2007-08-31T23:25:00-04:00" pubdate  data-updated="true" >Aug 31<span>st</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A few days ago I added the Digg counts to the bottom of the <a href="http://gpowered.net/g/postlist">Posts</a> page on gPowered.net.  Although, the more posts that I add, the further down on the page this section will get, so I decided to play around with YUI&#8217;s <a href="http://developer.yahoo.com/yui/tabview/">tabview control</a> and put the post list in one tab, and the diggs in another.  It turned out to be really easy:<br /><br />
+First we need a few dependencies<br /></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="c">&lt;!-- Dependencies --&gt;</span>
+</span><span class='line'><span class="c">&lt;!-- core CSS --&gt;</span>
+</span><span class='line'><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href=</span><span class="s">&quot;http://yui.yahooapis.com/2.3.0/build/tabview/assets/tabview.css&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">&lt;!-- optional skin for border tabs --&gt;</span>
+</span><span class='line'><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href=</span><span class="s">&quot;http://yui.yahooapis.com/2.3.0/build/tabview/assets/border_tabs.css&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://yui.yahooapis.com/2.3.0/build/yahoo-dom-event/yahoo-dom-event.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://yui.yahooapis.com/2.3.0/build/element/element-beta-min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">&lt;!-- Source file --&gt;</span>
+</span><span class='line'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://yui.yahooapis.com/2.3.0/build/tabview/tabview-min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<br />
+
+
+<p>And then we just need to organize some DIVs<br /></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;demo&quot;</span> <span class="na">class=</span><span class="s">&quot;yui-navset&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'> <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;yui-nav&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;selected&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#posts&quot;</span><span class="nt">&gt;&lt;em&gt;</span>Posts<span class="nt">&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#diggs&quot;</span><span class="nt">&gt;&lt;em&gt;</span>Diggs<span class="nt">&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#HOWTOs&quot;</span><span class="nt">&gt;&lt;em&gt;</span>HOWTO&#39;s<span class="nt">&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'> <span class="nt">&lt;/ul&gt;</span>
+</span><span class='line'> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;yui-content&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;posts&quot;</span> <span class="na">style=</span><span class="s">&quot;margin: 10px&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>   <span class="nt">&lt;h3&gt;</span>Posts<span class="nt">&lt;/h3&gt;</span>
+</span><span class='line'>   content
+</span><span class='line'>  <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;diggs&quot;</span> <span class="na">style=</span><span class="s">&quot;margin: 10px&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>   <span class="nt">&lt;h3&gt;</span>Diggs<span class="nt">&lt;/h3&gt;</span>
+</span><span class='line'>   content
+</span><span class='line'>  <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'> <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'><span class="nt">&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2007/08/vacation.html">Vacation!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2007-08-30T20:21:00-04:00" pubdate  data-updated="true" >Aug 30<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Hi All,</p>
+
+<br /><br />
+
+
+<p>I&#8217;m leaving for vacation in a few.  I&#8217;m going to be in Seattle, Washington until Wed morning and then San Fransisco until the following Sunday.  I don&#8217;t know if / when I&#8217;ll be able to post anything but I&#8217;ll try if I have some downtime ;)</p>
+
+<br /><br />
+
+
+<p>Hey look, an embedded map!!</p>
+
+<br /><br />
+
+
+
+
+<iframe width="425" height="350" frameborder="no" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=d&hl=en&geocode=&saddr=Hoboken,+NJ&daddr=JFK+to:Seattle,+WA+to:Parnassus+Ave+%4037.762970,+-122.459770+to:JFK+-+John+F+Kennedy+Intl+Airport,+Queens,+NY+to:Hoboken,+NJ&mrcr=4&mra=pi&sll=42.7379,-98.589685&sspn=44.718271,82.265625&ie=UTF8&om=1&ll=42.7379,-98.589685&spn=44.718271,82.265625&output=embed&s=AARTsJrXY7AVRAvooUWgo0SZHJgjAvE-_w"></iframe>
+
+
+<br /><a href="http://maps.google.com/maps?f=d&hl=en&geocode=&saddr=Hoboken,+NJ&daddr=JFK+to:Seattle,+WA+to:Parnassus+Ave+%4037.762970,+-122.459770+to:JFK+-+John+F+Kennedy+Intl+Airport,+Queens,+NY+to:Hoboken,+NJ&mrcr=4&mra=pi&sll=42.7379,-98.589685&sspn=44.718271,82.265625&ie=UTF8&om=1&ll=42.7379,-98.589685&spn=44.718271,82.265625&source=embed" style="color:#0000FF;text-align:left;font-size:small">View Larger Map</a>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2007/08/getting-numerof-diggs-from-digg.html">HOWTO: Getting the Numer of Diggs From Digg (Python)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2007-08-30T03:32:00-04:00" pubdate  data-updated="true" >Aug 30<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>After 2 of my posts were on the Digg front page this morning (Thank you all very much to those that dugg them), I took my first look into the <a href="http://apidoc.digg.com/">Digg API</a>.  I wanted a way to take a quick look to see how many Diggs certain stories were getting.  In some ways it is similar to GData: make a call to a URL, get some XML back, parse it, etc.  It does, however, feel lighter, probably due to its streamlined nature.  It has one purpose, get information off of Digg.  Using this, I&#8217;ve added a section in the <a href="http://gpowered.net/g/postlist/">Post List</a> section of gPowered.net that shows the Diggs of a few of the articles that I have submitted on Digg.   <br /><br /></p>
+
+<p>The API is broken into 5 main sections or endpoints.  Each of these will return related types of data:<br />
+- Stories<br />
+- Events<br />
+- Users<br />
+- Topics<br />
+- Errors<br /><br /></p>
+
+<p>In this quick HOWTO I&#8217;m going to take a quick look into the Stories endpoint so I can display the number of Diggs specific stories have.  We&#8217;ll start off by making a small class to hold our returned data (useful to send to a template or just for working with later on.  We don&#8217;t want to keep having to hit the ElementTree to get data out).  All of the calls will be send to &#8216;http://services.digg.com/&#8217;.  In this example I will only be querying &#8216;http://services.digg.com/story/{story clean title}&#8217;.<br /><br /></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">httplib2</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">elementtree</span> <span class="kn">import</span> <span class="n">ElementTree</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">#for storing</span>
+</span><span class='line'><span class="k">class</span> <span class="nc">MyDigg</span><span class="p">:</span>
+</span><span class='line'> <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">link</span><span class="p">,</span> <span class="n">digg</span><span class="p">,</span> <span class="n">diggs</span><span class="p">):</span>
+</span><span class='line'>  <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span>
+</span><span class='line'>  <span class="bp">self</span><span class="o">.</span><span class="n">link</span> <span class="o">=</span> <span class="n">link</span>
+</span><span class='line'>  <span class="bp">self</span><span class="o">.</span><span class="n">digg</span> <span class="o">=</span> <span class="n">digg</span>
+</span><span class='line'>  <span class="bp">self</span><span class="o">.</span><span class="n">diggs</span> <span class="o">=</span> <span class="n">diggs</span>
+</span><span class='line'>
+</span><span class='line'> <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>  <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">+</span> <span class="s">&#39; &#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">diggs</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">#stories to get diggs of  </span>
+</span><span class='line'><span class="n">posts</span> <span class="o">=</span> <span class="p">[</span>
+</span><span class='line'> <span class="s">&#39;Google_NOT_releasing_it_s_Goobuntu_Desktop_OS_STOP_DIGGING_IT&#39;</span><span class="p">,</span>
+</span><span class='line'> <span class="s">&#39;New_Digg_Home_Page_breaks_the_Linux_section_on_IE&#39;</span><span class="p">,</span>
+</span><span class='line'> <span class="s">&#39;Google_Reader_API_Functions&#39;</span>
+</span><span class='line'> <span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">#hold returned info</span>
+</span><span class='line'><span class="n">my_diggs</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">#all calls go through this</span>
+</span><span class='line'><span class="n">digg_service</span> <span class="o">=</span> <span class="s">&#39;http://services.digg.com/&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">#just looking at stories</span>
+</span><span class='line'><span class="n">service_endpoint</span> <span class="o">=</span> <span class="n">digg_service</span> <span class="o">+</span> <span class="s">&#39;story/</span><span class="si">%s</span><span class="s">&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">#only need 1 result back</span>
+</span><span class='line'><span class="n">trailer</span> <span class="o">=</span> <span class="s">&#39;?count=1&amp;appkey=http%3A</span><span class="si">%2F%2F</span><span class="s">gpowered.blogspot.com&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">#keep track of total diggs</span>
+</span><span class='line'><span class="n">total_diggs</span> <span class="o">=</span> <span class="mi">0</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<br /><br />
+
+
+<p>After we are set up, we will want to loop through each story we want to get Digg data for.  Add the well formed title into the query string, and send it to the Digg service.  Then, parse the response, and get the information we need.</p>
+
+<br /><br />
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">for</span> <span class="n">story</span> <span class="ow">in</span> <span class="n">posts</span><span class="p">:</span>
+</span><span class='line'> <span class="n">curr_story</span> <span class="o">=</span> <span class="n">service_endpoint</span> <span class="o">%</span> <span class="n">story</span>
+</span><span class='line'> <span class="n">url</span> <span class="o">=</span> <span class="n">curr_story</span> <span class="o">+</span> <span class="n">trailer</span>
+</span><span class='line'>
+</span><span class='line'> <span class="n">h</span> <span class="o">=</span> <span class="n">httplib2</span><span class="o">.</span><span class="n">Http</span><span class="p">()</span>
+</span><span class='line'> <span class="n">resp</span><span class="p">,</span> <span class="n">content</span> <span class="o">=</span> <span class="n">h</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="s">&quot;GET&quot;</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="s">&quot;nt&quot;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s">&#39;content-type&#39;</span><span class="p">:</span><span class="s">&#39;text/plain&#39;</span><span class="p">}</span> <span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'> <span class="n">story</span> <span class="o">=</span> <span class="n">ElementTree</span><span class="o">.</span><span class="n">fromstring</span><span class="p">(</span><span class="n">content</span><span class="p">)</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s">&#39;story&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'> <span class="n">d</span> <span class="o">=</span> <span class="n">MyDigg</span><span class="p">(</span><span class="n">story</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s">&#39;title&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">story</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;link&#39;</span><span class="p">),</span> <span class="n">story</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;href&#39;</span><span class="p">),</span> <span class="n">story</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;diggs&#39;</span><span class="p">))</span>
+</span><span class='line'> <span class="n">total_diggs</span> <span class="o">=</span> <span class="n">total_diggs</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">diggs</span><span class="p">)</span>
+</span><span class='line'> <span class="n">my_diggs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</span><span class='line'> <span class="k">print</span> <span class="n">d</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">print</span> <span class="s">&#39;Total: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">total_diggs</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<br /><br />
+
+
+<p>And that&#8217;s that.  my_diggs now has all the information we need!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2007/08/google-newest-data-center-pics.html">Google&#8217;s Newest Data Center [Pics]</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2007-08-30T03:25:00-04:00" pubdate  data-updated="true" >Aug 30<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.informationweek.com/galleries/showImage.jhtml?galleryID=62">Information Week</a> posted some photos of Google&#8217;s newest data center near The Dalles&#8217; dam.  Needless to say, I wouldn&#8217;t mind access to this baby.  Heck, I would want one, but there is no way I would be able to power it.  I&#8217;m sure the proximity to the dam&#8217;s power station and water supply were key factors in choosing the location.</p>
+
+<br /><br />
+
+
+<p><img src="http://i.cmpnet.com/infoweek/galleries/automated/62/google12_full.JPG" border="1" /><br /><br />
+<img src="http://i.cmpnet.com/infoweek/galleries/automated/62/google11_full.JPG" border="1" /><br /><br />
+<img src="http://i.cmpnet.com/infoweek/galleries/automated/62/google7_full.JPG" border="1" /><br /><br /></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <nav class="pagination">
+    <div>
+      
+        <a class="prev" href="/blog/page/48/">&larr; Older</a>
+      
+      <a href="/blog/archives">Blog Archives</a>
+      
+      <a class="next" href="/blog/page/46/">Newer &rarr;</a>
+      
+    </div>
+  </nav>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2011/10/what-do-you-listen-to-podcast-edition.html">What Do You Listen to? (Podcast Edition)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/10/creating-a-stateless-request-in-magento.html">Creating a Stateless Request in Magento</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/04/jira-tabs-open-all-those-jiras-at-once.html">Jira Tabs: Open all those Jira&#8217;s at once! </a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/04/google%25e2%2580%2599s-groupon-competitor-goes-live.html">Googles Groupon Competitor Goes Live</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/04/skynet.html">Skynet Becomes Self Aware Tonight</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2011 - Tim Broder -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+    (function () {
+      var disqus_shortname = 'timbrodercom';
+      
+        
+        var disqus_script = 'count.js'
+      
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-17099661-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

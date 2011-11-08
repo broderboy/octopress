@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>HOWTO: Use a Yahoo Pipe to filter feeds - TimBroder.com</title>
+  <meta name="author" content="Tim Broder">
+
+  
+  <meta name="description" content="One of my friends at work asked me today how I sift through volumes of news to find articles and information on Google and specifically on Google C...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.timbroder.com/2007/10/howto-use-yahoo-pipe-to-filter-feeds.html">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="http://feeds.feedburner.com/timbroder" rel="alternate" title="TimBroder.com" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">TimBroder.com</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://feeds.feedburner.com/timbroder" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.timbroder.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">HOWTO: Use a Yahoo Pipe to Filter Feeds</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2007-10-03T22:59:00-04:00" pubdate  data-updated="true" >Oct 3<span>rd</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>One of my friends at work asked me today how I sift through volumes of news to find articles and information on Google and specifically on Google Code for my articles.  The answer is simple, I don&#8217;t.  Granted, I DO read a LOT, but there just aren&#8217;t enough hours in the day to read everything I want to.  So, I have a <a href="http://pipes.yahoo.com/pipes/">Yahoo Pipe</a> sift through the feeds for me.  Pipes is &#8220;a powerful composition tool to aggregate, manipulate, and mashup content from around the web.&#8221;  Its fairly easy to use and doesn&#8217;t require any code or coding experience, although understanding the basic layout of an RSS or Atom feed is a definite plus.  The method I&#8217;m going to describe could work for any blogger or anyone who wants to filter a single or large group of feeds by keyword.  I&#8217;m not going to go into the details of Yahoo Pipes, there are plenty of tutorials and examples for that.  I&#8217;m just going to describe how I built the small pipe I use to filter for Google news.<br /><br /></p>
+
+<p>The first step is to log into or create a Yahoo account and go to <a href="http://pipes.yahoo.com/pipes/">http://pipes.yahoo.com/pipes/</a> and click on Create Pipe.  The first node we&#8217;re going to use is under sources and is called &#8220;Fetch Feed&#8221;.  Add as many of these as you want to pull in all the feeds you will need. <br /><br />
+<img src="http://lh6.google.com/timothy.broder/RwQeq2uGXrI/AAAAAAAAMTE/_APNQgTsUMQ/s400/pipe1.jpg?imgdl=1" border=1/></p>
+
+<br /><br /> 
+
+
+<p>Then use unions (located under Operators) to join these Fetches together.  If you have more then 5 feeds, you will need multiple unions.</p>
+
+<br /><br />
+
+
+
+
+<br /><br /><img src="http://lh6.google.com/timothy.broder/RwQeq2uGXsI/AAAAAAAAMTM/uKp3MSfdtUg/s400/pipe2.jpg?imgdl=1" border=1/> <br /><br />
+
+
+<p>Finally, add a filter, also located under Operators.  Here, &#8220;Permit&#8221; items that match &#8220;any&#8221; of the following.  Then, add rules where item.description > Contains and then the word or phrase you want to search for.  This filter will allow any posts that have the words through, and block everything else.  Send the output of the Filter to the Pipe Output and you are done.</p>
+
+<br /><br />
+
+
+<p><img src="http://lh6.google.com/timothy.broder/RwQeq2uGXtI/AAAAAAAAMTU/zrI8IloMhiw/s400/pipe3.jpg?imgdl=1" border=1/><br /><br /></p>
+
+<p>You can then subscribe to the output of this pipe with the reader of your choice.  When I subscribe to my pipe&#8217;s <a href="http://pipes.yahoo.com/pipes/pipe.run?_id=vF35LapU3BG9UzFodbq02Q&_render=rss">feed</a> in Google Reader, I only see posts that contain the word Google or google.  I also could have done that as one filter with a regular expression, or just with &#8220;oogle&#8221;.</p>
+
+<br /><br />
+
+
+<p>Here is a full view of the  <a href="http://pipes.yahoo.com/pipes/pipe.info?_id=vF35LapU3BG9UzFodbq02Q">pipe</a></p>
+
+<br /><br />
+
+
+<p><img src="http://lh6.google.com/timothy.broder/RwQeq2uGXuI/AAAAAAAAMTc/RAnjUutsd5A/s400/pipe4.jpg?imgdl=1" border=1/><br /><br /></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Tim Broder</span></span>
+
+      
+
+
+
+
+
+  
+
+
+
+<time datetime="2007-10-03T22:59:00-04:00" pubdate  data-updated="true" >Oct 3<span>rd</span>, 2007</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.timbroder.com/2007/10/howto-use-yahoo-pipe-to-filter-feeds.html" data-via="" data-counturl="http://www.timbroder.com/2007/10/howto-use-yahoo-pipe-to-filter-feeds.html" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+</div>
+
+    
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2011/10/what-do-you-listen-to-podcast-edition.html">What Do You Listen to? (Podcast Edition)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/10/creating-a-stateless-request-in-magento.html">Creating a Stateless Request in Magento</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/04/jira-tabs-open-all-those-jiras-at-once.html">Jira Tabs: Open all those Jira's at once! </a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/04/google%25e2%2580%2599s-groupon-competitor-goes-live.html">Googles Groupon Competitor Goes Live</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/04/skynet.html">Skynet Becomes Self Aware Tonight</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2011 - Tim Broder -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+    (function () {
+      var disqus_shortname = 'timbrodercom';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://www.timbroder.com/2007/10/howto-use-yahoo-pipe-to-filter-feeds.html';
+        var disqus_url = 'http://www.timbroder.com/2007/10/howto-use-yahoo-pipe-to-filter-feeds.html';
+        var disqus_script = 'embed.js'
+      
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-17099661-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

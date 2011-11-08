@@ -1,0 +1,473 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>TimBroder.com</title>
+  <meta name="author" content="Tim Broder">
+
+  
+  <meta name="description" content="After updating to Hardy I got a white screen of death upon rebooting.  After some research it turned out that this was more of an Nvidia driver iss...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.timbroder.com/blog/page/37/index.html">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="http://feeds.feedburner.com/timbroder" rel="alternate" title="TimBroder.com" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">TimBroder.com</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://feeds.feedburner.com/timbroder" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.timbroder.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/04/fixing-nvidia-8600-gt-on-hardy-heron.html">Fixing Nvidia 8600 GT on Hardy Heron</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2008-04-26T19:22:00-04:00" pubdate  data-updated="true" >Apr 26<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>After updating to Hardy I got a white screen of death upon rebooting.  After some research it turned out that this was more of an Nvidia driver issue rather then Ubuntu.  This may not have been the most correct way to fix it, but it worked for me.</p>
+
+<ol>
+<li>Completely remove nvidia-glx-new<br /><br /></li>
+<li>Remove nvidia-kernel-common (this also removes  linux-restricted-modules), (I am not sure if step 2 is required)<br /><br /></li>
+<li>install build-essentials<br /><br /></li>
+<li>Download the Nvidia beta driver that came out on April 10.  You can get it <a href="http://www.nvidia.com/object/linux_display_ia32_173.08.html">here</a><br /><br /></li>
+<li>hit ctrl + alt + f1 to break out of gnome<br /><br /></li>
+<li>&#8220;sudo /etc/init.d/gdm stop&#8221; to shutdown the X server<br /><br /></li>
+<li>sudo sh NVIDIA-Linux-x86-173.08-pkg1.run to install the driver.  If it asks you to update you&#8217;re xorg.conf file, let it.<br /><br /></li>
+<li>Reboot. (&#8220;sudo reboot&#8221;)  You should now be able to enable Desktop effects. YAY FISH!<br /><br /></li></ol>
+
+
+<p>This issue has also been addressed on the <a href="http://ubuntuforums.org/showthread.php?t=712479">Ubuntu Forums</a> and on <a href="https://bugs.launchpad.net/ubuntu/+source/linux-restricted-modules-2.6.24/+bug/208718">launchpad</a><br /><br /></p>
+
+<p>Note: I have a Dell XPS M1530</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/04/google-code-blog-google-app-engine-hack.html">Google Code Blog: Google App Engine Hack-a-thon Coming to Your Coast!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2008-04-25T14:42:00-04:00" pubdate  data-updated="true" >Apr 25<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&#8217;m going to the NYC one, anyone else?</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/04/but-daddy-i-want-and-andoid-phone-now.html">But Daddy! I Want and Andoid Phone NOW!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2008-04-25T14:02:00-04:00" pubdate  data-updated="true" >Apr 25<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A Microsoft Office editor should be available at launch and based on these <a href="http://www.talkandroid.com/85-quickoffice-for-android/">screenshots</a>, its going to be pretty useful.  <br /><br />I&#8217;ll have to fire up the Android emulator this weekend and see how this stacks up against mobile Google Docs and Spreadsheets.</p>
+
+<br /><br /><br />
+
+
+<p><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://2.bp.blogspot.com/_Ng3QbVQfLZ8/SBHoRfmVqOI/AAAAAAAARzk/Z6ryO5Ce-mo/s1600-h/veruca+salt.jpg"><img style="display:block; margin:0px auto 10px; text-align:center;cursor:pointer; cursor:hand;" src="http://2.bp.blogspot.com/_Ng3QbVQfLZ8/SBHoRfmVqOI/AAAAAAAARzk/Z6ryO5Ce-mo/s400/veruca+salt.jpg" border="0" alt=""id="BLOGGER_PHOTO_ID_5193187232572614882" /></a></p>
+
+<br /><br />
+
+
+<p><b><a href="http://www.imdb.com/name/nm0170628/">Veruca Salt</a></b>:
+Hey, Daddy, I want an Oompa Loompa. I want you to get me an Oompa Loompa right away.</p>
+
+<br />
+
+
+<p><b><a href="http://www.imdb.com/name/nm0455702/">Mr. Salt</a></b>:
+All right, Veruca, all right. I&#8217;ll get you one before the day is out.</p>
+
+<br />
+
+
+<p><b><a href="http://www.imdb.com/name/nm0170628/">Veruca Salt</a></b>:
+I want an Oompa Loompa now!</p>
+
+<br />
+
+
+<p><b><a href="http://www.imdb.com/name/nm0630019/">Violet Beauregarde</a></b>:
+Can it, you nit!</p>
+
+<br />
+
+
+<p>(<a href="http://www.imdb.com/title/tt0067992/">Willy Wonka &amp; the Chocolate Factory</a>)</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/04/upgrade-ubuntu-to-804-hardy-heron.html">Upgrade Ubuntu to 8.04 Hardy Heron</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2008-04-24T14:09:00-04:00" pubdate  data-updated="true" >Apr 24<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Hardy Heron came out this morning and ubuntu.com is very much down for the count</p>
+
+<br /><br />
+
+
+<p>You can Still update though, click <a href="http://72.14.205.104/search?q=cache:maBlktBTwPAJ:www.ubuntu.com/getubuntu/upgrading+upgrade+ubuntu&hl=en&ct=clnk&cd=1&gl=us&client=firefox-a">here</a> for the Google Cache version.<br /><br /></p>
+
+<p>Happy Updating!</p>
+
+<br /><br />
+
+
+<p>New Features in this release:</p>
+
+<br /><br /><a href="https://wiki.ubuntu.com/UbiquityPreserveHome">Install on an existing filesystem without overwriting /home</a><br /> When I moved from feisty to gutsy, I decided to do a fresh install. One of the things I had to do was back up my home folder, and when I finished installing gutsy I just copied it back onto my computer. This new feature will allow people to install the new version of Ubuntu without it overwriting their home folder.I&#8217;m sure this will come in very handy for people who like trying out different distro&#8217;s.<br /> <span class="fullpost"><br /> <span style="font-weight: bold"><a href="https://wiki.ubuntu.com/DesktopTeam/Specs/HardyHardwareDetection">Hardy Hardware Detection</a><br /> </span>This is more of a bug fix than a new feature. Gutsy already has excellent hardware support and the plan for hardy is even better and more robust detection of hardware. Sounds good to me.
+
+
+<br /><br /><a href="https://wiki.ubuntu.com/DesktopTeam/Specs/GdmFaceBrowser">GDM Face Browser</a><br /> </span>One of the changes I made to my gutsy is the GDM. I replaced the old one with something that allows me to just click on a picture of my username and login. This will hopefully be the default for hardy.
+
+
+
+
+<br /><br /><a href="https://wiki.ubuntu.com/X/AutodetectMonitorFrequency"><span style="font-weight: bold">Auto Detection of Monitor Frequency</span></a><br /> While I was testing gutsy beta I had to manually configure xorg.conf to get it to the right resolution. It wasn&#8217;t fun. This should be a thing of the past with hardy as it will automatically detect everything for you. Huzzah!
+
+
+<br /><br /><a href="https://wiki.ubuntu.com/AptAuthenticationReliability"><span style="font-weight: bold">Apt Authentication Reliability</span></a><br /> Have you ever had an update fail for no reason? Well it actually fails because of &#8216;transient network failures&#8217;. The aim is to make hardy more robust against these errors.
+
+
+<br /><br /><a href="https://wiki.ubuntu.com/DesktopTeam/Specs/RestrictedManagerRewrite">Redesign Restricted-Manager Code</a><br /> They want to expand the role of the restricted manager and change it so that other distro&#8217;s can share the joy.<span style="font-weight: bold"><br /> </span><a href="https://wiki.ubuntu.com/HardyFullDiskHandling"><br /> <span style="font-weight: bold">Handling Full Disks</span></a><br /> I&#8217;ve never had this problem with Ubuntu, but if your disk gets full, things can get quite ugly. They plan to add a notification and disk clean-up tool when your running low on space.
+
+
+
+
+<br /><br /><a href="https://wiki.ubuntu.com/DesktopTeam/Specs/HardyDesktopEffects"><span style="font-weight: bold">Desktop Effects</span></a><br /> Make compiz fusion more robust and easier to use.
+
+
+<br /><br /><a href="https://wiki.ubuntu.com/DesktopTeam/Specs/HardyTheme"><span style="font-weight: bold">New Theme</span></a><br /> Hardy Heron will be getting a shiny new theme, I hope they move away from the brown theme and choose something lighter and more fresh.
+
+
+<br /><br /><a href="https://wiki.ubuntu.com/EasyFileSharing">Easy File Sharing</a><br /> To allow people to easily share files over a network. Not more I can say about this.
+
+
+<br /><br /><a href="https://blueprints.launchpad.net/ubuntu/+spec/multi-monitor-config"><span style="font-weight: bold">Dual/Multi Monitor Support</span></a><br /> Currently you have to manually tweak Ubuntu if you want to use more than one monitor. They want to fix this for hardy.
+
+
+<br /><br /><a href="https://wiki.ubuntu.com/DesktopTeam/Specs/Prefetch"><span style="font-weight: bold">Integrate Prefetch into Ubuntu</span></a><br /> I noticed a slightly increased start up time in gutsy compared to feisty. Hardy will use file prefetch and other optimisations to speed up boot time.
+
+
+
+
+<br /><br /><a href="https://wiki.ubuntu.com/Automatix/Ubuntu_Team_Collaboration?highlight=%20automatix%20#81830218674224151">Automatix-Ubuntu Team Collaboration</a><br /> Automatix was extremely helpful for me in feisty. Although I don&#8217;t use it in gutsy, its good that they are collaborating with the automatix team.
+
+
+<br /><br /><a href="https://wiki.ubuntu.com/SingleClickInstall"><span style="font-weight: bold">Single Click Install</span></a><br /> Installing software is already pretty straightforward in Ubuntu. They want to make it even easier to install third party applications. I&#8217;m not complaining.
+
+
+<br /><br /><a href="https://wiki.ubuntu.com/HardyAppArmor"><span style="font-weight: bold">Apparmor Integration</span></a><br /> This is already a part of gutsy, the plan is to increase integration to make Ubuntu even safer.
+
+
+<br /><br /><a href="https://blueprints.launchpad.net/ubuntu/+spec/ubuntu-firewall"><span style="font-weight: bold">Firewall</span></a><br /> Make it easier for users to configure their firewall.
+
+
+<br /><br /><a href="https://blueprints.launchpad.net/ubuntu/+spec/third-party-apt"><span style="font-weight: bold">Third Party Apt</span></a><br /> Now when you install third party apps, you have to manually add the software repository to the sources.list. This spec makes it easy for users to install third party software and have it update automatically.
+
+
+
+
+<br /><br /><a href="https://wiki.ubuntu.com/DesktopTeam/Specs/ExitStrategy"><strong>Revamped Logout Screen</strong></a><br /> They want to streamline the options you have when you click that big red button, to make things less confusing.
+
+
+<br /><br /><a href="https://blueprints.launchpad.net/ubuntu/+spec/better-integrated-wine"><span style="font-weight: bold">Better Integrated Wine</span></a><br /> Better Wine will make it easier for Windows users to convert, thus helping to solve <a href="https://blueprints.launchpad.net/bugs/1">bug #1</a>.
+
+
+<br /><br /><a href="https://wiki.ubuntu.com/Xorg7.3Integration"><span style="font-weight: bold">Xorg 7.3</span></a><br /> This is one of the features that missed the gutsy deadline. This should make manual configuration of xorg.conf obsolete. Another much anticipated feature is Bullet Proof X, which will go into a graphical safe mode if anything goes wrong with X.
+
+
+<br /><br /><a href="https://wiki.ubuntu.com/SlickBoot"><span style="font-weight: bold">Slick Boot</span></a><br /> To improve the boot and shutdown process and also make the things look nicer.
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/04/almost-time-for-new-ubuntu.html">Almost Time for a New Ubuntu</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2008-04-22T10:59:00-04:00" pubdate  data-updated="true" >Apr 22<span>nd</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Ubuntu 8.04, <a href="https://wiki.ubuntu.com/HardyHeron/">Hardy Heron</a> comes out in two days<br /><br /></p>
+
+<p>Be ready for it.<br /><br /><br /><br /><br /><br /><br />
+<i>(Or install it <a href="https://help.ubuntu.com/community/HardyUpgrades#head-d552909d23532acc4ecb9a4c51a902e79caab0e8">now</a>)</i></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <nav class="pagination">
+    <div>
+      
+        <a class="prev" href="/blog/page/38/">&larr; Older</a>
+      
+      <a href="/blog/archives">Blog Archives</a>
+      
+      <a class="next" href="/blog/page/36/">Newer &rarr;</a>
+      
+    </div>
+  </nav>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2011/10/what-do-you-listen-to-podcast-edition.html">What Do You Listen to? (Podcast Edition)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/10/creating-a-stateless-request-in-magento.html">Creating a Stateless Request in Magento</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/04/jira-tabs-open-all-those-jiras-at-once.html">Jira Tabs: Open all those Jira&#8217;s at once! </a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/04/google%25e2%2580%2599s-groupon-competitor-goes-live.html">Googles Groupon Competitor Goes Live</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/04/skynet.html">Skynet Becomes Self Aware Tonight</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2011 - Tim Broder -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+    (function () {
+      var disqus_shortname = 'timbrodercom';
+      
+        
+        var disqus_script = 'count.js'
+      
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-17099661-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>TimBroder.com</title>
+  <link href="http://www.timbroder.com/atom.xml" rel="self"/>
+  <link href="http://www.timbroder.com/"/>
+  <updated>2011-11-08T17:51:14-05:00</updated>
+  <id>http://www.timbroder.com/</id>
+  <author>
+    <name>Tim Broder</name>
+    
+  </author>
+
+  
+  <entry>
+    <title>What Do You Listen to? (Podcast Edition)</title>
+    <link href="http://www.timbroder.com/2011/10/what-do-you-listen-to-podcast-edition.html"/>
+    <updated>2011-10-21T15:06:00-04:00</updated>
+    <id>http://www.timbroder.com/2011/10/what-do-you-listen-to-podcast-edition</id>
+    <content type="html">&lt;p&gt;I tend to listen to a decent number of podcasts. Usually while doing the dishes, running, or something or other in the park.  Some are book/comic related and help me keep up to date with what&amp;#8217;s coming out and how some books were that I didn&amp;#8217;t have time to read.  Others are tech and help me get other opinions on the new libraries or trends.  I&amp;#8217;ve found a number of fun libraries/how-tos from listening. Check them out below, what do you listen to?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tech&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Sitepoint - Web Dev news, tutorials, interviews&lt;br/&gt;
+&lt;a href=&quot;http://www.sitepoint.com/&quot;&gt;http://www.sitepoint.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Official jQuery podcast* - Javascript library&lt;br/&gt;
+&lt;a href=&quot;http://podcast.jquery.com/&quot;&gt;http://podcast.jquery.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;yayQuery* - Front End Dev podcast&lt;br/&gt;
+&lt;a href=&quot;http://yayquery.com/&quot;&gt;http://yayquery.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;djangodose* - Had great news about django, but I think its dead&lt;br/&gt;
+&lt;a href=&quot;http://djangodose.com/&quot;&gt;http://djangodose.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;techzinglive - Random tech/hacker news&lt;br/&gt;
+&lt;a href=&quot;http://techzinglive.com/&quot;&gt;http://techzinglive.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The Dev Show - Ruby,Php, Java, Javascript&lt;br/&gt;
+&lt;a href=&quot;http://5by5.tv/devshow&quot;&gt;http://5by5.tv/devshow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The changelog - Open source news&lt;br/&gt;
+&lt;a href=&quot;http://thechangelog.com/&quot;&gt;http://thechangelog.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ATX Web Show - web stuff&lt;br/&gt;
+&lt;a href=&quot;http://atxwebshow.com/&quot;&gt;http://atxwebshow.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The javascript show* - great js news and library coverage&lt;br/&gt;
+&lt;a href=&quot;http://javascriptshow.com/&quot;&gt;http://javascriptshow.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Non Tech&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;iFanboy* - Comic book news and reviews&lt;br/&gt;
+&lt;a href=&quot;http://ifanboy.com/&quot;&gt;http://ifanboy.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Sword and Laser* - Science Fiction and Fantasy book club&lt;br/&gt;
+&lt;a href=&quot;http://www.swordandlaser.com/&quot;&gt;http://www.swordandlaser.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;11 O&amp;#8217;Clock Comics - Comic news and culture&lt;br/&gt;
+&lt;a href=&quot;http://bullpenbulletinspodcast.com/&quot;&gt;http://bullpenbulletinspodcast.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Word Balloon - Comic creator interviews &lt;br/&gt;
+&lt;a href=&quot;http://wordballoon.com/&quot;&gt;http://wordballoon.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fuzzy Typewriter - Random media / culture &lt;br/&gt;
+&lt;a href=&quot;http://wordballoon.com/&quot;&gt;http://fuzzytypewriter.wordpress.com/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;I listen to every episode, others I cherry-pick&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+  </entry>
+  
+  <entry>
+    <title>Creating a Stateless Request in Magento</title>
+    <link href="http://www.timbroder.com/2011/10/creating-a-stateless-request-in-magento.html"/>
+    <updated>2011-10-17T18:45:00-04:00</updated>
+    <id>http://www.timbroder.com/2011/10/creating-a-stateless-request-in-magento</id>
+    <content type="html">&lt;p&gt;Have you ever wanted to create a stateless request in Magento? Something that doesn&amp;#8217;t touch any of Matengo&amp;#8217;s sessions?  We were having issues with some of the ajax calls on our cart and checkout pages mucking with the user&amp;#8217;s cart and had get stateless on these calls.  The issue we were having was out checkout page was loading, then a javascript include was going out and bringing code from a 3rd party relevance engine into our dom, which was in turn calling back an ajax request to our servers.  This issue with this being that at the start of the page load page load, the checkout session was being set to a certain state.  This state was then being sent through the rest of the page load, and the ajax calls. Unfortunately, by the time the ajax call got back to our server, the session was different in both locations, creating a race condition.  The ajax request usually won, removing the work the full page load had done with trying to process checkout.  The good news was there was nothing in the ajax call that needed to touch the session, it was just some data lookup. So, nix the session part of that call, and our troubles should be over&amp;#8230; Magento&amp;#8217;s api controller is the only place that implements a stateless request this but its fairly easy to do (after a bit of digging).&lt;/p&gt;
+
+&lt;p&gt;As long as Mage_Core_Controller_Varien_Action is a parent in your controller&amp;#8217;s hierchy, you are good to go (it probably is).  This class has a const FLAG_NO_START_SESSION which looks promising. Digging into the code a little we see that it controls whether cookies are processed or the session is started:&lt;/p&gt;
+
+&lt;div&gt;&lt;script src=&#8217;https://gist.github.com/1293475.js?file=&#8217;&gt;&lt;/script&gt;
+&lt;noscript&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;?php
+&#8230;
+        if (!$this-&amp;gt;getFlag(&#8221;, self::FLAG_NO_START_SESSION)) {
+            $checkCookie = in_array($this-&amp;gt;getRequest()-&amp;gt;getActionName(), $this-&amp;gt;_cookieCheckActions);
+            $checkCookie = $checkCookie &amp;amp;&amp;amp; !$this-&amp;gt;getRequest()-&amp;gt;getParam(&#8216;nocookie&#8217;, false);
+            $cookies = Mage::getSingleton(&#8216;core/cookie&#8217;)-&amp;gt;get();
+            if ($checkCookie &amp;amp;&amp;amp; empty($cookies)) {
+                $this-&amp;gt;setFlag(&#8221;, self::FLAG_NO_COOKIES_REDIRECT, true);
+            }
+            Mage::getSingleton(&#8216;core/session&#8217;, array(&#8216;name&#8217; =&amp;gt; $this-&amp;gt;_sessionNamespace))-&amp;gt;start();
+        }&lt;/code&gt;&lt;/pre&gt;&lt;/noscript&gt;&lt;/div&gt;
+
+
+&lt;p&gt;By adding to the preDispatch() method of our Action or Controller we can toggle this:&lt;/p&gt;
+
+&lt;div&gt;&lt;script src=&#8217;https://gist.github.com/1293491.js?file=&#8217;&gt;&lt;/script&gt;
+&lt;noscript&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;?php
+class Ai_AjaxCatalog_Controller_Action extends Mage_Core_Controller_Front_Action
+{
+    public function preDispatch()
+    {
+        $this-&amp;gt;setFlag(&#8221;, self::FLAG_NO_START_SESSION, 1); // Do not start standard session
+        parent::preDispatch();
+        return $this;
+    }
+}
+
+test&lt;/code&gt;&lt;/pre&gt;&lt;/noscript&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now, any action in this controller will be stateless and not effect any sessions&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Jira Tabs: Open all those Jira&#8217;s at once! </title>
+    <link href="http://www.timbroder.com/2011/04/jira-tabs-open-all-those-jiras-at-once.html"/>
+    <updated>2011-04-22T18:21:22-04:00</updated>
+    <id>http://www.timbroder.com/2011/04/jira-tabs-open-all-those-jiras-at-once</id>
+    <content type="html">&lt;p&gt;Ever want to open all the Jiras on the screen in new tabs? Jess does, I do, and you should too!&lt;/p&gt;
+
+&lt;p&gt;For firefox and chrome we now have the JiraTabs bookmark button.&lt;/p&gt;
+
+&lt;p&gt;Drag this link up to your bookmarks bar: &lt;a href=&quot;javascript: function tab(where){ var elms = document.getElementById(where).getElementsByTagName(&#8216;tr&#8217;); var conf=confirm(&#8216;Do you want to open &#8216;+(elms.length-1)+&#8217; Jiras?&#8217;); if(conf){ for(var i=1; i&lt;elms.length; i++){ var url = elms[i].getElementsByClassName(&#8216;summary&#8217;)[0].getElementsByTagName(&#8216;a&#8217;)[0]; window.open(url.href);}  } } tab(&#8216;issuetable&#8217;);&quot;&gt;JiraTabs&lt;/a&gt;. Then, whenever you are on a filter or search view of Jira&amp;#8217;s, click the button and all the jira&amp;#8217;s on your screen will open up in new tabs&lt;/p&gt;
+
+&lt;p&gt;Demo:&lt;/p&gt;
+
+&lt;iframe title=&quot;YouTube video player&quot; width=&quot;425&quot; height=&quot;349&quot; src=&quot;http://www.youtube.com/embed/PltTkfuhKfM?rel=0&amp;amp;hd=1&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+
+&lt;p&gt;Any updates will be made &lt;a href=&quot;https://bitbucket.org/broderboy/jira-tabs/src&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Googles Groupon Competitor Goes Live</title>
+    <link href="http://www.timbroder.com/2011/04/google%25e2%2580%2599s-groupon-competitor-goes-live.html"/>
+    <updated>2011-04-21T21:43:56-04:00</updated>
+    <id>http://www.timbroder.com/2011/04/google%e2%80%99s-groupon-competitor-goes-live</id>
+    <content type="html">&lt;p&gt;&lt;a href=&quot;http://bit.ly/eFvNwn &quot; target=&quot;_blank&quot;&gt;http://bit.ly/eFvNwn&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Skynet Becomes Self Aware Tonight</title>
+    <link href="http://www.timbroder.com/2011/04/skynet.html"/>
+    <updated>2011-04-19T21:25:05-04:00</updated>
+    <id>http://www.timbroder.com/2011/04/skynet</id>
+    <content type="html">&lt;h2&gt;Terminator: The Sarah Connor Chronicles&lt;a href=&quot;http://terminator.wikia.com/index.php?title=2011/04/21&amp;amp;action=edit&amp;amp;section=1&quot;&gt;&lt;img src=&quot;http://images1.wikia.nocookie.net/__cb35594/common/skins/common/blank.gif&quot; alt=&quot;Edit Terminator: The Sarah Connor Chronicles section&quot; /&gt;&lt;/a&gt;&lt;/h2&gt;
+
+
+&lt;ul&gt;
+    &lt;li&gt;&lt;strong&gt;April 21,&lt;a title=&quot;2011&quot; href=&quot;http://terminator.wikia.com/wiki/2011&quot;&gt;2011&lt;/a&gt;&lt;/strong&gt;.&lt;a title=&quot;Judgment Day&quot; href=&quot;http://terminator.wikia.com/wiki/Judgment_Day&quot;&gt;Judgment Day&lt;/a&gt;.&lt;a title=&quot;Kyle Reese&quot; href=&quot;http://terminator.wikia.com/wiki/Kyle_Reese&quot;&gt;Kyle Reese&lt;/a&gt; and&lt;a title=&quot;Derek Reese&quot; href=&quot;http://terminator.wikia.com/wiki/Derek_Reese&quot;&gt;Derek Reese&lt;/a&gt; witness the launch of U.S. missiles while playing ball in their yard.&lt;sup id=&quot;cite_ref-0&quot;&gt;&lt;a href=&quot;http://terminator.wikia.com/wiki/2011/04/21#cite_note-0&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;dl&gt;&lt;dd&gt;As a result of temporal interference by&lt;a title=&quot;Sarah Connor&quot; href=&quot;http://terminator.wikia.com/wiki/Sarah_Connor&quot;&gt;Sarah Connor&lt;/a&gt;, her son&lt;a title=&quot;John Connor&quot; href=&quot;http://terminator.wikia.com/wiki/John_Connor&quot;&gt;John&lt;/a&gt;,&lt;a title=&quot;Miles Dyson&quot; href=&quot;http://terminator.wikia.com/wiki/Miles_Dyson&quot;&gt;Miles Dyson&lt;/a&gt;, and the&lt;a title=&quot;T-800 (Terminator 2)&quot; href=&quot;http://terminator.wikia.com/wiki/T-800_%28Terminator_2%29&quot;&gt;T-800&lt;/a&gt;&lt;sup id=&quot;cite_ref-1&quot;&gt;&lt;a href=&quot;http://terminator.wikia.com/wiki/2011/04/21#cite_note-1&quot;&gt;[2]&lt;/a&gt;&lt;/sup&gt; destroying&lt;a title=&quot;Cyberdyne&quot; href=&quot;http://terminator.wikia.com/wiki/Cyberdyne&quot;&gt;Cyberdyne&lt;/a&gt; headquarters and all backups of the research in&lt;a title=&quot;1995&quot; href=&quot;http://terminator.wikia.com/wiki/1995&quot;&gt;1995&lt;/a&gt;, the date for Judgment day is moved back to here.&lt;sup id=&quot;cite_ref-2&quot;&gt;&lt;a href=&quot;http://terminator.wikia.com/wiki/2011/04/21#cite_note-2&quot;&gt;[3]&lt;/a&gt;&lt;/sup&gt; Skynet is destined to go online a few days earlier on&lt;strong&gt;&lt;a title=&quot;2011/04/19&quot; href=&quot;http://terminator.wikia.com/wiki/2011/04/19&quot;&gt;April 19&lt;/a&gt;,&lt;a title=&quot;2011&quot; href=&quot;http://terminator.wikia.com/wiki/2011&quot;&gt;2011&lt;/a&gt;&lt;/strong&gt; at&lt;strong&gt;20:11&lt;/strong&gt;&lt;/dd&gt;&lt;/dl&gt;
+
+</content>
+  </entry>
+  
+  <entry>
+    <title>Extending a Magento Controller</title>
+    <link href="http://www.timbroder.com/2011/04/extending-a-magento-controller.html"/>
+    <updated>2011-04-19T21:16:46-04:00</updated>
+    <id>http://www.timbroder.com/2011/04/extending-a-magento-controller</id>
+    <content type="html">&lt;p&gt;We&amp;#8217;re ajaxing part of the Magento shopping cart so we need to modify/extend some of the cart controller functionality. Sometimes when modifying controller&amp;#8217;s you have to worry about updating the routes. For this, we don&amp;#8217;t need to, we still want all the urls to be used the same way.&lt;/p&gt;
+
+&lt;p&gt;app/code/local/Ai/Checkout/etc/config.xml:&lt;/p&gt;
+
+&lt;figure class=&#8217;code&#8217;&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class=&#8217;line-number&#8217;&gt;1&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;2&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;3&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;4&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;5&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;6&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;7&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;8&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;9&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;10&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;11&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;12&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;13&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;14&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;15&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;16&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;17&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;18&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;19&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#8217;code&#8217;&gt;&lt;pre&gt;&lt;code class=&#8217;xml&#8217;&gt;&lt;span class=&#8217;line&#8217;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;config&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;modules&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;        &lt;span class=&quot;nt&quot;&gt;&amp;lt;Ai_Checkout&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;             &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;0.0.1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/Ai_Checkout&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/modules&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;&#8230;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;frontend&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;        &lt;span class=&quot;nt&quot;&gt;&amp;lt;routers&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;            &lt;span class=&quot;nt&quot;&gt;&amp;lt;checkout&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;                &lt;span class=&quot;nt&quot;&gt;&amp;lt;use&amp;gt;&lt;/span&gt;standard&lt;span class=&quot;nt&quot;&gt;&amp;lt;/use&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;                &lt;span class=&quot;nt&quot;&gt;&amp;lt;args&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;                    &lt;span class=&quot;nt&quot;&gt;&amp;lt;module&amp;gt;&lt;/span&gt;Ai_Checkout&lt;span class=&quot;nt&quot;&gt;&amp;lt;/module&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;                    &lt;span class=&quot;nt&quot;&gt;&amp;lt;frontName&amp;gt;&lt;/span&gt;checkout&lt;span class=&quot;nt&quot;&gt;&amp;lt;/frontName&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;                &lt;span class=&quot;nt&quot;&gt;&amp;lt;/args&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;            &lt;span class=&quot;nt&quot;&gt;&amp;lt;/checkout&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/routers&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/frontend&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/config&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;
+
+
+&lt;p&gt;app/code/local/Ai/Checkout/controllers/CartController.php:&lt;/p&gt;
+
+&lt;figure class=&#8217;code&#8217;&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class=&#8217;line-number&#8217;&gt;1&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;2&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;3&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;4&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;5&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;6&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;7&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;8&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;9&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;10&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#8217;code&#8217;&gt;&lt;pre&gt;&lt;code class=&#8217;php&#8217;&gt;&lt;span class=&#8217;line&#8217;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;&lt;span class=&quot;k&quot;&gt;require_once&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Mage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getModuleDir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;controllers&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Mage_Checkout&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;DS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;CartController.php&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Ai_Checkout_CartController&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Mage_Checkout_CartController&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;   &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;updatePostAction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;      &lt;span class=&quot;nx&quot;&gt;Mage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;quot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;NEW&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CONTROLLER&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;quot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;tim.log&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;        &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;
+
+</content>
+  </entry>
+  
+  <entry>
+    <title>Moving Gmail Gadgets to the Right Side</title>
+    <link href="http://www.timbroder.com/2011/04/moving-gmail-gadgets-to-the-right-side.html"/>
+    <updated>2011-04-07T14:56:39-04:00</updated>
+    <id>http://www.timbroder.com/2011/04/moving-gmail-gadgets-to-the-right-side</id>
+    <content type="html">&lt;p&gt;I started using Remember the Milk recently but didn&amp;#8217;t want the &lt;a href=&quot;http://www.rememberthemilk.com/services/gmail/gadget/&quot; target=&quot;_blank&quot;&gt;gmail gadget&lt;/a&gt; to be so far down on the left hand side of my screen. There is no built in way to move gadgets to the right hand side with the exception of chat (labels used to do this but was removed in favor of drag in drop back in late 2009).&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.timbroder.com/images/wp-content/uploads/2011/04/gmail_right_widgets.png&quot;&gt;&lt;img class=&quot;size-full wp-image-901 alignleft&quot; title=&quot;gmail_right_widgets&quot; src=&quot;http://www.timbroder.com/images/wp-content/uploads/2011/04/gmail_right_widgets.png&quot; alt=&quot;&quot; width=&quot;513&quot; height=&quot;455&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;If you don&amp;#8217;t have anything in the right hand column, &lt;em&gt;enable Right-Side Chat&lt;/em&gt; from Gmail Labs. We are going to add in some custom css to gmail so install either &lt;a href=&quot;https://chrome.google.com/extensions/detail/pabfempgigicdjjlccdgnbmeggkbjdhd&quot; target=&quot;_blank&quot;&gt;Stylist &lt;/a&gt;for Chrome or &lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/stylish/&quot; target=&quot;_blank&quot;&gt;Stylish&lt;/a&gt; for Firefox.&lt;/p&gt;
+
+&lt;p&gt;Add the following style:&lt;/p&gt;
+
+&lt;p&gt;&amp;#8220;` css
+div.TZ:nth-child(8) {&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;position:absolute !important;
+right:0px;
+top:165px;
+width:164px;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;}&amp;#8220;`&lt;/p&gt;
+
+&lt;p&gt;In chrome you can also restrict the domain to mail.google.com.  For me, the Remember the Milk gadget was the 8th child.  Play with this until it looks right for you. You may also have to play with the &amp;#8220;top&amp;#8221; element depending on how much room your chat gadget takes up&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>New Digg reverse paywall coming</title>
+    <link href="http://www.timbroder.com/2011/04/new-digg-reverse-paywall-coming.html"/>
+    <updated>2011-04-06T13:45:21-04:00</updated>
+    <id>http://www.timbroder.com/2011/04/new-digg-reverse-paywall-coming</id>
+    <content type="html">&lt;p&gt;Interesting: &lt;a href=&quot;http://about.digg.com/blog/cha-ching&quot; target=&quot;_blank&quot;&gt;http://about.digg.com/blog/cha-ching&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;em&gt;Welcome to the future of killing time on the internet, and  getting paid for it: Digg is implementing a reverse pay wall! We believe  this will greatly enhance the Digg experience. Early reaction from test  users has been great. Can Duruk, developer at Digg, sums it up well:&lt;/em&gt;
+
+&lt;em&gt;&amp;#8220;I thought Rebecca Black&amp;#8217;s &amp;#8216;Friday&amp;#8217; video was great now that I got paid to watch it!&amp;#8221;&lt;/em&gt;&lt;/blockquote&gt;
+
+
+&lt;p&gt;Now, I used to be on Digg for at least an hour a day. then v4 came&amp;#8230; and it kind of sucks now&amp;#8230;.. Losing nested categories was a huge loss for me.&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;&lt;span style=&quot;font-size: x-small;&quot;&gt;&lt;span style=&quot;color: #204a87;&quot;&gt;(9:39:48 AM) &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;font-weight: bold; color: #204a87;&quot;&gt;Tim: &lt;/span&gt;i would totally go back to digg to get paid &lt;a href=&quot;http://about.digg.com/blog/cha-ching&quot;&gt;http://about.digg.com/blog/cha-ching&lt;/a&gt;
+&lt;span style=&quot;font-weight: normal;&quot;&gt;&lt;span style=&quot;font-size: x-small;&quot;&gt;&lt;span style=&quot;color: #cc0000;&quot;&gt;(9:40:46 AM) &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;font-weight: bold; color: #cc0000;&quot;&gt;Laura: &lt;/span&gt;Hmm
+&lt;span style=&quot;font-weight: normal;&quot;&gt;&lt;span style=&quot;font-size: x-small;&quot;&gt;&lt;span style=&quot;color: #cc0000;&quot;&gt;(9:41:00 AM) &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;font-weight: bold; color: #cc0000;&quot;&gt;Laura: &lt;/span&gt;Digg is so horrible, that&amp;#8217;s a little like being ok with becoming a prostitute
+&lt;span style=&quot;font-weight: normal;&quot;&gt;&lt;span style=&quot;font-size: x-small;&quot;&gt;&lt;span style=&quot;color: #cc0000;&quot;&gt;(9:41:03 AM) &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;font-weight: bold; color: #cc0000;&quot;&gt;Laura: &lt;/span&gt;I mean, you get paid
+&lt;span style=&quot;font-weight: normal;&quot;&gt;&lt;span style=&quot;font-size: x-small;&quot;&gt;&lt;span style=&quot;color: #204a87;&quot;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;div id=&quot;_mcePaste&quot; class=&quot;mcePaste&quot; style=&quot;position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;&quot;&gt;http://about.digg.com/blog/cha-ching&lt;/div&gt;
+
+</content>
+  </entry>
+  
+  <entry>
+    <title>42.75&#8221; New Box Jump PR</title>
+    <link href="http://www.timbroder.com/2011/04/42-75-new-box-jump-pr.html"/>
+    <updated>2011-04-05T13:24:33-04:00</updated>
+    <id>http://www.timbroder.com/2011/04/42-75-new-box-jump-pr</id>
+    <content type="html">&lt;object width=&quot;266&quot; height=&quot;400&quot; &gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot; /&gt;&lt;param name=&quot;movie&quot; value=&quot;http://www.facebook.com/v/608117101466&quot; /&gt;&lt;embed src=&quot;http://www.facebook.com/v/608117101466&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; width=&quot;266&quot; height=&quot;400&quot;&gt;&lt;/embed&gt;&lt;/object&gt;
+
+</content>
+  </entry>
+  
+  <entry>
+    <title>Firefox 4 landing</title>
+    <link href="http://www.timbroder.com/2011/03/firefox-4-landing.html"/>
+    <updated>2011-03-21T20:01:55-04:00</updated>
+    <id>http://www.timbroder.com/2011/03/firefox-4-landing</id>
+    <content type="html">&lt;p&gt;&lt;img class=&quot;alignnone&quot; title=&quot;http://content.screencast.com/users/broderboy/folders/Jing/media/f18ea796-51be-45a3-b4f7-58a8b1104c99/2011-03-21_1559.png&quot; src=&quot;http://content.screencast.com/users/broderboy/folders/Jing/media/f18ea796-51be-45a3-b4f7-58a8b1104c99/2011-03-21_1559.png&quot; alt=&quot;&quot; width=&quot;777&quot; height=&quot;651&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It will be updating on your current installs tomorrow.&lt;/p&gt;
+
+&lt;p&gt;To download now: &lt;a href=&quot;http://fileforum.betanews.com/detail/Mozilla-Firefox-v4-for-Windows/1032985422/16&quot;&gt;Windows&lt;/a&gt;, &lt;a href=&quot;http://fileforum.betanews.com/detail/Mozilla-Firefox-v4-for-Mac-OS-X/1032985422/17&quot;&gt;Mac&lt;/a&gt;, and &lt;a href=&quot;http://fileforum.betanews.com/detail/Mozilla-Firefox-v4-for-Linux/1032985422/18&quot;&gt;Linux&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Setting a project as the default redmine homepage</title>
+    <link href="http://www.timbroder.com/2011/03/setting-a-project-as-the-default-redmine-homepage.html"/>
+    <updated>2011-03-15T23:31:01-04:00</updated>
+    <id>http://www.timbroder.com/2011/03/setting-a-project-as-the-default-redmine-homepage</id>
+    <content type="html">&lt;p&gt;Only have a single project running on &lt;a href=&quot;http://www.redmine.org/&quot; target=&quot;_blank&quot;&gt;redmine&lt;/a&gt;? want it to be the homepage?
+in config/routes.rb&lt;/p&gt;
+
+&lt;p&gt;in cofig/routes.rb
+&lt;code&gt;ruby
+map.home &#8221;, :controller =&amp;gt; &#8216;projects&#8217;, :action =&amp;gt; &#8216;show&#8217;, :id =&amp;gt; &#8216;my_project_name&#8217;&lt;/code&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Jump Higher</title>
+    <link href="http://www.timbroder.com/2011/03/jump-higher.html"/>
+    <updated>2011-03-15T21:22:42-04:00</updated>
+    <id>http://www.timbroder.com/2011/03/jump-higher</id>
+    <content type="html">&lt;iframe title=&quot;YouTube video player&quot; width=&quot;560&quot; height=&quot;349&quot; src=&quot;http://www.youtube.com/embed/tPZdYboa-HY?rel=0&amp;amp;hd=1&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+</content>
+  </entry>
+  
+  <entry>
+    <title>Crossfit 2011. Are you Ready?</title>
+    <link href="http://www.timbroder.com/2011/03/crossfit-2011-are-you-ready.html"/>
+    <updated>2011-03-04T18:25:24-05:00</updated>
+    <id>http://www.timbroder.com/2011/03/crossfit-2011-are-you-ready</id>
+    <content type="html">&lt;iframe title=&quot;YouTube video player&quot; width=&quot;560&quot; height=&quot;349&quot; src=&quot;http://www.youtube.com/embed/xqbw6hZW91k?rel=0&amp;amp;hd=1&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+</content>
+  </entry>
+  
+  <entry>
+    <title>Stress Relief: Blow things up</title>
+    <link href="http://www.timbroder.com/2011/02/stress-relief-blow-things-up.html"/>
+    <updated>2011-02-28T20:09:35-05:00</updated>
+    <id>http://www.timbroder.com/2011/02/stress-relief-blow-things-up</id>
+    <content type="html">&lt;div align=&quot;center&quot;&gt;&lt;object width=&quot;600&quot; height=&quot;500&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://www.physicsgames.net/swf/blowthingsup.swf&quot;&gt;&lt;/param&gt;&lt;embed src=&quot;http://www.physicsgames.net/swf/blowthingsup.swf&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;450&quot; height=&quot;375&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;br /&gt;&lt;a href=&quot;http://www.physicsgames.net/&quot;&gt;Online Physics Games&lt;/a&gt;&lt;/div&gt;
+
+</content>
+  </entry>
+  
+  <entry>
+    <title>Running Mongodb as a service on windows</title>
+    <link href="http://www.timbroder.com/2011/02/running-mongodb-as-a-service-on-windows.html"/>
+    <updated>2011-02-23T20:55:22-05:00</updated>
+    <id>http://www.timbroder.com/2011/02/running-mongodb-as-a-service-on-windows</id>
+    <content type="html">&lt;blockquote&gt;&lt;p&gt;c:\mongodb\mongod.exe &amp;#8211;logpath &amp;#8220;c:\mongodb\logs\mongo.log&amp;#8221; &amp;#8211;logappend &amp;#8211;dbpath &amp;#8220;c:\mongodb\dat
+a&amp;#8221; &amp;#8211;directoryperdb &amp;#8211;install
+all output going to: c:\mongodb\logs\mongo.log
+Creating service MongoDB.
+Service creation successful.
+Service can be started from the command line via &amp;#8216;net start &amp;#8220;MongoDB&amp;#8221;&amp;#8217;.&lt;/p&gt;
+
+&lt;p&gt;net start MongoDB
+The Mongo DB service was started successfully.&lt;/p&gt;
+
+&lt;p&gt;mongo
+MongoDB shell version: 1.6.5
+connecting to: test&lt;/p&gt;&lt;/blockquote&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>A note on Magento and multiple nodes using Memcached</title>
+    <link href="http://www.timbroder.com/2011/02/a-note-on-magento-and-multiple-nodes-using-memcached.html"/>
+    <updated>2011-02-11T18:35:44-05:00</updated>
+    <id>http://www.timbroder.com/2011/02/a-note-on-magento-and-multiple-nodes-using-memcached</id>
+    <content type="html">&lt;p&gt;If you have multiple nodes using a shared memcached server, make sure you define a shared prefix for the keys to use.&lt;/p&gt;
+
+&lt;p&gt;In local.xml:&lt;/p&gt;
+
+&lt;figure class=&#8217;code&#8217;&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class=&#8217;line-number&#8217;&gt;1&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;2&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;3&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;4&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;5&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;6&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#8217;code&#8217;&gt;&lt;pre&gt;&lt;code class=&#8217;xml&#8217;&gt;&lt;span class=&#8217;line&#8217;&gt;        &lt;span class=&quot;nt&quot;&gt;&amp;lt;cache&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;&#8230;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;            &lt;span class=&quot;nt&quot;&gt;&amp;lt;prefix&amp;gt;&lt;/span&gt;a1i&lt;span class=&quot;nt&quot;&gt;&amp;lt;/prefix&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;            &lt;span class=&quot;nt&quot;&gt;&amp;lt;id_prefix&amp;gt;&lt;/span&gt;a1i&lt;span class=&quot;nt&quot;&gt;&amp;lt;/id_prefix&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;            &lt;span class=&quot;nt&quot;&gt;&amp;lt;memcached&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;&#8230;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;
+
+
+
+</content>
+  </entry>
+  
+  <entry>
+    <title>Wolverine? Or 2 Batmen?</title>
+    <link href="http://www.timbroder.com/2011/02/wolverine-or-2-batmen.html"/>
+    <updated>2011-02-08T20:59:49-05:00</updated>
+    <id>http://www.timbroder.com/2011/02/wolverine-or-2-batmen</id>
+    <content type="html">&lt;p&gt;&lt;img class=&quot;alignnone&quot; title=&quot;http://www.igeektrooper.com/wp-content/uploads/2011/02/wolverinebatmen.jpg&quot; src=&quot;http://www.igeektrooper.com/wp-content/uploads/2011/02/wolverinebatmen.jpg&quot; alt=&quot;&quot; width=&quot;456&quot; height=&quot;545&quot; /&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Twitter recap of the superbowl halftime show</title>
+    <link href="http://www.timbroder.com/2011/02/twitter-recap-of-the-superbowl-halftime-show.html"/>
+    <updated>2011-02-07T01:36:05-05:00</updated>
+    <id>http://www.timbroder.com/2011/02/twitter-recap-of-the-superbowl-halftime-show</id>
+    <content type="html">&lt;p&gt;Ok so, the superbowl halftime was just god awful &lt;/p&gt;
+
+
+&lt;p&gt;@tomkaters I just put Prince on the turntable. #MakeMyOwnHalftimeShow&lt;/p&gt;
+
+
+&lt;p&gt;@cskilpatrick This halftime show needs more Bieber. #superbowl&lt;/p&gt;
+
+
+&lt;p&gt; @CobraCommander Who is this tranny singer butchering Guns at halftime?&lt;/p&gt;
+
+
+&lt;p&gt; @iamunscared Fergie is a train wreck, just ruined G n R.&lt;/p&gt;
+
+
+&lt;p&gt; @amyasparklethe sound from the halftime show is completely messed up. awful. &lt;/p&gt;
+
+
+&lt;p&gt; @garyvee No more pls&lt;/p&gt;
+
+
+&lt;p&gt; @tomkaters Enjoy halftime by tom. http://www.youtube.com/watch?v=_bP48M2BEs0 &lt;/p&gt;
+
+
+&lt;p&gt; @cskilpatrick They should play this halftime show when they&amp;#8217;re trying to get cultists to leave their compound. #superbowl&lt;/p&gt;
+
+
+&lt;p&gt; @brianshaler Glad everyone already tweeted about all the flaws in the Super Bowl halftime show. Now I don&amp;#8217;t have to.&lt;/p&gt;
+
+
+&lt;p&gt; @garyvee It&amp;#8217;s time for a new format for superbowl halftime shows, how about interviews at the 50 yrd line &amp;#8230;conan and Jon Stewart interview Prince&lt;/p&gt;
+
+
+&lt;p&gt; @brianshaler My favorite part of the halftime show was when they played the song &amp;#8220;Where is the Lol? E&amp;#8221;&lt;/p&gt;
+
+
+&lt;p&gt; @werty Pretty sure Fergie raided Ace Frehley&amp;#8217;s closet for her Super Bowl halftime show costume. #superbowl #blackeyedpeas&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Want to output the full xml config Magento is running?</title>
+    <link href="http://www.timbroder.com/2011/01/want-to-output-the-full-xml-config-magento-is-running.html"/>
+    <updated>2011-01-27T19:56:14-05:00</updated>
+    <id>http://www.timbroder.com/2011/01/want-to-output-the-full-xml-config-magento-is-running</id>
+    <content type="html">&lt;figure class=&#8217;code&#8217;&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class=&#8217;line-number&#8217;&gt;1&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;2&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;3&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#8217;code&#8217;&gt;&lt;pre&gt;&lt;code class=&#8217;php&#8217;&gt;&lt;span class=&#8217;line&#8217;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;&lt;span class=&quot;nx&quot;&gt;Mage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getConfig&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;asNiceXml&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;full_config.xml&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;
+
+
+&lt;p&gt;Where full_config.xml is the file you want it dumped to.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Getting it onto the Kindle</title>
+    <link href="http://www.timbroder.com/2011/01/getting-it-onto-the-kindle.html"/>
+    <updated>2011-01-27T15:05:49-05:00</updated>
+    <id>http://www.timbroder.com/2011/01/getting-it-onto-the-kindle</id>
+    <content type="html">&lt;p&gt;Been loving my Kindle 3 since I upgraded from my sony reader. There are so many options for getting various reading materials onto it.  Here are a few of the ones I like the best:&lt;/p&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;Want to get some RSS feeds onto the Kindle? (12 feeds for free) &lt;a href=&quot;http://kindlefeeder.com/&quot; target=&quot;_blank&quot;&gt;KindleFeeder&lt;/a&gt; is the way to go.  It also has a bookmarklet for capturing and sending whole pages from your browser.I use this to send articles in Google Reader that I want to read later to my Kindle.  I use my starred items to do this.  Starred items have their own RSS feed which you can put into kindlefeeder.  For information on how to get the link to the RSS of your starred items, &lt;a href=&quot;http://www.freewaregenius.com/2008/01/16/how-to-broadcast-your-google-reader-starred-items-to-an-rss-feed-or-widget-on-your-blog/&quot; target=&quot;_blank&quot;&gt;click here&lt;/a&gt;.&lt;/li&gt;
+    &lt;li&gt;&amp;#8220;&lt;a href=&quot;https://chrome.google.com/webstore/detail/ipkfnchcgalnafehpglfbommidgmalan#&quot; target=&quot;_blank&quot;&gt;Send to Kindle&lt;/a&gt;&amp;#8221; for chrome is a button that will send the content of the page your are currently viewing.&lt;/li&gt;
+    &lt;li&gt;The third method is the built in free Kindle email address that isn&amp;#8217;t broadly advertised:  &lt;a href=&quot;your.name@free.kindle.com&quot; target=&quot;_blank&quot;&gt;your.name@free.kindle.com&lt;/a&gt; will beam most docs that you mail it to your Kindle over wifi (does not work with 3G)&lt;/li&gt;
+    &lt;li&gt;&lt;a title=&quot;calibre&quot; href=&quot;http://calibre-ebook.com/&quot; target=&quot;_blank&quot;&gt;Calibre&lt;/a&gt; is great for managing what is on your Kindle and converting just about any file format to .mobi (a format the Kindle can read).  Calibre can also be used to &lt;a href=&quot;https://apprenticealf.wordpress.com/2011/01/13/ebooks-formats-drm-and-you-%E2%80%94-a-guide-for-the-perplexed/&quot; target=&quot;_blank&quot;&gt;strip the DRM&lt;/a&gt; off of your purchased Kindle books&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;http://www.youtube.com/watch?v=Xu_FgtM_Oqs&lt;/p&gt;
+</content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,444 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>TimBroder.com</title>
+  <meta name="author" content="Tim Broder">
+
+  
+  <meta name="description" content="Here is a list of Firefox keyboard and mouse shortcuts for each of the three major operating systems organized by topic.">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.timbroder.com/blog/page/17/index.html">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="http://feeds.feedburner.com/timbroder" rel="alternate" title="TimBroder.com" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">TimBroder.com</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://feeds.feedburner.com/timbroder" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.timbroder.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/10/firefox-keyboard-and-mouse-shortcuts.html">Firefox Keyboard and Mouse Shortcuts</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2009-10-05T15:06:00-04:00" pubdate  data-updated="true" >Oct 5<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.mouserunner.com/FF_Shortcuts1Printable.html">Here is a list</a> of Firefox keyboard and mouse shortcuts for each of the three major operating systems organized by topic.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/09/checking-if-remote-file-exists-in.html">Checking if a Remote File Exists in Python</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2009-09-30T19:51:00-04:00" pubdate  data-updated="true" >Sep 30<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Normally, to check if a remote web file exists I would use urllib&#8217;s getcode() but that is a 2.6 and newer feature.&nbsp; In Python 2.5 its a little more interesting.&nbsp; Thankfully, wget&#8217;s spider command can help us out.<br /></p>
+
+<br />
+
+
+<br />
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">subprocess</span> <span class="kn">import</span> <span class="n">Popen</span><span class="p">,</span> <span class="n">PIPE</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">url_exists</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+</span><span class='line'>    <span class="n">command</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;wget&quot;</span><span class="p">,</span> <span class="s">&quot;-S&quot;</span><span class="p">,</span> <span class="s">&quot;--spider&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">]</span>
+</span><span class='line'>    <span class="n">p</span> <span class="o">=</span> <span class="n">Popen</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">stderr</span><span class="o">=</span><span class="n">PIPE</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">communicate</span><span class="p">()</span>
+</span><span class='line'>    <span class="n">exists</span> <span class="o">=</span> <span class="n">stderr</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">&#39;ERROR 404&#39;</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">exists</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+</span><span class='line'>        <span class="k">return</span> <span class="bp">False</span>
+</span><span class='line'>    <span class="k">else</span><span class="p">:</span>
+</span><span class='line'>        <span class="k">return</span> <span class="bp">True</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/09/twitter-get-phone-calls-facebook-gets.html">Twitter Get Phone Calls, Facebook Gets Voice Chat</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2009-09-18T19:40:00-04:00" pubdate  data-updated="true" >Sep 18<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Twitter users on Thursday will, for the first time, be able to <a href="http://digg.com/d314ZwX">make voice calls</a> directly to each other through the microblogging service. <br /></p>
+
+<br />
+
+
+<br />
+
+
+<p>Look out, Facebook users: <a href="http://digg.com/d314NzW">Here comes voice chat</a>.<br /></p>
+
+<br />
+
+
+<p>Sometime in the next few weeks, the social network&#8217;s tens of millions of users will begin to be able to have high-quality voice conversations, even as its third-party developers are able to start including voice in their applications.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/09/fight-gone-bad-iv.html">Fight Gone Bad IV</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2009-09-10T19:18:00-04:00" pubdate  data-updated="true" >Sep 10<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Anyone want to help me out by donating?<br /><br /></p>
+
+<p><a href="http://feedproxy.google.com/~r/timbroder/~3/PDBIQvyH3rY/">Fight Gone Bad IV</a>: &#8221;<p>On Sept 26th I am competing in Fight Gone Bad IV to raise money for Wounded Warriors and Athletes for a cure. Fight gone bad is a CrossFit workout scored by the number of reps.</p></p>
+
+<p>Description from the <a href="http://www.crossfit.com/cf-info/faq.html#WOD2">CrossFit website</a></p>
+
+
+<dl>
+<dt><strong><a name="WOD2">4.3. Explain Fight Gone Bad</a></strong></dt>
+<dd>In this workout you move from each of five stations after a minute. This is a five-minute round from which a one-minute break is allowed before repeating. Weve used this in 3 and 5 round versions. The stations are:
+<ol>
+<li>Wall-ball: 20 pound ball, 10 ft target. (Reps)</li>
+<li>Sumo deadlift high-pull: 75 pounds (Reps)</li>
+<li>Box Jump: 20? box (Reps)</li>
+<li>Push-press: 75 pounds (Reps)</li>
+<li>Row: calories (Calories)</li>
+</ol>
+<p>The clock does not reset or stop between exercises. On call of rotate, the athlete/s must move to next station immediately for good score. One point is given for each rep, except on the rower where each calorie is one point.</p>
+</dd>
+</dl>
+
+
+<p>If you can, <a href="http://bit.ly/2N8ifX">please donate</a> to help me support these initiatives</p>
+
+
+<object id="TotalCounter" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="250" height="250" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="quality" value="high" /><param name="bgcolor" value="#869ca7" /><param name="allowScriptAccess" value="always" /><param name="src" value="https://www.rapidreghost.com/fgb/TotalCounter.swf" /><param name="name" value="TotalCounter" /><param name="align" value="middle" /><embed id="TotalCounter" type="application/x-shockwave-flash" width="250" height="250" src="https://www.rapidreghost.com/fgb/TotalCounter.swf" align="middle" name="TotalCounter" allowscriptaccess="always" bgcolor="#869ca7" quality="high"></embed></object>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/08/location-location-location.html">Location, Location, Location</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2009-08-29T18:39:00-04:00" pubdate  data-updated="true" >Aug 29<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This will be pretty cool when it comes out<br /></p>
+
+<br />
+
+
+<p><a href="http://blog.twitter.com/2009/08/location-location-location.html">Location, Location, Location</a>: &#8221;<a href="http://3.bp.blogspot.com/_E8ZD85Wzu9E/So20MKF3WiI/AAAAAAAAAnw/QjXxH9JTBGM/s1600-h/iStock_000006260161Small.jpg"><img style="margin:0px auto 10px;display:block;text-align:center;width:400px;height:268px" src="http://3.bp.blogspot.com/_E8ZD85Wzu9E/So20MKF3WiI/AAAAAAAAAnw/QjXxH9JTBGM/s400/iStock_000006260161Small.jpg" alt="" border="0"/></a>Twitter platform developers have been doing innovative work with location for some time despite having access to only a rudimentary level of API support. Most of the location-based projects we see are built using the simple, account-level location field folks can fill out as part of their profile. Since anything can be written in this field, it&#8217;s interesting but not very dependable.<br /></p>
+
+<br />
+
+
+<p>We&#8217;re gearing up to launch a new feature which makes Twitter truly location-aware. A new API will allow developers to add latitude and longitude to any tweet. Folks will need to activate this new feature by choice because it will be off by default and the exact location data won&#8217;t be stored for an extended period of time. However, if people do opt-in to sharing location on a tweet-by-tweet basis, compelling context will be added to each burst of information.<br /></p>
+
+<br />
+
+
+<p>For example, with accurate, tweet-level location data you could switch from reading the tweets of accounts you follow to reading tweets from anyone in your neighborhood or citywhether you follow them or not. It&#8217;s easy to imagine how this might be interesting at an event like a concert or even something more dramatic like an earthquake. There will likely be many use cases we haven&#8217;t even thought of yet which is part of what makes this so exciting.<br /></p>
+
+<br />
+
+
+<p><span style="font-weight:bold">Developer Preview</span><br /></p>
+
+<br />
+
+
+<p>We&#8217;re going to release geolocation to platform developers before we add the feature to Twitter.com. Most of the mobile applications people use and love are built by Twitter platform developers. Developers will have access to this new geolocation feature early which means it will most likely be available on your app of choice before it&#8217;s available on Twitter&#8217;s web site. Later, we&#8217;ll add it to our mobile web site and Twitter.com as well.<br /></p>
+
+<br />
+
+
+<p>We&#8217;re very excited about the potential of location metadata combined with Twitter. Our platform team has been on a roll lately. Geolocation lead @<a href="http://twitter.com/rsarver">rsarver</a> is particularly enthusiastic about location given his personal interest and involvement in events such as WhereCamp and his career history with location-aware services.<div><img width="1" height="1" src="https://blogger.googleusercontent.com/tracker/23958943-4539167026890119148?l=blog.twitter.com"/></div>&#8221;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <nav class="pagination">
+    <div>
+      
+        <a class="prev" href="/blog/page/18/">&larr; Older</a>
+      
+      <a href="/blog/archives">Blog Archives</a>
+      
+      <a class="next" href="/blog/page/16/">Newer &rarr;</a>
+      
+    </div>
+  </nav>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2011/10/what-do-you-listen-to-podcast-edition.html">What Do You Listen to? (Podcast Edition)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/10/creating-a-stateless-request-in-magento.html">Creating a Stateless Request in Magento</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/04/jira-tabs-open-all-those-jiras-at-once.html">Jira Tabs: Open all those Jira&#8217;s at once! </a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/04/google%25e2%2580%2599s-groupon-competitor-goes-live.html">Googles Groupon Competitor Goes Live</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/04/skynet.html">Skynet Becomes Self Aware Tonight</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2011 - Tim Broder -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+    (function () {
+      var disqus_shortname = 'timbrodercom';
+      
+        
+        var disqus_script = 'count.js'
+      
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-17099661-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
