@@ -8,39 +8,37 @@ I tend to listen to a decent number of podcasts. Usually while doing the dishes,
 
 **Tech**
 
-*   Sitepoint - Web Dev news, tutorials, interviews 
-    http://www.sitepoint.com/
-*   Official jQuery podcast* - Javascript library
-    
-    http://podcast.jquery.com/
-*   yayQuery* - Front End Dev podcast 
-    
-    http://yayquery.com/
-*   djangodose* - Had great news about jquery, but I think its dead
-    
-    http://djangodose.com/
-
-* techzinglive - Random tech/hacker news
-http://techzinglive.com/
-* The Dev Show - Ruby,Php, Java, Javascript
-http://5by5.tv/devshow
-* The changelog - Open source news 
-http://thechangelog.com/
-* ATX Web Show - web stuff
-http://atxwebshow.com/
-* The javascript show* - great js news and library coverage
-http://javascriptshow.com/
+*   Sitepoint - Web Dev news, tutorials, interviews  
+    [http://www.sitepoint.com/](http://www.sitepoint.com/)
+*   Official jQuery podcast* - Javascript library  
+    [http://podcast.jquery.com/](http://podcast.jquery.com/)
+*   yayQuery* - Front End Dev podcast  
+    [http://yayquery.com/](http://yayquery.com/)
+*   djangodose* - Had great news about django, but I think its dead  
+    [http://djangodose.com/](http://djangodose.com/)
+* 	techzinglive - Random tech/hacker news  
+    [http://techzinglive.com/](http://techzinglive.com/)
+*   The Dev Show - Ruby,Php, Java, Javascript  
+    [http://5by5.tv/devshow](http://5by5.tv/devshow)
+*   The changelog - Open source news  
+    [http://thechangelog.com/](http://thechangelog.com/)
+*   ATX Web Show - web stuff  
+    [http://atxwebshow.com/](http://atxwebshow.com/)
+*   The javascript show* - great js news and library coverage  
+    [http://javascriptshow.com/](http://javascriptshow.com/)
 
 
 **Non Tech**
-* iFanboy* - Comic book news and reviews
-http://ifanboy.com/
-* Sword and Laser* - Science Fiction and Fantasy book club
-http://www.swordandlaser.com/
-* 11 O'Clock Comics - Comic news and culture
-http://bullpenbulletinspodcast.com/
-* Word Balloon - Comic creator interviews 
-http://wordballoon.com/
-* Fuzzy Typewriter - Random media / culture 
-http://fuzzytypewriter.wordpress.com/
-* I listen to every episode, others I cherry-pick
+
+*   iFanboy* - Comic book news and reviews  
+    [http://ifanboy.com/](http://ifanboy.com/)
+*   Sword and Laser* - Science Fiction and Fantasy book club  
+    [http://www.swordandlaser.com/](http://www.swordandlaser.com/)
+*   11 O'Clock Comics - Comic news and culture  
+    [http://bullpenbulletinspodcast.com/](http://bullpenbulletinspodcast.com/)
+*   Word Balloon - Comic creator interviews   
+    [http://wordballoon.com/](http://wordballoon.com/)
+*   Fuzzy Typewriter - Random media / culture   
+    [http://fuzzytypewriter.wordpress.com/](http://wordballoon.com/)
+
+  * I listen to every episode, others I cherry-pick
