@@ -9,7 +9,7 @@
   <meta name="author" content="Tim Broder">
 
   
-  <meta name="description" content="Want to display the remaining characters on a text field in admin? (based off of maxlength or an override) 1234567891011121314151617181920212223242...">
+  <meta name="description" content="Add this to your model to be able to get their admin change link from anywhereUseful if you want to jump to the admin screen of an object you are l...">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -58,6 +58,65 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2010/02/get-admin-url-for-django-model.html">Get the Admin Url for a Django Model</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2010-02-09T18:48:00-05:00" pubdate  data-updated="true" >Feb 9<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Add this to your model to be able to get their admin change link from anywhere<br /></p>
+
+<br />
+
+
+<p>Useful if you want to jump to the admin screen of an object you are looking at on the front end <br /></p>
+
+<br />
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">django.core</span> <span class="kn">import</span> <span class="n">urlresolvers</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">django.contrib.contenttypes.models</span> <span class="kn">import</span> <span class="n">ContentType</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">get_admin_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>    <span class="n">content_type</span> <span class="o">=</span> <span class="n">ContentType</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get_for_model</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">urlresolvers</span><span class="o">.</span><span class="n">reverse</span><span class="p">(</span><span class="s">&quot;admin:</span><span class="si">%s</span><span class="s">_</span><span class="si">%s</span><span class="s">_change&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">content_type</span><span class="o">.</span><span class="n">app_label</span><span class="p">,</span> <span class="n">content_type</span><span class="o">.</span><span class="n">model</span><span class="p">),</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -550,59 +609,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2009/12/django-gets-multi-db.html">Django Gets Multi-DB</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-  
-
-
-
-<time datetime="2009-12-22T19:58:00-05:00" pubdate  data-updated="true" >Dec 22<span>nd</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>For his Google Summer of Code project <a href="http://lazypython.blogspot.com/">Alex Gaynor</a> added Multiple Database support to Django, which just got pushed to Trunk.<br /></p>
-
-<br />
-
-
-<p>The Documentation is available <a href="http://docs.djangoproject.com/en/dev/topics/db/multi-db/">here</a>.&nbsp; <br /></p>
-
-<br />
-
-
-<p>Some of the offhand benifits I can see:<br /></p>
-
-<ol><li>Multiple of databases.&nbsp; Got some legacy systems you don&#8217;t want to migrate but have access to the data? no problem</li>
-<li>Have a read and a write database.&nbsp; Want one of your databases to speed up by configuring faster indexes and disabling writes? done.</li>
-<li>Multiple TYPES of databases.&nbsp; This is the one I&#8217;m most excited about.&nbsp; This is going to enable people to use some of the NoSQL databases (<a href="http://www.mongodb.org/">MongoDB</a>, <a href="http://couchdb.apache.org/">CouchDB</a>, see <a href="http://en.wikipedia.org/wiki/NoSQL#List_of_NoSQL_open_source_projects">here </a>for a more complete list)<br />
-<br />
-For a great application of MongoDB on a news site see <a href="http://www.businessinsider.com/how-we-use-mongodb-2009-11">Business Insider</a><br />
-</li>
-</ol>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <nav class="pagination">
     <div>
       
@@ -622,6 +628,10 @@ For a great application of MongoDB on a news site see <a href="http://www.busine
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2011/11/moving.html">Moving</a>
+      </li>
+    
+      <li class="post">
         <a href="/2011/10/what-do-you-listen-to-podcast-edition.html">What Do You Listen to? (Podcast Edition)</a>
       </li>
     
@@ -635,10 +645,6 @@ For a great application of MongoDB on a news site see <a href="http://www.busine
     
       <li class="post">
         <a href="/2011/04/google%25e2%2580%2599s-groupon-competitor-goes-live.html">Googles Groupon Competitor Goes Live</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2011/04/skynet.html">Skynet Becomes Self Aware Tonight</a>
       </li>
     
   </ul>

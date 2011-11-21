@@ -4,13 +4,22 @@
   <title>TimBroder.com</title>
   <link href="http://www.timbroder.com/atom.xml" rel="self"/>
   <link href="http://www.timbroder.com/"/>
-  <updated>2011-11-08T17:51:14-05:00</updated>
+  <updated>2011-11-21T09:20:19-05:00</updated>
   <id>http://www.timbroder.com/</id>
   <author>
     <name>Tim Broder</name>
     
   </author>
 
+  
+  <entry>
+    <title>Moving</title>
+    <link href="http://www.timbroder.com/2011/11/moving.html"/>
+    <updated>2011-11-21T09:19:00-05:00</updated>
+    <id>http://www.timbroder.com/2011/11/moving</id>
+    <content type="html">&lt;p&gt;Moving servers and blogging engines. Details and fun to follow. Sorry if anything seems&amp;#8230; off for a week or so&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <title>What Do You Listen to? (Podcast Edition)</title>
@@ -471,25 +480,6 @@ connecting to: test&lt;/p&gt;&lt;/blockquote&gt;
 
 
 &lt;p&gt;Where full_config.xml is the file you want it dumped to.&lt;/p&gt;
-</content>
-  </entry>
-  
-  <entry>
-    <title>Getting it onto the Kindle</title>
-    <link href="http://www.timbroder.com/2011/01/getting-it-onto-the-kindle.html"/>
-    <updated>2011-01-27T15:05:49-05:00</updated>
-    <id>http://www.timbroder.com/2011/01/getting-it-onto-the-kindle</id>
-    <content type="html">&lt;p&gt;Been loving my Kindle 3 since I upgraded from my sony reader. There are so many options for getting various reading materials onto it.  Here are a few of the ones I like the best:&lt;/p&gt;
-
-&lt;ul&gt;
-    &lt;li&gt;Want to get some RSS feeds onto the Kindle? (12 feeds for free) &lt;a href=&quot;http://kindlefeeder.com/&quot; target=&quot;_blank&quot;&gt;KindleFeeder&lt;/a&gt; is the way to go.  It also has a bookmarklet for capturing and sending whole pages from your browser.I use this to send articles in Google Reader that I want to read later to my Kindle.  I use my starred items to do this.  Starred items have their own RSS feed which you can put into kindlefeeder.  For information on how to get the link to the RSS of your starred items, &lt;a href=&quot;http://www.freewaregenius.com/2008/01/16/how-to-broadcast-your-google-reader-starred-items-to-an-rss-feed-or-widget-on-your-blog/&quot; target=&quot;_blank&quot;&gt;click here&lt;/a&gt;.&lt;/li&gt;
-    &lt;li&gt;&amp;#8220;&lt;a href=&quot;https://chrome.google.com/webstore/detail/ipkfnchcgalnafehpglfbommidgmalan#&quot; target=&quot;_blank&quot;&gt;Send to Kindle&lt;/a&gt;&amp;#8221; for chrome is a button that will send the content of the page your are currently viewing.&lt;/li&gt;
-    &lt;li&gt;The third method is the built in free Kindle email address that isn&amp;#8217;t broadly advertised:  &lt;a href=&quot;your.name@free.kindle.com&quot; target=&quot;_blank&quot;&gt;your.name@free.kindle.com&lt;/a&gt; will beam most docs that you mail it to your Kindle over wifi (does not work with 3G)&lt;/li&gt;
-    &lt;li&gt;&lt;a title=&quot;calibre&quot; href=&quot;http://calibre-ebook.com/&quot; target=&quot;_blank&quot;&gt;Calibre&lt;/a&gt; is great for managing what is on your Kindle and converting just about any file format to .mobi (a format the Kindle can read).  Calibre can also be used to &lt;a href=&quot;https://apprenticealf.wordpress.com/2011/01/13/ebooks-formats-drm-and-you-%E2%80%94-a-guide-for-the-perplexed/&quot; target=&quot;_blank&quot;&gt;strip the DRM&lt;/a&gt; off of your purchased Kindle books&lt;/li&gt;
-&lt;/ul&gt;
-
-
-&lt;p&gt;http://www.youtube.com/watch?v=Xu_FgtM_Oqs&lt;/p&gt;
 </content>
   </entry>
   

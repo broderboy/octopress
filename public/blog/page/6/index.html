@@ -9,7 +9,7 @@
   <meta name="author" content="Tim Broder">
 
   
-  <meta name="description" content="In: lib/Zend/DB/Adapter/Adapter.php&#8220;` php&lt;?phppublic function query($sql, $bind = array()){    // connect to the database if needed    $th...">
+  <meta name="description" content="Create a context processorsettings.py123TEMPLATE_CONTEXT_PROCESSORS = (    &#39;myapp.context_processors.user&#39;,)context_processors.py1234def us...">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -58,6 +58,73 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2010/12/want-user-available-in-every-template-in-django.html">Want User Available in Every Template in Django?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2010-12-29T03:08:52-05:00" pubdate  data-updated="true" >Dec 29<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Create a context processor</p>
+
+<p>settings.py</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">TEMPLATE_CONTEXT_PROCESSORS</span> <span class="o">=</span> <span class="p">(</span>
+</span><span class='line'>    <span class="s">&#39;myapp.context_processors.user&#39;</span><span class="p">,</span>
+</span><span class='line'><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>context_processors.py</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">user</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s">&#39;user&#39;</span><span class="p">):</span>
+</span><span class='line'>        <span class="k">return</span> <span class="p">{</span><span class="s">&#39;user&#39;</span><span class="p">:</span><span class="n">request</span><span class="o">.</span><span class="n">user</span> <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="p">{}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>user is now available in any template:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>%}Do Something Special%}
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>source: <a href="http://stackoverflow.com/questions/41547/always-including-the-user-in-the-django-template-context">stackoverflow</a></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -365,56 +432,6 @@ public function query($sql, $bind = array())</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2010/10/pesto.html">Pesto</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-  
-
-
-
-<time datetime="2010-10-04T20:35:20-04:00" pubdate  data-updated="true" >Oct 4<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Really want to try this this week (via <a href="http://twitter.com/mrblondeau" target="_blank">Jon</a>)</p>
-
-<ul>
-    <li>1 to 1 1/2 cups of olive oil</li>
-    <li>2 cups fresh basil chopped (i usually get a couple of bushels 3 or 4 depends on what much u want to make its breaks down, i usually just take it off the stem and throw it in)</li>
-    <li>1/2 tsp fresh ground pepper</li>
-    <li>5 cloves of garlic chopped</li>
-    <li>1 tsp salt</li>
-    <li>1/2 cup grated Parmesan cheese</li>
-</ul>
-
-
-<p>Put like 1/2 cup of oil in blender to start with and add the basil. pepper garlic and salt. Keep adding basil and the rest of oil till it all</p>
-
-<p>blend smooth</p>
-
-<p>Mix with Parmesan cheese before serving</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <nav class="pagination">
     <div>
       
@@ -434,6 +451,10 @@ public function query($sql, $bind = array())</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2011/11/moving.html">Moving</a>
+      </li>
+    
+      <li class="post">
         <a href="/2011/10/what-do-you-listen-to-podcast-edition.html">What Do You Listen to? (Podcast Edition)</a>
       </li>
     
@@ -447,10 +468,6 @@ public function query($sql, $bind = array())</p>
     
       <li class="post">
         <a href="/2011/04/google%25e2%2580%2599s-groupon-competitor-goes-live.html">Googles Groupon Competitor Goes Live</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2011/04/skynet.html">Skynet Becomes Self Aware Tonight</a>
       </li>
     
   </ul>

@@ -9,7 +9,7 @@
   <meta name="author" content="Tim Broder">
 
   
-  <meta name="description" content="Best Supporting ActressAmy Adams, The FighterHelena Bonham Carter, The King&#8217;s SpeechMelissa Leo, The FighterHailee Steinfeld, True GritJackie...">
+  <meta name="description" content="Been loving my Kindle 3 since I upgraded from my sony reader. There are so many options for getting various reading materials onto it.  Here are a ...">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -58,6 +58,50 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2011/01/getting-it-onto-the-kindle.html">Getting It Onto the Kindle</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2011-01-27T15:05:49-05:00" pubdate  data-updated="true" >Jan 27<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Been loving my Kindle 3 since I upgraded from my sony reader. There are so many options for getting various reading materials onto it.  Here are a few of the ones I like the best:</p>
+
+<ul>
+    <li>Want to get some RSS feeds onto the Kindle? (12 feeds for free) <a href="http://kindlefeeder.com/" target="_blank">KindleFeeder</a> is the way to go.  It also has a bookmarklet for capturing and sending whole pages from your browser.I use this to send articles in Google Reader that I want to read later to my Kindle.  I use my starred items to do this.  Starred items have their own RSS feed which you can put into kindlefeeder.  For information on how to get the link to the RSS of your starred items, <a href="http://www.freewaregenius.com/2008/01/16/how-to-broadcast-your-google-reader-starred-items-to-an-rss-feed-or-widget-on-your-blog/" target="_blank">click here</a>.</li>
+    <li>&#8220;<a href="https://chrome.google.com/webstore/detail/ipkfnchcgalnafehpglfbommidgmalan#" target="_blank">Send to Kindle</a>&#8221; for chrome is a button that will send the content of the page your are currently viewing.</li>
+    <li>The third method is the built in free Kindle email address that isn&#8217;t broadly advertised:  <a href="your.name@free.kindle.com" target="_blank">your.name@free.kindle.com</a> will beam most docs that you mail it to your Kindle over wifi (does not work with 3G)</li>
+    <li><a title="calibre" href="http://calibre-ebook.com/" target="_blank">Calibre</a> is great for managing what is on your Kindle and converting just about any file format to .mobi (a format the Kindle can read).  Calibre can also be used to <a href="https://apprenticealf.wordpress.com/2011/01/13/ebooks-formats-drm-and-you-%E2%80%94-a-guide-for-the-perplexed/" target="_blank">strip the DRM</a> off of your purchased Kindle books</li>
+</ul>
+
+
+<p>http://www.youtube.com/watch?v=Xu_FgtM_Oqs</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -454,73 +498,6 @@ Joel &amp; Ethan Coen, <em>True Grit</em></p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2010/12/want-user-available-in-every-template-in-django.html">Want User Available in Every Template in Django?</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-  
-
-
-
-<time datetime="2010-12-29T03:08:52-05:00" pubdate  data-updated="true" >Dec 29<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Create a context processor</p>
-
-<p>settings.py</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">TEMPLATE_CONTEXT_PROCESSORS</span> <span class="o">=</span> <span class="p">(</span>
-</span><span class='line'>    <span class="s">&#39;myapp.context_processors.user&#39;</span><span class="p">,</span>
-</span><span class='line'><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>context_processors.py</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">user</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
-</span><span class='line'>    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s">&#39;user&#39;</span><span class="p">):</span>
-</span><span class='line'>        <span class="k">return</span> <span class="p">{</span><span class="s">&#39;user&#39;</span><span class="p">:</span><span class="n">request</span><span class="o">.</span><span class="n">user</span> <span class="p">}</span>
-</span><span class='line'>    <span class="k">return</span> <span class="p">{}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>user is now available in any template:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'>%}Do Something Special%}
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>source: <a href="http://stackoverflow.com/questions/41547/always-including-the-user-in-the-django-template-context">stackoverflow</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <nav class="pagination">
     <div>
       
@@ -540,6 +517,10 @@ Joel &amp; Ethan Coen, <em>True Grit</em></p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2011/11/moving.html">Moving</a>
+      </li>
+    
+      <li class="post">
         <a href="/2011/10/what-do-you-listen-to-podcast-edition.html">What Do You Listen to? (Podcast Edition)</a>
       </li>
     
@@ -553,10 +534,6 @@ Joel &amp; Ethan Coen, <em>True Grit</em></p>
     
       <li class="post">
         <a href="/2011/04/google%25e2%2580%2599s-groupon-competitor-goes-live.html">Googles Groupon Competitor Goes Live</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2011/04/skynet.html">Skynet Becomes Self Aware Tonight</a>
       </li>
     
   </ul>

@@ -86,46 +86,56 @@
  easy to set up and works on any html sites, as well as <a href="http://www.blogger.com">blogger</a> and <a href="http://www.wordpress.org">wordpress</a>.  I&#8217;ll be using it heavily throughout these posts.  3 easy steps:<br /><br />
  1) Include the SyntaxHighlighter.css file at the top of your page.</p>
 
-<br /> <br /> 
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;link</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;/php/js/dp.SyntaxHighlighter/Styles/SyntaxHighlighter.css&quot;</span><span class="nt">&gt;&lt;/link&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
-<pre class="brush: html">
-<link type="text/css" rel="stylesheet" href="/php/js/dp.SyntaxHighlighter/Styles/SyntaxHighlighter.css"></link>
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p></p>
+
+<p>2) At the bottom of the page, include the <a href="http://code.google.com/p/syntaxhighlighter/wiki/Brushes">brushes</a> and other js files you will need, as well as the function call to stylize the <pre> tags:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>&lt;br /&gt; 
-</span><span class='line'>2) At the bottom of the page, include the &lt;a href="http://code.google.com/p/syntaxhighlighter/wiki/Brushes"&gt;brushes&lt;/a&gt; and other js files you will need, as well as the function call to stylize the &lt;pre&gt; tags:
-</span><span class='line'>&lt;br /&gt;&lt;br /&gt; </span></code></pre></td></tr></table></div></figure> html
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;script </span><span class="na">language=</span><span class="s">&quot;javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;/php/js/dp.SyntaxHighlighter/Scripts/shCore.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'><span class="nt">&lt;script </span><span class="na">language=</span><span class="s">&quot;javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;/php/js/dp.SyntaxHighlighter/Scripts/shBrushCSharp.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'><span class="nt">&lt;script </span><span class="na">language=</span><span class="s">&quot;javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;/php/js/dp.SyntaxHighlighter/Scripts/shBrushXml.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'><span class="nt">&lt;script </span><span class="na">language=</span><span class="s">&quot;javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;/php/js/dp.SyntaxHighlighter/Scripts/shBrushPython.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'><span class="nt">&lt;script </span><span class="na">language=</span><span class="s">&quot;javascript&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="nx">dp</span><span class="p">.</span><span class="nx">SyntaxHighlighter</span><span class="p">.</span><span class="nx">ClipboardSwf</span> <span class="o">=</span> <span class="s1">&#39;/flash/clipboard.swf&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="nx">dp</span><span class="p">.</span><span class="nx">SyntaxHighlighter</span><span class="p">.</span><span class="nx">HighlightAll</span><span class="p">(</span><span class="s1">&#39;code&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nt">&lt;/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<script language="javascript" src="/php/js/dp.SyntaxHighlighter/Scripts/shCore.js"></script>
-<script language="javascript" src="/php/js/dp.SyntaxHighlighter/Scripts/shBrushCSharp.js"></script>
-<script language="javascript" src="/php/js/dp.SyntaxHighlighter/Scripts/shBrushXml.js"></script>
-<script language="javascript" src="/php/js/dp.SyntaxHighlighter/Scripts/shBrushPython.js"></script>
-<script language="javascript">
-dp.SyntaxHighlighter.ClipboardSwf = '/flash/clipboard.swf';
-dp.SyntaxHighlighter.HighlightAll('code');
-</script>
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+
+<p></p>
+
+<br /> 
+
+
+<p>3) Then, place the code you want in between these two steps using <pre> tags that the javascript will stylize</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>&lt;br /&gt; 
-</span><span class='line'>3) Then, place the code you want in between these two steps using &lt;pre&gt; tags that the javascript will stylize
-</span><span class='line'>&lt;br /&gt;&lt;br /&gt; </span></code></pre></td></tr></table></div></figure> html
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="c">&lt;!-- code here --&gt;</span>
-</span></code></pre></td></tr></table></div></figure> 
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c"># code here</span>
-</span></code></pre></td></tr></table></div></figure> 
-
-&#8220;` 
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;pre</span> <span class="na">class=</span><span class="s">&quot;brush: html&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="c">&lt;!-- code here --&gt;</span>
+</span><span class='line'><span class="nt">&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;pre</span> <span class="na">class=</span><span class="s">&quot;brush: python&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'># code here
+</span><span class='line'><span class="nt">&lt;/pre&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
 
 </div>
 
@@ -181,6 +191,10 @@ dp.SyntaxHighlighter.HighlightAll('code');
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2011/11/moving.html">Moving</a>
+      </li>
+    
+      <li class="post">
         <a href="/2011/10/what-do-you-listen-to-podcast-edition.html">What Do You Listen to? (Podcast Edition)</a>
       </li>
     
@@ -194,10 +208,6 @@ dp.SyntaxHighlighter.HighlightAll('code');
     
       <li class="post">
         <a href="/2011/04/google%25e2%2580%2599s-groupon-competitor-goes-live.html">Googles Groupon Competitor Goes Live</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2011/04/skynet.html">Skynet Becomes Self Aware Tonight</a>
       </li>
     
   </ul>

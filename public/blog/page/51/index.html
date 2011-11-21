@@ -9,7 +9,7 @@
   <meta name="author" content="Tim Broder">
 
   
-  <meta name="description" content="As of this morning (or at least sometime before lunch), Zoho Writer turned on offline mode with Google Gears. If you haven&#8217;t heard about Gear...">
+  <meta name="description" content="Google Gadgets can now be added to your calendar.  Previously the only gadgets I had on my calendar were Google Doodles, Weather, phases of the moo...">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -58,6 +58,44 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2007/08/gadgets-now-on-google-calendar.html">Gadgets Now on Google Calendar!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2007-08-22T02:52:00-04:00" pubdate  data-updated="true" >Aug 22<span>nd</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Google Gadgets can now be added to your calendar.  Previously the only gadgets I had on my calendar were Google Doodles, Weather, phases of the moon, and PicasaWeb Photo of the day.  Now just about anything is going to be possible.  I briefly played around with it this morning and added horoscopes and Sudoku to my calendar.<br /><br /></p>
+
+<p><img src="http://lh5.google.com/timothy.broder/RsukR5E6BOI/AAAAAAAAKm4/QFkA3ZwVJ_M/s400/cal_gadgets.jpg?imgdl=1" border="1"/><br /><br /></p>
+
+<p>Other new gadgets include Movie Release dates and famous people&#8217;s birthdays.  I expect that very soon there will be video game releases as well.  <a href="http://code.google.com/apis/calendar/calendar_gadgets.html">Documentation</a> is out for the gadgets, so get coding!</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -337,105 +375,6 @@ First we&#8217;re going to need the <a href="http://code.google.com/p/httplib2/d
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2007/08/howto-getting-list-of-post-titles-from.html">HOWTO: Getting a List of Post Titles From Blogger (Python)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-  
-
-
-
-<time datetime="2007-08-11T18:25:00-04:00" pubdate  data-updated="true" >Aug 11<span>th</span>, 2007</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This will be a quick one on how to pull the titles from your blog.  I&#8217;m using it to <a href="http://gpowered.net/g/postlist">Lists the posts</a> I have available on <a href="http://gpowered.net/g/">gPowered.net</a>.  Firstly we&#8217;ll set up our imports and call to the blogger service.<br /><br /></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">elementtree</span> <span class="kn">import</span> <span class="n">ElementTree</span>
-</span><span class='line'><span class="kn">from</span> <span class="nn">gdata</span> <span class="kn">import</span> <span class="n">service</span>
-</span><span class='line'><span class="kn">import</span> <span class="nn">gdata</span>
-</span><span class='line'><span class="kn">import</span> <span class="nn">atom</span>
-</span><span class='line'><span class="kn">import</span> <span class="nn">getopt</span>
-</span><span class='line'><span class="kn">import</span> <span class="nn">sys</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">blog_id</span> <span class="o">=</span> <span class="mi">413573351281770670</span>
-</span><span class='line'><span class="n">blogger_service</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">GDataService</span><span class="p">(</span><span class="s">&#39;timothy.broder@gmail.com&#39;</span><span class="p">,</span> <span class="s">&#39;*****&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="n">blogger_service</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="s">&#39;Blogger_Python_Sample-1.0&#39;</span>
-</span><span class='line'><span class="n">blogger_service</span><span class="o">.</span><span class="n">service</span> <span class="o">=</span> <span class="s">&#39;blogger&#39;</span>
-</span><span class='line'><span class="n">blogger_service</span><span class="o">.</span><span class="n">server</span> <span class="o">=</span> <span class="s">&#39;www.blogger.com&#39;</span>
-</span><span class='line'><span class="n">blogger_service</span><span class="o">.</span><span class="n">ProgrammaticLogin</span><span class="p">()</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p></p>
-
-<br />
-
-
-<p>For this query we&#8217;re going to use the summary feed because all we really need for this is the titles, not the full posts:<br /><br /></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">query</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">Query</span><span class="p">()</span>
-</span><span class='line'><span class="n">query</span><span class="o">.</span><span class="n">feed</span> <span class="o">=</span> <span class="s">&#39;/feeds/&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">blog_id</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;/posts/summary&#39;</span>
-</span><span class='line'><span class="n">feed</span> <span class="o">=</span> <span class="n">blogger_service</span><span class="o">.</span><span class="n">Get</span><span class="p">(</span><span class="n">query</span><span class="o">.</span><span class="n">ToUri</span><span class="p">())</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p></p>
-
-<br />
-
-
-<p>Then I just do a little counting so I can use the links on my site.  All the information we need is in feed.entry<br /><br /></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">curr_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">feed</span><span class="o">.</span><span class="n">total_results</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-</span><span class='line'><span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">feed</span><span class="o">.</span><span class="n">entry</span><span class="p">:</span>
-</span><span class='line'> <span class="n">entry</span><span class="o">.</span><span class="n">my_id</span> <span class="o">=</span> <span class="n">curr_id</span>
-</span><span class='line'> <span class="n">curr_id</span> <span class="o">-=</span> <span class="mi">1</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <nav class="pagination">
     <div>
       
@@ -455,6 +394,10 @@ First we&#8217;re going to need the <a href="http://code.google.com/p/httplib2/d
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2011/11/moving.html">Moving</a>
+      </li>
+    
+      <li class="post">
         <a href="/2011/10/what-do-you-listen-to-podcast-edition.html">What Do You Listen to? (Podcast Edition)</a>
       </li>
     
@@ -468,10 +411,6 @@ First we&#8217;re going to need the <a href="http://code.google.com/p/httplib2/d
     
       <li class="post">
         <a href="/2011/04/google%25e2%2580%2599s-groupon-competitor-goes-live.html">Googles Groupon Competitor Goes Live</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2011/04/skynet.html">Skynet Becomes Self Aware Tonight</a>
       </li>
     
   </ul>
