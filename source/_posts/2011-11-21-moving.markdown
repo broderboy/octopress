@@ -1,0 +1,8 @@
+---
+layout: post
+title: "Moving"
+date: 2011-11-21 09:19
+comments: true
+categories: 
+---
+Moving servers and blogging engines. Details and fun to follow. Sorry if anything seems... off for a week or so
